@@ -13,4 +13,4 @@ app.listen(PORT, () => {
 });
 
 //Put routes here:
-// app.use("/routePathHere", file);
+app.use("/inventory", require("./routes/inventory"));
