@@ -65,29 +65,42 @@
     "status": "In Stock"
   },
   {
-    "id": "12345668",
+    "id": "6",
     "item": [
       {
-        "name": "Hartz Zoo Balloons Dog Toy",
-        "description": "Toss and Retrieve Toy"
+        "name": "Pup-Peroni Lean Beef Flavour Dog Snacks 708g",
+        "description": "All the real meat taste and 90% fat free! Pup-Peroni Lean Beef Flavour dog snacks are a guilt-free dog snack packed full of rich beef flavour."
       }
     ],
-    "lastOrdered": "05/04/2018",
-    "location": "Toronto, CA",
-    "quantity": "120",
+    "lastOrdered": "06/01/2017",
+    "location": "Vancouver, CA",
+    "quantity": "300",
     "status": "In Stock"
   },
   {
-    "id": "12345668",
+    "id": "7",
     "item": [
       {
-        "name": "Hartz Zoo Balloons Dog Toy",
-        "description": "Toss and Retrieve Toy"
+        "name": "Snausages In a Blanket Beef & Cheese Flavour Dog Snacks 196g",
+        "description": "Give your dog Snausages In-a-Blanket Beef & Cheese Flavour dog treats, it’s a lip-smacking taste that will have your dog begging for more!"
       }
     ],
-    "lastOrdered": "05/04/2018",
+    "lastOrdered": "05/04/2017",
     "location": "Toronto, CA",
     "quantity": "120",
+    "status": "Out of Stock"
+  },
+  {
+    "id": "8",
+    "item": [
+      {
+        "name": "Sporn Easy Fit Harness Harness",
+        "description": "The patented SPORN® Easy Fit Harness™ is easy to get on and off and provides superior comfort and breathability for everyday walking, in any climate! Its no-choke design features a lightweight, padded mesh material for maximum comfort, and includes special safety features such as reflective stitching throughout and dual D-rings for extra secure leash attachment. Girth straps are adjustable for proper fitting."
+      }
+    ],
+    "lastOrdered": "04/20/2017",
+    "location": "Toronto, CA",
+    "quantity": "555",
     "status": "In Stock"
   }
 ]
