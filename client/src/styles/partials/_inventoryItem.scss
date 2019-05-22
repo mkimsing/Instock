@@ -1,0 +1,23 @@
+.item {
+  margin: 10px 16px;
+  &__flexContainer {
+    display: flex;
+    flex-direction: column;
+
+    h5,
+    h4 {
+      margin: 0px;
+    }
+
+    //Product name title
+    h2 {
+      margin: 0px 0px 16px 0px;
+    }
+
+    h5 {
+      font-size: 14px;
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+  }
+}
