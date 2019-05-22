@@ -1,0 +1,63 @@
+.inventoryPage {
+  margin: 32px 16px 10px 16px;
+  
+  h1{
+    margin:0px;
+  }
+  //Search bar
+  input{
+    margin-top: 16px;
+    margin-bottom: 8px;
+    height: 48px;
+    width: 80%;
+    background: url("../assets/Icons/SVG/Icon-search.svg") no-repeat
+      $ALABASTER;
+    background-size: 16px;
+    background-position: 16px 50%;
+    
+    border: 1px $MERCURY solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: AvenirNext;
+    font-size: 14px;
+    line-height: 18px;
+    text-indent: calc(16px + 12px + 3%);
+    &:active, &:focus {
+      border-color: $BLUE;
+    }
+  }
+}
+
+@media(min-width: 768px){
+  .inventoryPage{
+    margin-left: 24px;
+    margin-right: 24px;
+
+    &__header{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom:24px;
+    }
+    input{
+      width: 40%;
+    }
+  }
+}
+
+@media(min-width: 1440px){
+  .inventoryPage{
+    margin-left: 180px;
+    margin-right: 180px;
+
+    &__header{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom:48px;
+    }
+    input{
+      width: 24%;
+    }
+  }
+}
