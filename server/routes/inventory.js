@@ -8,4 +8,12 @@ router
     res.json(inventoryController.getAllInventory());
   });
 
-module.exports = router;
+//create an endpoint that will return an item based on its id.
+//If the id does not match, return a 404 status and an error message.
+  .route('/inventory/:id')
+  .get((_req, res) => {
+
+  })
+
+
+module.exports = router; git 
