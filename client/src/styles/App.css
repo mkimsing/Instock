@@ -1,33 +1,69 @@
-.App {
-  text-align: center;
+/*=============================================
+=            Colors                          =
+=============================================*/
+/*=============================================
+=            Import font family            =
+=============================================*/
+@font-face {
+  font-family: AvenirNext;
+  src: url("../assets/Fonts/Avenir-Regular.otf");
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: AvenirNext;
+  src: url("../assets/Fonts/Avenir-Demi.otf");
+  font-weight: 550;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: AvenirNext;
+  src: url("../assets/Fonts/Avenir-Bold.otf");
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+/*=============================================
+=    Baseline Comment Sizing/Styles           =
+=============================================*/
+body {
+  font-family: AvenirNext;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+body h1 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+}
+
+body h2 {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 550;
+}
+
+body h4 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+body h5 {
+  font-size: 12px;
+  line-height: 20px;
+  color: #afafaf;
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  body h4 {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: normal;
   }
-  to {
-    transform: rotate(360deg);
+  body h5 {
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+    font-weight: normal;
   }
 }
+/*# sourceMappingURL=App.css.map */
