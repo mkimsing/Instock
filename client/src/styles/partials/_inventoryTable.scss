@@ -1,29 +1,28 @@
-
 /*=============================================
 =              Headers (For tab/desk)        =
 =============================================*/
-.inventoryTable__Headers{
-  display:none;
+.inventoryTable__Headers {
+  display: none;
 }
-@media(min-width: 768px){
-  .inventoryTable{   
-    input{
+@media (min-width: 768px) {
+  .inventoryTable {
+    input {
       width: 40%;
     }
 
-    &__Headers{
-      margin:0px 5px;
-      display:flex;
+    &__Headers {
+      margin: 0px 5px;
+      display: flex;
       justify-content: space-between;
 
-      h5{
+      h5 {
         margin: 0px;
         width: 15%;
       }
 
-      h5:first-child{
+      h5:first-child {
         width: 30%;
-        max-width:30%;
+        max-width: 30%;
         margin-right: 16px;
         margin-left: 8px;
       }
@@ -31,6 +30,40 @@
   }
 }
 
+/*=============================================
+=            Kebab Button General        =
+=============================================*/
+//CONTAINED IN KEBABBUTTON.JS
+.kebabContainer {
+  .kebabButton {
+    mask-image: url("../assets/Icons/SVG//Icon-kebab-default.svg");
+    background-color: black;
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+
+    border: none;
+    height: 20px;
+  }
+
+  .removeButton {
+    border: $MERCURY solid 1px;
+    background-color: white;
+    position: absolute;
+    text-align: start;
+    font-size: 14px;
+    font-family: AvenirNext;
+    z-index: 1; // Force on top
+
+    &--show {
+      display: block;
+    }
+
+    &--hide {
+      display: none;
+    }
+  }
+}
 
 /*=============================================
 =            Table Rows / Cells          =
@@ -38,13 +71,22 @@
 .item {
   border-bottom: solid $SILVER 1px;
   padding-bottom: 24px;
+
+  .fullSizeOnly {
+    display: none;
+  }
+
+  .mobileOnly {
+    display: block; //May be overridden by display:flex, etc
+  }
+
   &__flexContainer {
     display: flex;
     flex-direction: column;
 
-    .kebabButton{
+    .kebabButton {
       mask-image: url("../assets/Icons/SVG//Icon-kebab-default.svg");
-      background-color:black;
+      background-color: black;
       mask-size: contain;
       mask-position: center;
       mask-repeat: no-repeat;
@@ -52,14 +94,25 @@
       border: none;
       height: 20px;
     }
-    .kebabContainer{
-      display:flex;
+    .topRow {
+      display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative; //Allow absolute positioning of remove button
 
       //Kebab button
-      button{
+      .kebabButton {
         margin-right: 10px;
+      }
+
+      .kebabContainer {
+        .removeButton {
+          width: 50%;
+          max-width: 200px;
+          height: 50px;
+          bottom: -40px;
+          right: 5px;
+        }
       }
     }
 
@@ -78,61 +131,84 @@
       margin-top: 24px;
       margin-bottom: 16px;
     }
-
-    .kebabButton.fullSizeOnly{
-      display:none;
-    }
   }
 }
 
-@media (min-width: 768px){
-  .item{
+@media (min-width: 768px) {
+  .item {
     margin: 24px 5px;
-    &__flexContainer{
+
+    .fullSizeOnly {
+      display: block; //May be overridden by display:flex, etc
+    }
+
+    .mobileOnly {
+      display: none;
+    }
+    &__flexContainer {
       flex-direction: row;
       align-items: flex-end;
       justify-content: space-between;
 
-      h5{
-        display:none;
+      h5 {
+        display: none;
       }
 
-      h2{
+      h2 {
         margin-bottom: 0px;
       }
 
-      .kebabContainer{
-        display:none;
+      .mobileOnly {
+        display: none;
       }
 
-      .item__text{
+      .item__text {
         width: 30%;
-        max-width:30%;
+        max-width: 30%;
         margin-right: 16px;
         margin-left: 8px;
       }
-      .tableCell{
+      .tableCell {
         width: 15%;
       }
 
-      #kebabCell{
-        display:flex;
-        justify-content: space-between
+      #kebabCell {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        .kebabContainer {
+          .removeButton {
+            width: 100%;
+            height: 50px;
+            bottom: -50px;
+            right: 0px;
+          }
+        }
       }
 
-      .kebabButton.fullSizeOnly{
-        display:block;
+      .fullSizeOnly {
+        display: block;
+      }
+
+      .kebabButton {
         margin-right: 12px;
       }
     }
   }
 }
 
-@media(min-width: 1440px){
-  .item{
-    &__flexContainer{
+@media (min-width: 1440px) {
+  .item {
+    &__flexContainer {
       align-items: center;
-    }
 
+      #kebabCell {
+        .kebabContainer {
+          .removeButton {
+            bottom: -60px;
+          }
+        }
+      }
+    }
   }
 }
