@@ -16,11 +16,19 @@ export default class KebabButton extends Component {
       });
     }
   };
+
+  removeHandler = () => {
+    console.log(`Removing!`);
+  };
+
   render() {
     return (
       <div className="kebabContainer">
         <button className="kebabButton" onClick={this.toggleRemoveButton} />
-        <button className={`removeButton ${this.state.removeButtonModifier}`}>
+        <button
+          className={`removeButton ${this.state.removeButtonModifier}`}
+          onClick={this.removeHandler}
+        >
           Remove
         </button>
       </div>
