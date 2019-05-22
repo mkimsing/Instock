@@ -3,15 +3,7 @@ import "./styles/App.css";
 import InventoryContainer from "./containers/InventoryContainer";
 
 function App() {
-  return (
-    <>
-      <InventoryContainer />
-      <InventoryContainer />
-      <InventoryContainer />
-      <InventoryContainer />
-      <InventoryContainer />
-    </>
-  );
+  return <InventoryContainer />;
 }
 
 export default App;

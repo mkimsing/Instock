@@ -1,5 +1,6 @@
 .item {
-  margin: 10px 16px;
+  border-bottom: solid $SILVER 1px;
+  padding-bottom: 24px;
   &__flexContainer {
     display: flex;
     flex-direction: column;

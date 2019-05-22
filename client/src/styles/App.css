@@ -68,7 +68,8 @@ body h5 {
 }
 
 .item {
-  margin: 10px 16px;
+  border-bottom: solid #afafaf 1px;
+  padding-bottom: 24px;
 }
 
 .item__flexContainer {
@@ -94,5 +95,9 @@ body h5 {
   font-size: 14px;
   margin-top: 24px;
   margin-bottom: 16px;
+}
+
+.inventoryPage {
+  margin: 32px 16px 10px 16px;
 }
 /*# sourceMappingURL=App.css.map */
