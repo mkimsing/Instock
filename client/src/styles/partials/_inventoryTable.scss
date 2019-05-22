@@ -1,0 +1,138 @@
+
+/*=============================================
+=              Headers (For tab/desk)        =
+=============================================*/
+.inventoryTable__Headers{
+  display:none;
+}
+@media(min-width: 768px){
+  .inventoryTable{   
+    input{
+      width: 40%;
+    }
+
+    &__Headers{
+      margin:0px 5px;
+      display:flex;
+      justify-content: space-between;
+
+      h5{
+        margin: 0px;
+        width: 15%;
+      }
+
+      h5:first-child{
+        width: 30%;
+        max-width:30%;
+        margin-right: 16px;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+
+/*=============================================
+=            Table Rows / Cells          =
+=============================================*/
+.item {
+  border-bottom: solid $SILVER 1px;
+  padding-bottom: 24px;
+  &__flexContainer {
+    display: flex;
+    flex-direction: column;
+
+    .kebabButton{
+      mask-image: url("../assets/Icons/SVG//Icon-kebab-default.svg");
+      background-color:black;
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+
+      border: none;
+      height: 20px;
+    }
+    .kebabContainer{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+
+      //Kebab button
+      button{
+        margin-right: 10px;
+      }
+    }
+
+    h5,
+    h4 {
+      margin: 0px;
+    }
+
+    //Product name title
+    h2 {
+      margin: 0px 0px 16px 0px;
+    }
+
+    h5 {
+      font-size: 14px;
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+
+    .kebabButton.fullSizeOnly{
+      display:none;
+    }
+  }
+}
+
+@media (min-width: 768px){
+  .item{
+    margin: 24px 5px;
+    &__flexContainer{
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      h5{
+        display:none;
+      }
+
+      h2{
+        margin-bottom: 0px;
+      }
+
+      .kebabContainer{
+        display:none;
+      }
+
+      .item__text{
+        width: 30%;
+        max-width:30%;
+        margin-right: 16px;
+        margin-left: 8px;
+      }
+      .tableCell{
+        width: 15%;
+      }
+
+      #kebabCell{
+        display:flex;
+        justify-content: space-between
+      }
+
+      .kebabButton.fullSizeOnly{
+        display:block;
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+@media(min-width: 1440px){
+  .item{
+    &__flexContainer{
+      align-items: center;
+    }
+
+  }
+}

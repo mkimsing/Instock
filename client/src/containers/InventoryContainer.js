@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import apiInfo from "../helpers/api_info";
-import InventoryList from "../components/InventoryList";
+import Inventory from "../components/Inventory";
 export default class InventoryContainer extends Component {
   state = {
     inventory: {}
@@ -15,6 +15,6 @@ export default class InventoryContainer extends Component {
     });
   }
   render() {
-    return <InventoryList />;
+    return <Inventory />;
   }
 }
