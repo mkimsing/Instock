@@ -14,3 +14,4 @@ app.listen(PORT, () => {
 
 //Put routes here:
 app.use("/inventory", require("./routes/inventory"));
+app.use("/warehouses", require("./routes/warehouses"));
