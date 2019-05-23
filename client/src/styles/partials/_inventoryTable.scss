@@ -55,7 +55,8 @@
     font-size: 14px;
     font-family: AvenirNext;
     z-index: 1; // Force on top
-
+    border-radius: 2px;
+    box-shadow: 0px 40px 30px 0px rgba(225, 225, 225, 0.4); //Color is $MERCURY
     &--show {
       display: block;
     }
@@ -78,7 +79,7 @@
   }
 
   .mobileOnly {
-    display: block; //May be overridden by display:flex, etc
+    display: block; //Show by default, may be overridden by display:flex, etc
   }
 
   &__flexContainer {
@@ -148,7 +149,7 @@
     }
     &__flexContainer {
       flex-direction: row;
-      align-items: flex-end;
+      align-items: center;
       justify-content: space-between;
 
       h5 {
@@ -201,8 +202,6 @@
 @media (min-width: 1440px) {
   .item {
     &__flexContainer {
-      align-items: center;
-
       #kebabCell {
         .kebabContainer {
           .removeButton {
