@@ -1,14 +1,18 @@
 import React from 'react';
+import RightArrow from '../assets/Icons/SVG/Icon-arrow-right.svg';
 
 function AllWarehouses(props) {
-    // console.log(props.warehouses)
     return (
-        <div>
-            <div>
-                <h1>Locations</h1>
-                <div>Search bar</div>
+        <div className='warehousesPage'>
+            <div className='warehousesPage__header'>
+                <h1 className='warehousesPage__header--title'>Locations</h1>
+                <form>
+                    <div className='warehousesPage__header--search'>
+                        <input className='warehousesPage__header--search warehousesPage__header--searchBar' type='text' name='search' placeholder='Search'></input>
+                    </div>
+                </form>
             </div>
-            <div>
+            <div className='warehousesPage__desktop--categories'>
                 <div>WAREHOUSE</div>
                 <div>CONTACT</div>
                 <div>CONTACT INFORMATION</div>
@@ -23,7 +27,6 @@ function AllWarehouses(props) {
 
 function WarehousesList(props) {
     const warehouseArray = props.warehouses
-    // console.log(warehouseArray)
     if (Object.keys(warehouseArray).length === 0) return <div>Loading...</div>
     const warehouseList = warehouseArray.map((warehouse) => {
         return <Warehouse
@@ -51,12 +54,14 @@ function Warehouse(props) {
     categorySort(categories)
     return (
         <div>
-            <div>
-                <div>
-                    <div>{props.warehouse.name}</div>
-                    <div>{props.warehouse.location}</div>
+            <div className='warehousesPage__warehouse'>
+                <div className='warehousesPage__warehouse--nameLoc'>
+                    <div className='warehousesPage__warehouse--name'>{props.warehouse.name}</div>
+                    <div className='warehousesPage__warehouse--loc'>{props.warehouse.location}</div>
                 </div>
-                <div>arrow icon</div>
+                <div className='warehousesPage__warehouse--arrow'>
+                    <img src={RightArrow} />
+                </div>
             </div>
             <div>
                 <div>{props.warehouse.contact.name}</div>
@@ -68,6 +73,9 @@ function Warehouse(props) {
             </div>
             <div>
                 <div>{props.warehouse.categories}</div>
+                <div className='warehousesPage__desktop--arrow'>
+                    <img src={RightArrow}></img>
+                </div>
             </div>
         </div>
     )

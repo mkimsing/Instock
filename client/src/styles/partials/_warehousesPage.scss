@@ -1,0 +1,66 @@
+.warehousesPage {
+    margin: 0 16px;
+    font-size: 0.9rem;
+    // display: none;
+    &__header {
+        &--title {
+            margin-top: 32px;
+        }
+        &--search {
+            display: flex;
+            flex-basis: 100%;
+            border-radius: 5px;
+            height: 48px;
+            background-color: $ALABASTER;
+            border: $MERCURY solid 1px;
+            background: none;
+            width: 80%;
+            margin-bottom: 16px;
+        }
+        &--searchBar {
+            display: flex;
+            // flex-basis: 100%;
+            background-image: url('../assets/Icons/SVG/Icon-search.svg');
+            background-repeat: no-repeat;
+            background-size: 16px;
+            background-position: 12px 50%;
+            padding-left: 30px;
+            height: 100%;
+            width: 80%;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: none;
+            background-color: $ALABASTER;
+        }
+    }
+    &__desktop {
+        &--categories {
+            display: none;
+        }
+        &--arrow {
+            display: none;
+        }
+    }
+    &__warehouse {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &--nameLoc {
+            display: flex;
+            flex-direction: column;
+        }
+        &--name {
+            // font-weight: bold;
+            font-weight: 550;
+        }
+        &--arrow {
+            display: flex;
+            align-content: flex-start;
+            // * {
+            //     display: flex;
+            //     align-content: flex-start;
+            // }
+        }
+    }
+}
+
