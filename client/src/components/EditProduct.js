@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Switch from "react-switch";
 import BackArrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 
-export default class InventoryDetailComponent extends Component {
+export default class EditProduct extends Component {
   constructor(props) {
     super(props);
     this.state = { checked: false };
