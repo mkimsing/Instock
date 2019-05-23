@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/App.css";
+
 import { Switch, Route } from "react-router-dom";
 import WarehousesContainer from "./containers/WarehousesContainer";
 import InventoryContainer from "./containers/InventoryContainer";
@@ -20,6 +21,7 @@ class App extends React.Component {
       </div>
     );
   }
+
 }
 
 export default App;
