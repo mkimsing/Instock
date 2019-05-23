@@ -1,0 +1,129 @@
+[
+  {
+    "id": 1,
+    "name": "Warehouse Number 1",
+    "location": "121 Main Street, Vancouver, BC",
+    "contact":
+      {
+        "name": "Chuck Peterson",
+        "position": "Warehouse Manager",
+        "phone": "604-321-8971",
+        "email": "chuck.pete@warehouse1.com"
+      } ,
+    "categories": [
+      "Industrial", "Automotive", "Heavy Mechanical", "Engineering"
+    ]
+  }, {
+    "id": 2,
+    "name": "Warehouse Number 2",
+    "location": "122 Main Street, Vancouver, BC",
+    "contact": 
+      {
+        "name": "Truck Leverson",
+        "position": "Warehouse Manager",
+        "phone": "604-241-8971",
+        "email": "truck.lever@warehouse2.com"
+      } ,
+    "categories": [
+      "Industrial", "Automotive", "Heavy Mechanical", "Engineering"
+    ]
+  }, {
+    "id": 3,
+    "name": "Warehouse Number 3",
+    "location": "123 Main Street, Vancouver, BC",
+    "contact": 
+      {
+        "name": "Pete Charleson",
+        "position": "Warehouse Manager",
+        "phone": "604-321-8964",
+        "email": "pete.chuck@warehouse2.com"
+      },
+    "categories": [
+      "Industrial", "Automotive", "Heavy Mechanical", "Engineering"
+    ]
+  }, {
+    "id": 4,
+    "name": "Warehouse Number 4",
+    "location": "124 Main Street, Vancouver, BC",
+    "contact": 
+      {
+        "name": "Darlene Smith",
+        "position": "Warehouse Manager",
+        "phone": "604-321-7671",
+        "email": "dar.smith@warehouse4.com"
+      },
+    "categories": [
+      "Industrial", "Automotive", "Heavy Mechanical", "Engineering"
+    ]
+  }, {
+    "id": 5,
+    "name": "Warehouse Number 5",
+    "location": "125 Main Street, Vancouver, BC",
+    "contact": 
+      {
+        "name": "Pete Patterson",
+        "position": "Warehouse Manager",
+        "phone": "604-656-6756",
+        "email": "pete.pat@warehouse5.com"
+      },
+    "categories": [
+      "Industrial", "Automotive", "Heavy Mechanical", "Engineering"
+    ]
+  }, {
+    "id": 6,
+    "name": "Warehouse Number 6",
+    "location": "123 Main Street, Vancouver, BC",
+    "contact": 
+      {
+        "name": "Lisa Chen",
+        "position": "Warehouse Manager",
+        "phone": "604-321-8971",
+        "email": "l.chen@warehouse6.com"
+      },
+    "categories": [
+      "Industrial", "Automotive", "Heavy Mechanical", "Engineering"
+    ]
+  }, {
+    "id": 7,
+    "name": "Warehouse Number 7",
+    "location": "127 Main Street, Vancouver, BC",
+    "contact": 
+      {
+        "name": "Sarah A",
+        "position": "Warehouse Manager",
+        "phone": "604-321-8001",
+        "email": "saraha@warehous71.com"
+      },
+    "categories": [
+      "Industrial", "Automotive", "Heavy Mechanical", "Engineering"
+    ]
+  }, {
+    "id": 8,
+    "name": "Warehouse Number 8",
+    "location": "128 Main Street, Vancouver, BC",
+    "contact": 
+      {
+        "name": "Janet K",
+        "position": "Warehouse Manager",
+        "phone": "604-321-8971",
+        "email": "jk@warehouse8.com"
+      },
+    "categories": [
+      "Industrial", "Automotive", "Heavy Mechanical", "Engineering"
+    ]
+  }, {
+    "id": 9,
+    "name": "Warehouse Number 9",
+    "location": "129 Main Street, Vancouver, BC",
+    "contact": 
+      {
+        "name": "Taylor M",
+        "position": "Warehouse Manager",
+        "phone": "604-021-8971",
+        "email": "taylor.m@warehouse9.com"
+      },
+    "categories": [
+      "Industrial", "Automotive", "Heavy Mechanical", "Engineering"
+    ]
+  }
+]
