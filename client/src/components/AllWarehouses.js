@@ -1,5 +1,7 @@
 import React from 'react';
 import RightArrow from '../assets/Icons/SVG/Icon-arrow-right.svg';
+import Add from '../assets/Icons/SVG/Icon-add.svg';
+import { Link } from 'react-router-dom';
 
 function AllWarehouses(props) {
     return (
@@ -20,6 +22,9 @@ function AllWarehouses(props) {
             </div>
             <div>
                 <WarehousesList warehouses={props.warehouses} />
+            </div>
+            <div className='warehousesPage__add'>
+                <img className='warehousesPage__add--img' src={Add} />
             </div>
         </div>
     )
@@ -53,30 +58,33 @@ function Warehouse(props) {
     }
     categorySort(categories)
     return (
-        <div>
-            <div className='warehousesPage__warehouse'>
-                <div className='warehousesPage__warehouse--nameLoc'>
-                    <div className='warehousesPage__warehouse--name'>{props.warehouse.name}</div>
-                    <div className='warehousesPage__warehouse--loc'>{props.warehouse.location}</div>
+        <div className='warehousesPage__table'>
+            <div className='warehousesPage__left'>
+                <div className='warehousesPage__warehouse'>
+                    <div className='warehousesPage__warehouse--nameLoc'>
+                        <div className='warehousesPage__warehouse--name'>{props.warehouse.name}</div>
+                        <div className='warehousesPage__warehouse--loc'>{props.warehouse.location}</div>
+                    </div>
                 </div>
-                <div className='warehousesPage__warehouse--arrow'>
-                    <img src={RightArrow} />
+                <div className='warehousesPage__contact'>
+                    <div className='warehousesPage__contact--namePos'>
+                        <div className='warehousesPage__contact--name'>{props.warehouse.contact.name}</div>
+                        <div className='warehousesPage__contact--pos'>{props.warehouse.contact.position}</div>
+                    </div>
+                    <div className='warehousesPage__contact--info'>
+                        <div className='warehousesPage__contact--phone'>{props.warehouse.contact.phone}</div>
+                        <div className='warehousesPage__contact--email'>{props.warehouse.contact.email}</div>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div>{props.warehouse.contact.name}</div>
-                <div>{props.warehouse.contact.position}</div>
-            </div>
-            <div>
-                <div>{props.warehouse.contact.phone}</div>
-                <div>{props.warehouse.contact.email}</div>
-            </div>
-            <div>
-                <div>{props.warehouse.categories}</div>
-                <div className='warehousesPage__desktop--arrow'>
-                    <img src={RightArrow}></img>
+                <div className='warehousesPage__categories'>
+                    <div>{props.warehouse.categories}</div>
                 </div>
             </div>
+            {/* <Link> */}
+            <div className='warehousesPage__warehouse--arrow'>
+                <img src={RightArrow} />
+            </div>
+            {/* </Link> */}
         </div>
     )
 }

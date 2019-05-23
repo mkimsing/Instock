@@ -364,8 +364,9 @@ body h5 {
 }
 
 .warehousesPage {
-  margin: 0 16px;
+  margin: 0 16px 60px;
   font-size: 0.9rem;
+  color: #323232;
 }
 
 .warehousesPage__header--title {
@@ -384,33 +385,48 @@ body h5 {
   border: #e1e1e1 solid 1px;
   background: none;
   width: 80%;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 
 .warehousesPage__header--searchBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url("../assets/Icons/SVG/Icon-search.svg");
-  background-repeat: no-repeat;
+  background: url("../assets/Icons/SVG/Icon-search.svg") no-repeat #fafafa;
   background-size: 16px;
   background-position: 12px 50%;
-  padding-left: 30px;
+  padding-left: 34px;
   height: 100%;
   width: 80%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 5px;
   border: none;
-  background-color: #fafafa;
+  font-family: AvenirNext;
 }
 
 .warehousesPage__desktop--categories {
   display: none;
 }
 
-.warehousesPage__desktop--arrow {
-  display: none;
+.warehousesPage__table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px #afafaf solid;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+
+.warehousesPage__left {
+  width: 75%;
 }
 
 .warehousesPage__warehouse {
@@ -434,10 +450,12 @@ body h5 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 24px;
 }
 
 .warehousesPage__warehouse--name {
   font-weight: 550;
+  padding-bottom: 8px;
 }
 
 .warehousesPage__warehouse--arrow {
@@ -446,5 +464,48 @@ body h5 {
   display: flex;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+  height: 16px;
+}
+
+.warehousesPage__contact--namePos {
+  padding-bottom: 24px;
+}
+
+.warehousesPage__contact--name {
+  padding-bottom: 6px;
+}
+
+.warehousesPage__contact--pos {
+  font-style: italic;
+}
+
+.warehousesPage__contact--info {
+  padding-bottom: 24px;
+}
+
+.warehousesPage__contact--phone {
+  padding-bottom: 6px;
+}
+
+.warehousesPage__contact__categories {
+  line-height: 1.2rem;
+}
+
+.warehousesPage__add {
+  background: #004892;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+}
+
+.warehousesPage__add--img {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 /*# sourceMappingURL=App.css.map */

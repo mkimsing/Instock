@@ -1,6 +1,7 @@
 .warehousesPage {
-    margin: 0 16px;
+    margin: 0 16px 60px;
     font-size: 0.9rem;
+    color: $BLACK;
     // display: none;
     &__header {
         &--title {
@@ -15,31 +16,38 @@
             border: $MERCURY solid 1px;
             background: none;
             width: 80%;
-            margin-bottom: 16px;
+            margin-bottom: 32px;
         }
         &--searchBar {
             display: flex;
             // flex-basis: 100%;
-            background-image: url('../assets/Icons/SVG/Icon-search.svg');
-            background-repeat: no-repeat;
+            background: url('../assets/Icons/SVG/Icon-search.svg') no-repeat $ALABASTER;
             background-size: 16px;
             background-position: 12px 50%;
-            padding-left: 30px;
+            padding-left: 34px;
             height: 100%;
             width: 80%;
             box-sizing: border-box;
             border-radius: 5px;
             border: none;
-            background-color: $ALABASTER;
+            font-family: AvenirNext;
         }
     }
     &__desktop {
         &--categories {
             display: none;
         }
-        &--arrow {
-            display: none;
-        }
+    }
+    &__table {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px $SILVER solid;
+        padding-bottom: 24px;
+        margin-bottom: 32px;
+    }
+    &__left {
+        width: 75%;
     }
     &__warehouse {
         display: flex;
@@ -48,18 +56,55 @@
         &--nameLoc {
             display: flex;
             flex-direction: column;
+            padding-bottom: 24px;
         }
         &--name {
-            // font-weight: bold;
             font-weight: 550;
+            padding-bottom: 8px;
         }
         &--arrow {
             display: flex;
             align-content: flex-start;
-            // * {
-            //     display: flex;
-            //     align-content: flex-start;
-            // }
+            height: 16px;
+        }
+    }
+    &__contact {
+        &--namePos {
+            padding-bottom: 24px;
+        }
+        &--name {
+            padding-bottom: 6px;
+        }
+        &--pos {
+            font-style: italic;
+        }
+        &--info {
+            padding-bottom: 24px;
+        }
+        &--phone {
+            padding-bottom: 6px;
+        }
+        // &--email {
+
+        // }
+    &__categories {
+        line-height: 1.2rem;
+    }
+    }
+    &__add {
+        background: $BLUE;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        position: fixed;
+        bottom: 100px;
+        right: 24px;
+        &--img {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
         }
     }
 }
