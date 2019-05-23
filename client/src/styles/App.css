@@ -465,6 +465,7 @@ body h5 {
   -ms-flex-line-pack: start;
       align-content: flex-start;
   height: 16px;
+  padding-right: 12px;
 }
 
 .warehousesPage__contact--namePos {
