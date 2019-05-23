@@ -3,6 +3,7 @@ import "./styles/App.css";
 import { Switch, Route } from "react-router-dom";
 import WarehousesContainer from "./containers/WarehousesContainer";
 import InventoryContainer from "./containers/InventoryContainer";
+import navBar from "./components/NavBar";
 
 class App extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class App extends React.Component {
       <div className="App">
         <Switch>
           {/* When a user hits the homepage, redirect them to the list of warehouses */}
-
+          <Route path="/navBar" component={navBar} />
           <Route path="/" exact component={WarehousesContainer} />
           <Route path="/warehouses" component={WarehousesContainer} />
           <Route path="/inventory" component={InventoryContainer} />

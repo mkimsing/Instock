@@ -1,23 +1,27 @@
-@import "fonts";
-@import "colors";
+// @import "fonts";
+// @import "colors";
+
+/*=============================================
+=              NavBar                         =
+=============================================*/
 
 /* MOBILE - screen 320 px */
 
-navBar {
+.NavBar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 80px;
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-top: 16px;
-  margin-bottom: 16px;
   width: 100vw;
   background-color: $BLACK;
 
   header {
     margin-left: 69px;
     margin-right: 69px;
+
+    .logo {
+      margin-top: 16px;
+    }
   }
 
   nav {
@@ -29,17 +33,15 @@ navBar {
     font-family: "AvenirNext", Arial, Helvetica, sans-serif;
   }
 
-  $a-tags: "a, a:active, a:hover, a:visited";
-  $a-tags-hover: "a:active, a:hover";
-
-  #{$a-tags} {
+  a {
     color: $ALABASTER;
-    text-decoration: none;
     font-family: "AvenirNext", Arial, Helvetica, san-serif;
+    text-decoration: none;
   }
 
-  #{$a-tags-hover} {
-    font-family: "AvenirNext", Arial, Helvetica, san-serif;
+  a:active,
+  a:hover,
+  a:visited {
     font-weight: 550;
     margin-bottom: 20px;
     border-bottom: 2px solid $ALABASTER;

@@ -360,7 +360,96 @@ body h5 {
   }
   .inventoryPage input {
     width: 24%;
+  }
+}
 
+/*=============================================
+=              NavBar                         =
+=============================================*/
+/* MOBILE - screen 320 px */
+.NavBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+  width: 100vw;
+  background-color: #323232;
+}
+
+.NavBar header {
+  margin-left: 69px;
+  margin-right: 69px;
+}
+
+.NavBar header .logo {
+  margin-top: 16px;
+}
+
+.NavBar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 16px;
+  color: #fafafa;
+  font-family: "AvenirNext", Arial, Helvetica, sans-serif;
+}
+
+.NavBar a {
+  color: #fafafa;
+  font-family: "AvenirNext", Arial, Helvetica, san-serif;
+  text-decoration: none;
+}
+
+.NavBar a:active,
+.NavBar a:hover,
+.NavBar a:visited {
+  font-weight: 550;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #fafafa;
+}
+
+/* MEDIA QUERIES */
+/* TABLET 768px */
+@media (min-width: 768px) {
+  navBar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  navBar nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+/* MEDIA QUERIES */
+/* DESKTOP 1440px */
+@media (min-width: 1440px) {
+  navBar {
+    margin-left: 180px;
+    margin-right: 180px;
   }
 }
 /*# sourceMappingURL=App.css.map */
