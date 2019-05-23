@@ -14,7 +14,8 @@ export default class InventoryContainer extends Component {
       });
     });
   }
+
   render() {
-    return <Inventory />;
+    return <Inventory inventory={this.state.inventory} />;
   }
 }
