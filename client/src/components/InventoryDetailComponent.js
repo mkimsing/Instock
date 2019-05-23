@@ -32,7 +32,7 @@ export default class InventoryDetailComponent extends Component {
           </div>
           <div>
             <div className="form__row--flex">
-              <div className="form--flex">
+              <div className="form--flex form__margin--right">
                 ORDERED BY
                 <input type="text" placeholder="Mark Saunders" />
               </div>
@@ -42,7 +42,7 @@ export default class InventoryDetailComponent extends Component {
               </div>
             </div>
             <div className="form__row--flex">
-              <div className="form--flex">
+              <div className="form--flex form__margin--right">
                 LAST ORDERED
                 <input type="text" placeholder="2018-05-24" />
               </div>
@@ -56,14 +56,16 @@ export default class InventoryDetailComponent extends Component {
               </div>
             </div>
             <div className="form__row--flex">
-              <div className="form--flex">
+              <div className="form--flex form__margin--right">
                 QUANTITY
                 <input type="text" placeholder="0" />
               </div>
-              <div>
+              <div className="form--flex">
                 STATUS
                 <div className="form__stock">
-                  <div className="form__stock-text">In Stock</div>
+                  {/* <div className="form__stock--flex">
+                    <div className="toggle__button--flex"> */}
+                  <span className="form__stock-text">In Stock</span>
                   <label className="form__toggle-button">
                     <Switch
                       onChange={this.handleChange}
@@ -77,6 +79,8 @@ export default class InventoryDetailComponent extends Component {
                       boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
                     />
                   </label>
+                  {/* </div>
+                  </div> */}
                 </div>
               </div>
             </div>

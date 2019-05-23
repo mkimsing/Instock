@@ -21,6 +21,11 @@
     font-size: 13px;
     line-height: 20px;
 
+    &--flex {
+      display: flex;
+      flex-direction: column;
+    }
+
     input,
     textarea {
       border: $MERCURY 1px solid;
@@ -37,12 +42,14 @@
       line-height: 18px;
       width: 72vw;
       font-size: 12.5px;
+      font-family: AvenirNext;
     }
 
     input::placeholder {
       color: black;
       padding-left: 15px;
       font-size: 13px;
+      font-family: AvenirNext;
     }
 
     input {
@@ -50,11 +57,14 @@
     }
 
     &__city {
-      height: 40px;
+      height: 43px;
       border: $MERCURY 1px solid;
       margin-bottom: 24px;
       padding-left: 15px;
       font-size: 12px;
+      font-family: AvenirNext;
+      background-color: $ALABASTER;
+      border-radius: 4px;
     }
 
     &__stock {
@@ -70,6 +80,7 @@
       display: flex;
       align-items: center;
       font-size: 13px;
+      font-family: AvenirNext;
     }
 
     &__toggle-button {
@@ -109,13 +120,26 @@
       width: 67vw;
       display: flex;
 
-      &--flex {
+      &__row--flex {
         display: flex;
-        flex-direction: column;
+        width: 100%;
+      }
 
-        &--row--flex {
-          display: flex;
-        }
+      &--flex {
+        width: 100%;
+      }
+
+      &__margin--right {
+        margin-right: 40px;
+      }
+
+      &__stock {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      .toggle__button--flex {
+        display: flex;
       }
     }
   }

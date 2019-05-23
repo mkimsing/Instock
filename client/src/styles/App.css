@@ -99,6 +99,16 @@ body h5 {
   line-height: 20px;
 }
 
+.product-detail-page--margin .form--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .product-detail-page--margin .form input,
 .product-detail-page--margin .form textarea {
   border: #e1e1e1 1px solid;
@@ -115,6 +125,7 @@ body h5 {
   line-height: 18px;
   width: 72vw;
   font-size: 12.5px;
+  font-family: AvenirNext;
 }
 
 .product-detail-page--margin .form textarea:-ms-input-placeholder {
@@ -124,6 +135,7 @@ body h5 {
   line-height: 18px;
   width: 72vw;
   font-size: 12.5px;
+  font-family: AvenirNext;
 }
 
 .product-detail-page--margin .form textarea::-ms-input-placeholder {
@@ -133,6 +145,7 @@ body h5 {
   line-height: 18px;
   width: 72vw;
   font-size: 12.5px;
+  font-family: AvenirNext;
 }
 
 .product-detail-page--margin .form textarea::placeholder {
@@ -142,30 +155,35 @@ body h5 {
   line-height: 18px;
   width: 72vw;
   font-size: 12.5px;
+  font-family: AvenirNext;
 }
 
 .product-detail-page--margin .form input::-webkit-input-placeholder {
   color: black;
   padding-left: 15px;
   font-size: 13px;
+  font-family: AvenirNext;
 }
 
 .product-detail-page--margin .form input:-ms-input-placeholder {
   color: black;
   padding-left: 15px;
   font-size: 13px;
+  font-family: AvenirNext;
 }
 
 .product-detail-page--margin .form input::-ms-input-placeholder {
   color: black;
   padding-left: 15px;
   font-size: 13px;
+  font-family: AvenirNext;
 }
 
 .product-detail-page--margin .form input::placeholder {
   color: black;
   padding-left: 15px;
   font-size: 13px;
+  font-family: AvenirNext;
 }
 
 .product-detail-page--margin .form input {
@@ -173,11 +191,14 @@ body h5 {
 }
 
 .product-detail-page--margin .form__city {
-  height: 40px;
+  height: 43px;
   border: #e1e1e1 1px solid;
   margin-bottom: 24px;
   padding-left: 15px;
   font-size: 12px;
+  font-family: AvenirNext;
+  background-color: #fafafa;
+  border-radius: 4px;
 }
 
 .product-detail-page--margin .form__stock {
@@ -201,6 +222,7 @@ body h5 {
       -ms-flex-align: center;
           align-items: center;
   font-size: 13px;
+  font-family: AvenirNext;
 }
 
 .product-detail-page--margin .form__toggle-button {
@@ -243,16 +265,23 @@ body h5 {
     display: -ms-flexbox;
     display: flex;
   }
-  .product-detail-page--margin .form--flex {
+  .product-detail-page--margin .form__row--flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    width: 100%;
   }
-  .product-detail-page--margin .form--flex--row--flex {
+  .product-detail-page--margin .form--flex {
+    width: 100%;
+  }
+  .product-detail-page--margin .form__margin--right {
+    margin-right: 40px;
+  }
+  .product-detail-page--margin .form__stock {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .product-detail-page--margin .form .toggle__button--flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
