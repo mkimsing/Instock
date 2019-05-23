@@ -118,76 +118,19 @@ body h5 {
   resize: none;
 }
 
-.product-detail-page--margin .form textarea::-webkit-input-placeholder {
-  color: black;
-  padding-left: 15px;
-  padding-top: 8px;
+.product-detail-page--margin .form textarea {
   line-height: 18px;
-  width: 72vw;
   font-size: 12.5px;
   font-family: AvenirNext;
-}
-
-.product-detail-page--margin .form textarea:-ms-input-placeholder {
-  color: black;
-  padding-left: 15px;
-  padding-top: 8px;
-  line-height: 18px;
-  width: 72vw;
-  font-size: 12.5px;
-  font-family: AvenirNext;
-}
-
-.product-detail-page--margin .form textarea::-ms-input-placeholder {
-  color: black;
-  padding-left: 15px;
-  padding-top: 8px;
-  line-height: 18px;
-  width: 72vw;
-  font-size: 12.5px;
-  font-family: AvenirNext;
-}
-
-.product-detail-page--margin .form textarea::placeholder {
-  color: black;
-  padding-left: 15px;
-  padding-top: 8px;
-  line-height: 18px;
-  width: 72vw;
-  font-size: 12.5px;
-  font-family: AvenirNext;
-}
-
-.product-detail-page--margin .form input::-webkit-input-placeholder {
-  color: black;
-  padding-left: 15px;
-  font-size: 13px;
-  font-family: AvenirNext;
-}
-
-.product-detail-page--margin .form input:-ms-input-placeholder {
-  color: black;
-  padding-left: 15px;
-  font-size: 13px;
-  font-family: AvenirNext;
-}
-
-.product-detail-page--margin .form input::-ms-input-placeholder {
-  color: black;
-  padding-left: 15px;
-  font-size: 13px;
-  font-family: AvenirNext;
-}
-
-.product-detail-page--margin .form input::placeholder {
-  color: black;
-  padding-left: 15px;
-  font-size: 13px;
-  font-family: AvenirNext;
+  padding: 16px 37px 10px 16px;
 }
 
 .product-detail-page--margin .form input {
+  font-size: 13px;
+  font-family: AvenirNext;
   height: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .product-detail-page--margin .form__city {
@@ -265,6 +208,12 @@ body h5 {
     display: -ms-flexbox;
     display: flex;
   }
+  .product-detail-page--margin .form textarea {
+    padding-right: 114px;
+  }
+  .product-detail-page--margin .form #categories {
+    margin-bottom: 0px;
+  }
   .product-detail-page--margin .form__row--flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -280,11 +229,67 @@ body h5 {
   .product-detail-page--margin .form__stock {
     margin-top: 0px;
     margin-bottom: 0px;
+    height: 40px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .product-detail-page--margin .form .toggle__button--flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .product-detail-page--margin .form .form__categories--margin {
+    margin-bottom: 48px;
+  }
+  .product-detail-page--margin .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-top: 1px #e1e1e1 solid;
+    margin-bottom: 40px;
+    padding-top: 40px;
+  }
+  .product-detail-page--margin .buttons button {
+    height: 48px;
+    width: 160px;
+    margin-left: 40px;
+  }
+  .product-detail-page--margin .buttons .cancel-button {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .product-detail-page--margin {
+    margin-right: 180px;
+    margin-left: 180px;
+  }
+  .product-detail-page--margin .form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: initial;
+    margin-right: 20px;
+  }
+  .product-detail-page--margin .form__description {
+    margin-right: 40px;
+    width: 75vw;
+  }
+  .product-detail-page--margin .form #categories {
+    margin-bottom: 0px;
+  }
+  .product-detail-page--margin .form aside {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=App.css.map */

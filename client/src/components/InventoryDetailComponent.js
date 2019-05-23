@@ -20,83 +20,85 @@ export default class InventoryDetailComponent extends Component {
           <img src={BackArrow} />
           <h1>Product Name</h1>
         </div>
-        <form className="form">
-          <div className="form--flex">
-            ITEM DESCRIPTION
-            <textarea
-              rows="8"
-              placeholder="Here is a more detailed summary of the product name, it’s uses,
+        <div>
+          <form className="form">
+            <div className="form--flex form__description">
+              ITEM DESCRIPTION
+              <textarea
+                rows="5"
+                placeholder="Here is a more detailed summary of the product name, it’s uses,
           industries and possible attributes that could be used to describe the
           product."
-            />
-          </div>
-          <div>
-            <div className="form__row--flex">
-              <div className="form--flex form__margin--right">
-                ORDERED BY
-                <input type="text" placeholder="Mark Saunders" />
-              </div>
-              <div className="form--flex">
-                REFERENCE NUMBER
-                <input type="text" placeholder="JK2020FD7811201" />
-              </div>
+              />
             </div>
-            <div className="form__row--flex">
-              <div className="form--flex form__margin--right">
-                LAST ORDERED
-                <input type="text" placeholder="2018-05-24" />
-              </div>
-              <div className="form--flex">
-                LOCATION
-                <select className="form__city">
-                  <option value="Toronto">Toronto, CA</option>
-                  <option value="Vancouver">Vancouver, CA</option>
-                  <option value="Calgary">Calgary, CA</option>
-                </select>
-              </div>
-            </div>
-            <div className="form__row--flex">
-              <div className="form--flex form__margin--right">
-                QUANTITY
-                <input type="text" placeholder="0" />
-              </div>
-              <div className="form--flex">
-                STATUS
-                <div className="form__stock">
-                  {/* <div className="form__stock--flex">
-                    <div className="toggle__button--flex"> */}
-                  <span className="form__stock-text">In Stock</span>
-                  <label className="form__toggle-button">
-                    <Switch
-                      onChange={this.handleChange}
-                      checked={this.state.checked}
-                      uncheckedIcon={false}
-                      checkedIcon={false}
-                      height={22}
-                      width={40}
-                      onColor="#49C342"
-                      handleDiameter={22}
-                      boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                    />
-                  </label>
-                  {/* </div>
-                  </div> */}
+            <aside>
+              <div className="form__row--flex">
+                <div className="form--flex form__margin--right">
+                  ORDERED BY
+                  <input type="text" placeholder="Mark Saunders" />
+                </div>
+                <div className="form--flex">
+                  REFERENCE NUMBER
+                  <input type="text" placeholder="JK2020FD7811201" />
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="form--flex">
-            CATEGORIES
-            <textarea
-              rows="6"
-              placeholder="Industrial, Automotive, Heavy,
+              <div className="form__row--flex">
+                <div className="form--flex form__margin--right">
+                  LAST ORDERED
+                  <input type="text" placeholder="2018-05-24" />
+                </div>
+                <div className="form--flex">
+                  LOCATION
+                  <select className="form__city">
+                    <option value="Toronto">Toronto, CA</option>
+                    <option value="Vancouver">Vancouver, CA</option>
+                    <option value="Calgary">Calgary, CA</option>
+                  </select>
+                </div>
+              </div>
+              <div className="form__row--flex">
+                <div className="form--flex form__margin--right">
+                  QUANTITY
+                  <input type="text" placeholder="0" />
+                </div>
+                <div className="form--flex">
+                  STATUS
+                  <div className="form__stock">
+                    <span className="form__stock-text">In Stock</span>
+                    <label className="form__toggle-button">
+                      <Switch
+                        onChange={this.handleChange}
+                        checked={this.state.checked}
+                        uncheckedIcon={false}
+                        checkedIcon={false}
+                        height={22}
+                        width={40}
+                        onColor="#49C342"
+                        handleDiameter={22}
+                        boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="form--flex form__categories--margin">
+                CATEGORIES
+                <textarea
+                  id="categories"
+                  rows="6"
+                  placeholder="Industrial, Automotive, Heavy,
             Mechanical, Engineering,
             Transportation, Sales"
-            />
-          </div>
-        </form>
-        <button>SAVE</button>
-        <div className="cancel-button">CANCEL</div>
+                />
+              </div>
+            </aside>
+          </form>
+        </div>
+        <div className="buttons">
+          <button>SAVE</button>
+          <div className="cancel-button">CANCEL</div>
+        </div>
       </div>
     );
   }
