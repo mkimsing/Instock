@@ -4,30 +4,31 @@ import Add from '../assets/Icons/SVG/Icon-add.svg';
 import { Link } from 'react-router-dom';
 
 function AllWarehouses(props) {
-    return (
-        <div className='warehousesPage'>
-            <div className='warehousesPage__header'>
-                <h1 className='warehousesPage__header--title'>Locations</h1>
-                <form>
-                    <div className='warehousesPage__header--search'>
-                        <input className='warehousesPage__header--search warehousesPage__header--searchBar' type='text' name='search' placeholder='Search'></input>
-                    </div>
-                </form>
+    if (!props.warehouses || Object.keys(props.warehouses.length === 0))
+        return (
+            <div className='warehousesPage'>
+                <div className='warehousesPage__header'>
+                    <h1 className='warehousesPage__header--title'>Locations</h1>
+                    <form>
+                        <div className='warehousesPage__header--search'>
+                            <input className='warehousesPage__header--search warehousesPage__header--searchBar' type='text' name='search' placeholder='Search'></input>
+                        </div>
+                    </form>
+                </div>
+                <div className='warehousesPage__desktop--categories'>
+                    <div>WAREHOUSE</div>
+                    <div>CONTACT</div>
+                    <div>CONTACT INFORMATION</div>
+                    <div>CATEGORIES</div>
+                </div>
+                <div>
+                    <WarehousesList warehouses={props.warehouses} />
+                </div>
+                <div className='warehousesPage__add'>
+                    <img className='warehousesPage__add--img' src={Add} />
+                </div>
             </div>
-            <div className='warehousesPage__desktop--categories'>
-                <div>WAREHOUSE</div>
-                <div>CONTACT</div>
-                <div>CONTACT INFORMATION</div>
-                <div>CATEGORIES</div>
-            </div>
-            <div>
-                <WarehousesList warehouses={props.warehouses} />
-            </div>
-            <div className='warehousesPage__add'>
-                <img className='warehousesPage__add--img' src={Add} />
-            </div>
-        </div>
-    )
+        )
 }
 
 function WarehousesList(props) {
@@ -46,7 +47,6 @@ function WarehousesList(props) {
 }
 
 function Warehouse(props) {
-    console.log(props.warehouse)
     const categories = (props.warehouse.categories)
     function categorySort(catArr) {
         for (let i = 0; i < catArr.length; i++) {
