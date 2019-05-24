@@ -1,6 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const inventoryController = require("../controllers/inventoryController");
+const helper = require("../helpers/helper");
+const fileName = `${__dirname}/../model/inventory.json`;
+
 router
   .route("/")
   //Get all inventory
@@ -25,16 +28,14 @@ router.route("/:id").get((req, res) => {
 });
 
 //Endpoint that will delete an item specified by id.
-router.delete("/inventory/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
   const inventory = inventoryController.getAllInventory();
-  const found = inventory.some(
-    inventory => inventory.id === parseInt(req.params.id)
-  );
+  const found = inventory.some(inventory => inventory.id === req.params.id);
   if (found) {
     const inventoryAfterDeletion = inventory.filter(
-      inventory => inventory.id !== parseInt(req.params.id)
+      inventory => inventory.id !== req.params.id
     );
-    helper.writeJSONfile(fileName, inventoryAfterDeletion);
+    helper.writeJSONFile(fileName, inventoryAfterDeletion);
     res.json({
       msg: `Inventory item with ID: ${req.params.id} has been deleted`,
       inventory: inventoryAfterDeletion
