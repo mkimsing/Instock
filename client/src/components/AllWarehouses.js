@@ -63,7 +63,7 @@ function Warehouse(props) {
                 <div className='warehousesPage__warehouse'>
                     <div className='warehousesPage__warehouse--nameLoc'>
                         <div className='warehousesPage__warehouse--name'>{props.warehouse.name}</div>
-                        <div className='warehousesPage__warehouse--loc'>{props.warehouse.location}</div>
+                        <div className='warehousesPage__warehouse--loc'>{props.warehouse.location.address}, {props.warehouse.location.city}</div>
                     </div>
                 </div>
                 <div className='warehousesPage__contact'>

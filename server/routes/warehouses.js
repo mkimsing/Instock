@@ -8,4 +8,14 @@ router
     res.json(warehouseController.getAllWarehouses());
   });
 
+
+
+// router
+//   .route('/')
+//   .post((req, res) => {
+//     const newWarehouse = {
+//       id: 
+//     }
+//   })
+
 module.exports = router;
