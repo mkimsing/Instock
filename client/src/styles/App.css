@@ -415,7 +415,6 @@ body h5 {
 }
 
 .NavBar a:active,
-.NavBar a:hover,
 .NavBar a:visited {
   font-weight: 550;
   margin-bottom: 20px;
