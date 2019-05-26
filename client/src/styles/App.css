@@ -144,6 +144,11 @@ body h5 {
 .item {
   border-bottom: solid #afafaf 1px;
   padding-bottom: 24px;
+  padding-top: 24px;
+}
+
+.item:hover {
+  background-color: #e1e1e1;
 }
 
 .item .fullSizeOnly {
@@ -162,6 +167,7 @@ body h5 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 5px;
 }
 
 .item__flexContainer .kebabButton {
@@ -189,6 +195,10 @@ body h5 {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+}
+
+.item__flexContainer .topRow h5 {
+  margin-top: 10px;
 }
 
 .item__flexContainer .topRow .kebabButton {
@@ -220,7 +230,7 @@ body h5 {
 
 @media (min-width: 768px) {
   .item {
-    margin: 24px 5px;
+    margin: 0px 5px;
   }
   .item .fullSizeOnly {
     display: block;
@@ -731,6 +741,124 @@ body h5 {
   }
   .product-detail-page--margin .form aside {
     width: 100%;
+  }
+}
+
+.warehouseInventory {
+  margin: 32px 16px 0px 16px;
+}
+
+.warehouseInventory .text--italic {
+  font-style: italic;
+}
+
+.warehouseInventory__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+
+.warehouseInventory__header h1 {
+  margin: 0px;
+}
+
+.warehouseInventory__header a {
+  width: 20px;
+  height: 30px;
+  background-color: black;
+  -webkit-mask-image: url("../assets/Icons/SVG/Icon-back-arrow.svg");
+          mask-image: url("../assets/Icons/SVG/Icon-back-arrow.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  margin-right: 20px;
+}
+
+.warehouseInventory .warehouseInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.warehouseInventory .warehouseInfo h5 {
+  margin: 0px 0px 15px 0px;
+}
+
+.warehouseInventory .warehouseInfo h4 {
+  margin: 0px;
+}
+
+.warehouseInventory .warehouseInfo__addressContainer .addressInfo, .warehouseInventory .warehouseInfo__addressContainer .postalInfo {
+  margin-bottom: 25px;
+}
+
+.warehouseInventory .warehouseInfo__contactContainer .nameInfo, .warehouseInventory .warehouseInfo__contactContainer .contactInfo {
+  margin-bottom: 25px;
+}
+
+.tableBG {
+  background-color: #fafafa;
+  padding: 10px 0px 20px 0px;
+}
+
+.tableBG .tableContainer {
+  margin: 16px 16px 10px 16px;
+}
+
+@media (min-width: 768px) {
+  .warehouseInventory {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .warehouseInventory__header {
+    margin-bottom: 24px;
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 20px;
+  }
+  .warehouseInventory__header a {
+    height: 20px;
+    margin-right: 10px;
+  }
+  .warehouseInventory .warehouseInfo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .warehouseInventory .warehouseInfo__addressContainer {
+    margin-right: 33vw;
+  }
+  .tableBG .tableContainer {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .warehouseInventory {
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+  .warehouseInventory__header {
+    margin-bottom: 48px;
+  }
+  .tableBG .tableContainer {
+    margin-left: 180px;
+    margin-right: 180px;
   }
 }
 /*# sourceMappingURL=App.css.map */
