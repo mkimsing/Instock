@@ -407,6 +407,14 @@ body h5 {
   display: none;
 }
 
+.warehousesPage__desktop--arrow {
+  display: none;
+}
+
+.warehousesPage__bottom {
+  width: 75%;
+}
+
 .warehousesPage__table {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -424,7 +432,7 @@ body h5 {
 }
 
 .warehousesPage__left {
-  width: 75%;
+  width: 100%;
 }
 
 .warehousesPage__warehouse {
@@ -438,6 +446,9 @@ body h5 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 100%;
 }
 
 .warehousesPage__warehouse--nameLoc {
@@ -453,7 +464,7 @@ body h5 {
 
 .warehousesPage__warehouse--name {
   font-weight: 550;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
 
 .warehousesPage__warehouse--arrow {
@@ -486,8 +497,8 @@ body h5 {
   padding-bottom: 6px;
 }
 
-.warehousesPage__contact__categories {
-  line-height: 1.2rem;
+.warehousesPage__categories {
+  line-height: 1.5rem;
 }
 
 .warehousesPage__add {
@@ -498,6 +509,8 @@ body h5 {
   position: fixed;
   bottom: 100px;
   right: 24px;
+  -webkit-box-shadow: 0 25px 50px #e1e1e1;
+          box-shadow: 0 25px 50px #e1e1e1;
 }
 
 .warehousesPage__add--img {
@@ -506,6 +519,156 @@ body h5 {
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+
+@media (min-width: 768px) {
+  .warehousesPage {
+    margin: 0 24px 60px;
+    font-size: 1rem;
+  }
+  .warehousesPage__left {
+    margin: 0 8px;
+  }
+  .warehousesPage__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 40px 0;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .warehousesPage__header--title {
+    margin: 0;
+    font-size: 2rem;
+    padding-top: 10px;
+  }
+  .warehousesPage__header--search {
+    margin: 0;
+    width: 250px;
+  }
+  .warehousesPage__warehouse--nameLoc {
+    padding-bottom: 32px;
+  }
+  .warehousesPage__warehouse--arrow {
+    padding: 0;
+  }
+  .warehousesPage__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    width: 100%;
+  }
+  .warehousesPage__contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .warehousesPage__contact--namePos {
+    padding-bottom: 0;
+    width: 33%;
+  }
+  .warehousesPage__contact--name {
+    margin: 0;
+  }
+  .warehousesPage__contact--info {
+    padding-bottom: 0;
+    width: 33%;
+  }
+  .warehousesPage__contact--name {
+    margin: 0;
+  }
+  .warehousesPage__categories {
+    width: 33%;
+  }
+  .warehousesPage__add {
+    height: 80px;
+    width: 80px;
+    bottom: 80px;
+    right: 80px;
+  }
+  .warehousesPage__add--img {
+    right: 25px;
+    bottom: 25px;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .warehousesPage {
+    margin: 0 180px 60px;
+  }
+  .warehousesPage__desktop--categories {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 8px 8px 32px;
+    color: #afafaf;
+    font-size: 0.9rem;
+  }
+  .warehousesPage__desktop--categories * {
+    width: 25%;
+  }
+  .warehousesPage__desktop--arrow {
+    display: initial;
+    padding-top: 12px;
+    padding-right: 8px;
+    height: 18px;
+    width: 11px;
+  }
+  .warehousesPage__table {
+    margin-bottom: 24px;
+  }
+  .warehousesPage__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .warehousesPage__warehouse {
+    max-width: 25%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .warehousesPage__warehouse--arrow {
+    display: none;
+  }
+  .warehousesPage__warehouse--nameLoc {
+    padding-bottom: 0;
+  }
+  .warehousesPage__bottom {
+    width: 75%;
+  }
+  .warehousesPage__categories {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .warehousesPage__add {
+    bottom: 100px;
+    right: 240px;
+  }
 }
 
 .product-detail-page--margin {

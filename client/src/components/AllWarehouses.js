@@ -65,8 +65,14 @@ function Warehouse(props) {
                         <div className='warehousesPage__warehouse--name'>{props.warehouse.name}</div>
                         <div className='warehousesPage__warehouse--loc'>{props.warehouse.location.address}, {props.warehouse.location.city}</div>
                     </div>
+                    {/* <Link> */}
+                    <div className='warehousesPage__warehouse--arrow'>
+                        <img src={RightArrow} />
+                    </div>
+                    {/* </Link> */}
                 </div>
-                <div className='warehousesPage__contact'>
+                <div className='warehousesPage__bottom'>
+                    {/* <div className='warehousesPage__contact'> */}
                     <div className='warehousesPage__contact--namePos'>
                         <div className='warehousesPage__contact--name'>{props.warehouse.contact.name}</div>
                         <div className='warehousesPage__contact--pos'>{props.warehouse.contact.position}</div>
@@ -75,16 +81,15 @@ function Warehouse(props) {
                         <div className='warehousesPage__contact--phone'>{props.warehouse.contact.phone}</div>
                         <div className='warehousesPage__contact--email'>{props.warehouse.contact.email}</div>
                     </div>
-                </div>
-                <div className='warehousesPage__categories'>
-                    <div>{props.warehouse.categories}</div>
+                    {/* </div> */}
+                    <div className='warehousesPage__categories'>
+                        <div>{props.warehouse.categories}</div>
+                        <div className='warehousesPage__desktop--arrow'>
+                            <img src={RightArrow} />
+                        </div>
+                    </div>
                 </div>
             </div>
-            {/* <Link> */}
-            <div className='warehousesPage__warehouse--arrow'>
-                <img src={RightArrow} />
-            </div>
-            {/* </Link> */}
         </div>
     )
 }
