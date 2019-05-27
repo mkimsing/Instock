@@ -43,4 +43,20 @@ router
     res.json(warehouses)
   })
 
+router
+  .route('/:id')
+  .get((req, res) => {
+    const warehousesData = warehousesController.getAllWarehouses();
+    const warehouse = warehousesData.find(warehouse => {
+      return warehouse.id === req.params.id;
+    })
+    if (warehouse) {
+      res.json(warehouse)
+    } else {
+      res
+        .status(404)
+        .json({ errorMessage: `Warehouse with ID: ${req.params.id} not found` });
+    }
+  })
+
 module.exports = router;

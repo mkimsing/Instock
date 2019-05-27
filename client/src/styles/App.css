@@ -497,6 +497,11 @@ body h5 {
   padding-bottom: 6px;
 }
 
+.warehousesPage__contact--email {
+  text-decoration: none;
+  color: #323232;
+}
+
 .warehousesPage__categories {
   line-height: 1.5rem;
 }

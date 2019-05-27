@@ -2,6 +2,7 @@ import React from 'react';
 import RightArrow from '../assets/Icons/SVG/Icon-arrow-right.svg';
 import Add from '../assets/Icons/SVG/Icon-add.svg';
 import { Link } from 'react-router-dom';
+// const emailLink = `mailto:${props.warehouse.contact.email}`
 
 function AllWarehouses(props) {
     if (!props.warehouses || Object.keys(props.warehouses.length === 0))
@@ -79,7 +80,8 @@ function Warehouse(props) {
                     </div>
                     <div className='warehousesPage__contact--info'>
                         <div className='warehousesPage__contact--phone'>{props.warehouse.contact.phone}</div>
-                        <div className='warehousesPage__contact--email'>{props.warehouse.contact.email}</div>
+                        {/* <div className='warehousesPage__contact--email'>{props.warehouse.contact.email}</div> */}
+                        <a className='warehousesPage__contact--email' href={'mailto:' + props.warehouse.contact.email}>{props.warehouse.contact.email}</a>
                     </div>
                     {/* </div> */}
                     <div className='warehousesPage__categories'>

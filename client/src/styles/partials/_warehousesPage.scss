@@ -91,6 +91,10 @@
         &--phone {
             padding-bottom: 6px;
         }
+        &--email {
+            text-decoration: none;
+            color: $BLACK;
+        }
     }
     &__categories {
         line-height: 1.5rem;
