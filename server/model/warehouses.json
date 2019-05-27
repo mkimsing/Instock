@@ -3,8 +3,10 @@
     "id": 1,
     "name": "Warehouse Number 1",
     "location": {
-      "address": "121 Main Street",
-      "city": "Vancouver, BC"
+      "address1": "111 Main Street",
+      "address2": "Office 11",
+      "region": "Vancouver, BC",
+      "postalCode": "12BGC3 CA"
     },
     "contact": {
       "name": "Chuck Peterson",
@@ -24,8 +26,10 @@
     "id": 2,
     "name": "Warehouse Number 2",
     "location": {
-      "address": "122 Main Street",
-      "city": "Vancouver, BC"
+      "address1": "112 Main Street",
+      "address2": "Office 12",
+      "region": "Vancouver, BC",
+      "postalCode": "A1B2C3 CA"
     },
     "contact": {
       "name": "Truck Leverson",
@@ -45,14 +49,16 @@
     "id": 3,
     "name": "Warehouse Number 3",
     "location": {
-      "address": "123 Main Street",
-      "city": "Vancouver, BC"
+      "address1": "113 Main Street",
+      "address2": "Office 13",
+      "region": "Vancouver, BC",
+      "postalCode": "LQ13PZ CA"
     },
     "contact": {
       "name": "Pete Charleson",
       "position": "Warehouse Manager",
       "phone": "604-321-8964",
-      "email": "pete.chuck@warehouse2.com"
+      "email": "pete.chuck@warehouse3.com"
     },
     "categories": [
       "Industrial",
@@ -66,8 +72,10 @@
     "id": 4,
     "name": "Warehouse Number 4",
     "location": {
-      "address": "124 Main Street",
-      "city": "Vancouver, BC"
+      "address1": "114 Main Street",
+      "address2": "Office 14",
+      "region": "Vancouver, BC",
+      "postalCode": "Q9A1KM CA"
     },
     "contact": {
       "name": "Darlene Smith",
@@ -87,8 +95,10 @@
     "id": 5,
     "name": "Warehouse Number 5",
     "location": {
-      "address": "125 Main Street",
-      "city": "Vancouver, BC"
+      "address1": "115 Main Street",
+      "address2": "Office 15",
+      "region": "Vancouver, BC",
+      "postalCode": "P3MJ8B CA"
     },
     "contact": {
       "name": "Pete Patterson",
@@ -108,8 +118,10 @@
     "id": 6,
     "name": "Warehouse Number 6",
     "location": {
-      "address": "126 Main Street",
-      "city": "Vancouver, BC"
+      "address1": "116 Main Street",
+      "address2": "Office 16",
+      "region": "Vancouver, BC",
+      "postalCode": "12MVU4 CA"
     },
     "contact": {
       "name": "Lisa Chen",
@@ -129,8 +141,10 @@
     "id": 7,
     "name": "Warehouse Number 7",
     "location": {
-      "address": "127 Main Street",
-      "city": "Vancouver, BC"
+      "address1": "117 Main Street",
+      "address2": "Office 17",
+      "region": "Vancouver, BC",
+      "postalCode": "789YEB CA"
     },
     "contact": {
       "name": "Sarah A",
@@ -150,8 +164,10 @@
     "id": 8,
     "name": "Warehouse Number 8",
     "location": {
-      "address": "128 Main Street",
-      "city": "Vancouver, BC"
+      "address1": "118 Main Street",
+      "address2": "Office 18",
+      "region": "Vancouver, BC",
+      "postalCode": "7ZX5VG CA"
     },
     "contact": {
       "name": "Janet K",
@@ -171,8 +187,10 @@
     "id": 9,
     "name": "Warehouse Number 9",
     "location": {
-      "address": "129 Main Street",
-      "city": "Vancouver, BC"
+      "address1": "119 Main Street",
+      "address2": "Office 19",
+      "region": "Vancouver, BC",
+      "postalCode": "JRRB4Y CA"
     },
     "contact": {
       "name": "Taylor M",

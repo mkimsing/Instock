@@ -1,0 +1,108 @@
+.warehouseInventory {
+  margin: 32px 16px 0px 16px;
+  .text--italic{
+    font-style: italic;
+  }
+  &__header{
+    display:flex;
+    align-items: center;
+    border:none;
+    padding: 0px;
+    margin-bottom: 20px;
+    h1{
+      margin:0px;
+    }
+
+    a {
+      width: 20px;
+      height: 30px;
+      background-color: black;
+      mask-image: url('../assets/Icons/SVG/Icon-back-arrow.svg');
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+      margin-right: 20px;
+    }
+  }
+
+  .warehouseInfo{
+    display:flex;
+    flex-direction: column;
+    h5{
+      margin: 0px 0px 15px 0px;
+    }
+    h4{
+      margin: 0px;
+    }
+
+    &__addressContainer{
+      .addressInfo, .postalInfo{
+        margin-bottom: 25px;
+      }
+    }
+
+    &__contactContainer{
+      .nameInfo, .contactInfo{
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+.tableBG{
+  background-color: $ALABASTER;
+  padding: 10px 0px 20px 0px;
+  .tableContainer{
+    margin: 16px 16px 10px 16px;   
+  }
+}
+
+@media(min-width: 768px){
+  .warehouseInventory{
+    margin-left: 24px;
+    margin-right: 24px;
+
+    &__header{
+      margin-bottom:24px;
+      border-bottom: 2px solid $MERCURY;
+      padding-bottom: 20px;
+      a{
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
+
+    .warehouseInfo{
+      flex-direction: row;
+      margin-bottom: 20px;
+      &__addressContainer{
+        margin-right: 33vw;
+      }
+    }
+  }
+
+  .tableBG{
+    .tableContainer{
+      margin-left: 24px;
+      margin-right: 24px;  
+    } 
+  }
+}
+
+@media(min-width: 1440px){
+  .warehouseInventory{
+    margin-left: 180px;
+    margin-right: 180px;
+
+    &__header{
+      margin-bottom:48px;
+    }
+  }
+
+    .tableBG{
+    .tableContainer{
+      margin-left: 180px;
+      margin-right: 180px;  
+    } 
+  }
+}

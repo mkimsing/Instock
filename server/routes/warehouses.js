@@ -1,9 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const warehouseController = require("../controllers/warehouseController");
+
 const helper = require("../helpers/helper");
 const fileName = `${__dirname}/../model/warehouses.json`
 let warehouses = require(fileName);
+
+const inventoryController = require("../controllers/inventoryController");
 
 router
   .route("/")
@@ -58,5 +61,16 @@ router
         .json({ errorMessage: `Warehouse with ID: ${req.params.id} not found` });
     }
   })
+
+router.route("/:id/inventory").get((req, res) => {
+  let response = inventoryController.getWarehouseInventory(req.params.id)
+  if (response.error) {
+    res
+      .status(response.error)
+      .json(response.errorMsg);
+  } else {
+    res.json(response)
+  }
+})
 
 module.exports = router;
