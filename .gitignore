@@ -1,8 +1,9 @@
-
 #Ignore documentation
 InStock Design Documents/
 
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+#Ignore sass generated files
+*.css.map
+*.css
 
 # dependencies
 client/node_modules

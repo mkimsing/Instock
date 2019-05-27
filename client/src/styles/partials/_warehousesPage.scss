@@ -1,0 +1,244 @@
+.warehousesPage {
+    margin: 0 16px 60px;
+    font-size: 0.9rem;
+    color: $BLACK;
+    &__header {
+        &--title {
+            margin-top: 32px;
+        }
+        &--search {
+            display: flex;
+            flex-basis: 100%;
+            border-radius: 5px;
+            height: 48px;
+            background-color: $ALABASTER;
+            border: $MERCURY solid 1px;
+            background: none;
+            width: 80%;
+            margin-bottom: 32px;
+        }
+        &--searchBar {
+            display: flex;
+            background: url('../assets/Icons/SVG/Icon-search.svg') no-repeat $ALABASTER;
+            background-size: 16px;
+            background-position: 12px 50%;
+            padding-left: 34px;
+            height: 100%;
+            width: 80%;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: none;
+            font-family: AvenirNext;
+        }
+    }
+    &__desktop {
+        &--categories {
+            display: none;
+        }
+        &--arrow {
+            display: none;
+        }
+    }
+    &__bottom {
+        width: 75%;
+    }
+    &__table {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px $SILVER solid;
+        padding-bottom: 24px;
+        margin-bottom: 32px;
+    }
+    &__left {
+        width: 100%;
+    }
+    &__warehouse {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-basis: 100%;
+        width: 100%;
+        &--nameLoc {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 24px;
+        }
+        &--name {
+            font-weight: 550;
+            padding-bottom: 6px;
+        }
+        &--arrow {
+            display: flex;
+            align-content: flex-start;
+            height: 16px;
+            padding-right: 12px;
+        }
+    }
+    &__contact {
+        &--namePos {
+            padding-bottom: 24px;
+        }
+        &--name {
+            padding-bottom: 6px;
+        }
+        &--pos {
+            font-style: italic;
+        }
+        &--info {
+            padding-bottom: 24px;
+        }
+        &--phone {
+            padding-bottom: 6px;
+        }
+        &--email {
+            text-decoration: none;
+            color: $BLACK;
+        }
+    }
+    &__categories {
+        line-height: 1.5rem;
+    }
+    &__add {
+        background: $BLUE;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        position: fixed;
+        bottom: 100px;
+        right: 24px;
+        box-shadow: 0 25px 50px $MERCURY;
+        &--img {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .warehousesPage {
+        margin: 0 24px 60px;
+        font-size: 1rem;
+        &__left {
+            margin: 0 8px;
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            align-content: center;
+            &--title {
+                margin: 0;
+                font-size: 2rem;
+                padding-top: 10px;
+            }
+            &--search {
+                margin: 0;
+                width: 250px;
+            }
+        }
+        &__warehouse {
+            &--nameLoc {
+                padding-bottom: 32px;
+            }
+            &--arrow {
+                padding: 0;
+            }
+        }
+        &__bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-basis: 100%;
+            width: 100%;
+        }
+        &__contact {
+            display: flex;
+            flex-direction: row;
+            flex-basis: 100%;
+            &--namePos {
+                padding-bottom: 0;
+                width: 33%;
+            }
+            &--name {
+                margin: 0;
+            }
+            &--info {
+                padding-bottom: 0;
+                width: 33%;
+            }
+            &--name {
+                margin: 0;
+            }
+        }
+        &__categories {
+            width: 33%;
+        }
+        &__add {
+            height: 80px;
+            width: 80px;
+            bottom: 80px;
+            right: 80px;
+            &--img {
+                right: 25px;
+                bottom: 25px;
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .warehousesPage {
+        margin: 0 180px 60px;
+        &__desktop {
+            &--categories {
+                display: flex;
+                padding: 8px 8px 32px;
+                color: $SILVER;
+                font-size: 0.9rem;
+                & * {
+                    width: 25%;
+                }
+            }
+            &--arrow {
+                display: initial;
+                padding-top: 12px;
+                padding-right: 8px;
+                height: 18px;
+                width: 11px;
+            }
+        }
+        &__table {
+            margin-bottom: 24px;
+        }
+        &__left {
+            display: flex;
+            flex-direction: row;
+        }
+        &__warehouse {
+            max-width: 25%;
+            flex-basis: 100%;
+            &--arrow {
+                display: none;
+            }
+            &--nameLoc {
+                padding-bottom: 0;
+            }
+        }
+        &__bottom {
+            width: 75%;
+        }
+        &__categories {
+            display: flex;
+        }
+        &__add {
+            bottom: 100px;
+            right: 240px;
+        }
+    }
+}

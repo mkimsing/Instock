@@ -73,6 +73,10 @@
 .item {
   border-bottom: solid $SILVER 1px;
   padding-bottom: 24px;
+  padding-top: 24px;
+  &:hover {
+    background-color: $MERCURY;
+  }
 
   .fullSizeOnly {
     display: none;
@@ -85,6 +89,7 @@
   &__flexContainer {
     display: flex;
     flex-direction: column;
+    padding: 5px;
 
     .kebabButton {
       mask-image: url("../assets/Icons/SVG//Icon-kebab-default.svg");
@@ -101,6 +106,9 @@
       justify-content: space-between;
       align-items: center;
       position: relative; //Allow absolute positioning of remove button
+      h5 {
+        margin-top: 10px;
+      }
 
       //Kebab button
       .kebabButton {
@@ -138,7 +146,7 @@
 
 @media (min-width: 768px) {
   .item {
-    margin: 24px 5px;
+    margin: 0px 5px;
 
     .fullSizeOnly {
       display: block; //May be overridden by display:flex, etc

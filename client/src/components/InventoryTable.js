@@ -12,7 +12,7 @@ export default function InventoryTable(props) {
       </div>
       <div>
         {props.inventory.map(item => {
-          return <InventoryItem item={item} />;
+          return <InventoryItem item={item} key={item.id} />;
         })}
       </div>
     </section>
