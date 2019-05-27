@@ -74,7 +74,7 @@
   border-bottom: solid $SILVER 1px;
   padding-bottom: 24px;
   padding-top: 24px;
-  &:hover{
+  &:hover {
     background-color: $MERCURY;
   }
 
@@ -106,7 +106,7 @@
       justify-content: space-between;
       align-items: center;
       position: relative; //Allow absolute positioning of remove button
-      h5{
+      h5 {
         margin-top: 10px;
       }
 
