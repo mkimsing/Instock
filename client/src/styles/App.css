@@ -901,4 +901,43 @@ body h5 {
     width: 100%;
   }
 }
+
+.addProduct__header {
+  font-size: 0.8rem;
+  color: #afafaf;
+  padding-bottom: 8px;
+  padding-top: 24px;
+}
+
+.addProduct__input {
+  background-color: #fafafa;
+  border: #e1e1e1 solid 1px;
+  border-radius: 5px;
+  height: 48px;
+  width: 100%;
+  font-family: AvenirNext;
+  color: #323232;
+  padding-left: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.addProduct__input--select {
+  padding-right: 16px;
+}
+
+.addProduct__input--description {
+  height: 80px;
+  padding-top: 16px;
+}
+
+.addProduct__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 /*# sourceMappingURL=App.css.map */

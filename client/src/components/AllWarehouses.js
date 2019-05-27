@@ -2,7 +2,6 @@ import React from 'react';
 import RightArrow from '../assets/Icons/SVG/Icon-arrow-right.svg';
 import Add from '../assets/Icons/SVG/Icon-add.svg';
 import { Link } from 'react-router-dom';
-// const emailLink = `mailto:${props.warehouse.contact.email}`
 
 function AllWarehouses(props) {
     if (!props.warehouses || Object.keys(props.warehouses.length === 0))
