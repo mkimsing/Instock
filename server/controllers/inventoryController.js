@@ -7,4 +7,4 @@ const inventoryController = {
   }
 };
 
-module.exports = inventoryController;
+module.exports = inventoryController
