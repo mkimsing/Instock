@@ -4,14 +4,16 @@ import { Switch, Route } from "react-router-dom";
 import WarehousesContainer from "./containers/WarehousesContainer";
 import InventoryContainer from "./containers/InventoryContainer";
 import navBar from "./components/NavBar";
+import addWarehouse from "./components/addWarehouse";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
         <Switch>
-          {/* When a user hits the homepage, redirect them to the list of warehouses */}
           <Route path="/navBar" component={navBar} />
+          <Route path="/addWarehouse" component={addWarehouse}/>
+          {/* When a user hits the homepage, redirect them to the list of warehouses */}
           <Route path="/" exact component={WarehousesContainer} />
           <Route path="/warehouses" component={WarehousesContainer} />
           <Route path="/inventory" component={InventoryContainer} />
