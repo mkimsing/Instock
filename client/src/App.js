@@ -4,11 +4,15 @@ import "./styles/App.css";
 import { Switch, Route } from "react-router-dom";
 import WarehousesContainer from "./containers/WarehousesContainer";
 import InventoryContainer from "./containers/InventoryContainer";
+
+import ProductDetailComponent from "./components/ProductDetailComponent";
 import WarehouseInventoryContainer from "./containers/WarehouseInventoryContainer"
+
 class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <ProductDetailComponent />
         <Switch>
           {/* When a user hits the homepage, redirect them to the list of warehouses */}
 
@@ -20,6 +24,7 @@ class App extends React.Component {
           {/* <Route path="/warehouse/:id" component={Warehouse} /> */}
           {/* <Route path="/inventory/:id" component={Inventory} /> */}
         </Switch>
+
       </div>
     );
   }
