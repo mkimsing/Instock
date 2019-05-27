@@ -1,0 +1,39 @@
+// .caps {
+//     text-transform: uppercase;
+// }
+.addWarehouse {
+    margin-right: 16px;
+    margin-left: 16px;
+    font-family: AvenirNext;
+    //form {
+
+    header {
+        font-size: 0.8rem;
+        color: $SILVER;
+        padding-bottom: 8px;
+        padding-top: 24px;
+    }
+
+    &__input {
+        background-color: $ALABASTER;
+        border: $MERCURY solid 1px;
+        border-radius: 5px;
+        height: 48px;
+        width: 100%;
+        font-family: AvenirNext;
+        color: $BLACK;
+        padding-left: 16px;
+        box-sizing: border-box;
+
+        &--select {
+            padding-right: 16px;
+        }
+
+        &--description {
+            height: 80px;
+            padding-top: 16px;
+        }
+    }
+
+    //}
+}
