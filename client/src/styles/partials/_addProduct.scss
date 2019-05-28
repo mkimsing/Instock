@@ -2,13 +2,14 @@
     padding: 16px;
     color: $BLACK;
     position: fixed;
-    z-index: 99;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
     background: white;
+    overflow: hidden;
     &__header {
         font-size: 0.8rem;
         color: $SILVER;
@@ -43,19 +44,16 @@
             padding-top: 6px;
             color: $BLACK;
         }
-        // &--switch {
-        // }
     }
     &__buttons {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         &--save {
             background-color: $BLUE;
             border: none;
             color: $ALABASTER;
             height: 48px;
             border-radius: 5px;
-            // font-weight: 500;
             font-size: 1rem;
             font-weight: bold;
         }
@@ -69,30 +67,75 @@
         }
     }
 }
-
 .addProduct--hide {
     display: none;
 }
 .addProduct--show {
     display: initial;
 }
-// }
-// &--publish {
-//             background-color: $brainflix-blue;
-//             color: white;
-//             border: none;
-//             border-radius: 5px;
-//             height: 48px;
-//             font-size: 1rem;
-//             font-family: standard-font;
-//             font-weight: 700;
-//         }
-//         &--cancel {
-//             background: none;
-//             border: none;
-//             color: $brainflix-blue;
-//             font-family: standard-font;
-//             font-size: 1rem;
-//             font-weight: 700;
-//             padding-top: 24px;
-//         }
+.inventory--scroll {
+    overflow: initial;
+}
+.inventory--noScroll {
+    overflow: hidden;
+    height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .addProduct {
+        background: rgba(0,0,0,0.5);
+        &__tab {
+            background: white;
+            width: 576px;
+            height: 654px;
+            margin: auto;
+            padding: 40px 48px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            &--row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        &__title {
+            font-size: 2rem;
+            margin: 16px 0 24px;
+        }
+        &__input {
+            height: 48px;
+            width: 220px;
+            &--description {
+                margin-bottom: 40px;
+                height: 80px;
+                width: 480px;
+            }
+        }
+        &__status {
+            display: flex;
+            flex-direction: column;
+            width: 220px;
+        }
+        &__statusToggle {
+            padding-top: 8px;
+        }
+        &__buttons {
+            flex-direction: row;
+            justify-content: flex-end;
+            &--save {
+                width: 160px;
+                height: 48px;
+            }
+            &--cancel {
+                padding: 0;
+                margin: 0 48px;
+            }
+        }
+        &--show {
+            // will need to be adjusted with navbar added
+            padding-top: 10vh;
+        }
+    }
+}

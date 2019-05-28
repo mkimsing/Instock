@@ -4,16 +4,19 @@ import AddProduct from "./AddProduct";
 
 export default class AddProductButton extends Component {
     state = {
-        addProductDisplay: "addProduct--hide"
+        addProductDisplay: "addProduct--hide",
+        inventoryPageScroll: "inventory--scroll"
     };
     displayAddProductPage = () => {
         this.setState({
-            addProductDisplay: "addProduct--show"
+            addProductDisplay: "addProduct--show",
+            inventoryPageScroll: "inventory--noScroll"
         })
     };
     hideAddProductPage = () => {
         this.setState({
-            addProductDisplay: "addProduct--hide"
+            addProductDisplay: "addProduct--hide",
+            inventoryPageScroll: "inventory--scroll"
         })
     };
     addProductHandler = () => {
