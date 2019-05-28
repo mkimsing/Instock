@@ -1,6 +1,6 @@
 import React from "react";
 import InventoryTable from "./InventoryTable";
-import Add from "../assets/Icons/SVG/Icon-add.svg";
+import AddProductButton from "./AddProductButton";
 
 export default function Inventory(props) {
   let { inventory } = props;
@@ -16,16 +16,16 @@ export default function Inventory(props) {
     );
   } else {
     return (
-      <div className="inventoryPage">
-        <div className="inventoryPage__header">
-          <h1>Inventory</h1>
-          <input placeholder="Search" />
+      <>
+        <div className="inventoryPage">
+          <div className="inventoryPage__header">
+            <h1>Inventory</h1>
+            <input placeholder="Search" />
+          </div>
+          <InventoryTable inventory={inventory} />
         </div>
-        <InventoryTable inventory={inventory} />
-        <div className="add">
-          <img className="add--img" src={Add} alt="Plus Sign" />
-        </div>
-      </div>
+        <AddProductButton />
+      </>
     );
   }
 }

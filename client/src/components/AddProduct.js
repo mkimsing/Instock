@@ -2,19 +2,22 @@ import React, { Component } from 'react';
 import Switch from 'react-switch';
 
 export default class AddProduct extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = { checked: false };
         this.handleChange = this.handleChange.bind(this);
     }
     handleChange(checked) {
         this.setState({ checked });
     }
+    addProduct = (event) => {
+        event.preventDefault()
+    }
     render() {
         return (
-            <div className='addProduct'>
+            <div className={`addProduct ${this.props.addProductDisplay.addProductDisplay}`}>
                 <h1>Create New</h1>
-                <form>
+                <form onSubmit={this.addProduct}>
                     <div>
                         <div>
                             <div className='addProduct__header'>PRODUCT</div>
@@ -44,9 +47,9 @@ export default class AddProduct extends Component {
                         </div>
                         <div>
                             <div className='addProduct__header'>STATUS</div>
-                            <div>
-                                <div>In Stock</div>
-                                <Switch onChange={this.handleChange} checked={this.state.checked} />
+                            <div className='addProduct__statusToggle'>
+                                <div className='addProduct__statusToggle--title'>In Stock</div>
+                                <Switch className='addProduct__statusToggle--switch' onChange={this.handleChange} checked={this.state.checked} />
                             </div>
                         </div>
                     </div>
@@ -55,8 +58,8 @@ export default class AddProduct extends Component {
                         <textarea className='addProduct__input addProduct__input--description' placeholder='(Optional)'></textarea>
                     </div>
                     <div className='addProduct__buttons'>
-                        <button>SAVE</button>
-                        <button>CANCEL</button>
+                        <button className='addProduct__buttons--save'>SAVE</button>
+                        <button onClick={this.props.hideAddProductPage} className='addProduct__buttons--cancel'>CANCEL</button>
                     </div>
                 </form>
             </div>

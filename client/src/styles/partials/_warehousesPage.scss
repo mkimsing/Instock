@@ -107,7 +107,7 @@
         position: fixed;
         bottom: 100px;
         right: 24px;
-        box-shadow: 0 25px 50px $MERCURY;
+        box-shadow: 0 25px 25px rbga(225,225,225,0.5);
         &--img {
             height: 20px;
             width: 20px;
@@ -183,10 +183,10 @@
             bottom: 80px;
             right: 80px;
             &--img {
-                right: 25px;
-                bottom: 25px;
-                height: 30px;
-                width: 30px;
+                right: 28px;
+                bottom: 28px;
+                height: 24px;
+                width: 24px;
             }
         }
     }
