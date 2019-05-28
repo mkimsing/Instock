@@ -34,6 +34,7 @@ export default class AddWarehouse extends Component {
               >
                 <option value="Vancouver">Vancouver, BC</option>
                 <option value="Toronto">Toronto, ON</option>
+                <option value="Calgary">Calgary, AB</option>
               </select>
             </div>
           </div>
