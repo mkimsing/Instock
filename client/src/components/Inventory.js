@@ -3,8 +3,8 @@ import InventoryTable from "./InventoryTable";
 import AddProductButton from "./AddProductButton";
 
 export default function Inventory(props) {
-  let { inventory } = props;
-  if (!inventory || Object.keys(inventory).length === 0) {
+  let { inventory, warehouseNames } = props;
+  if ((!inventory || Object.keys(inventory).length === 0) || (!warehouseNames || Object.keys(warehouseNames).length === 0)) {
     return (
       <div className="inventoryPage">
         <div className="inventoryPage__header">
@@ -24,7 +24,8 @@ export default function Inventory(props) {
           </div>
           <InventoryTable inventory={inventory} />
         </div>
-        <AddProductButton />
+        {/* need to pass props of warehouse list to addproductbutton */}
+        <AddProductButton warehouseNames={warehouseNames} />
       </>
     );
   }

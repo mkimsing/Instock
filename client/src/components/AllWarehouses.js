@@ -66,9 +66,9 @@ function Warehouse(props) {
                         <div className='warehousesPage__warehouse--loc'>{props.warehouse.location.address1}, {props.warehouse.location.region}</div>
                     </div>
                     <Link to={`/warehouses/${props.warehouse.id}`}>
-                      <div className='warehousesPage__warehouse--arrow'>
-                          <img src={RightArrow} />
-                      </div>
+                        <div className='warehousesPage__warehouse--arrow'>
+                            <img src={RightArrow} />
+                        </div>
                     </Link>
                 </div>
                 <div className='warehousesPage__bottom'>
@@ -86,9 +86,9 @@ function Warehouse(props) {
                     <div className='warehousesPage__categories'>
                         <div>{props.warehouse.categories}</div>
                         <Link to={`/warehouses/${props.warehouse.id}`}>
-                          <div className='warehousesPage__desktop--arrow'>
-                              <img src={RightArrow} />
-                          </div>
+                            <div className='warehousesPage__desktop--arrow'>
+                                <img src={RightArrow} />
+                            </div>
                         </Link>
                     </div>
                 </div>

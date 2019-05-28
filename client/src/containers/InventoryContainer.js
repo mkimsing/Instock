@@ -4,7 +4,8 @@ import apiInfo from "../helpers/api_info";
 import Inventory from "../components/Inventory";
 export default class InventoryContainer extends Component {
   state = {
-    inventory: {}
+    inventory: {},
+    warehouseNames: {}
   };
 
   componentDidMount() {
@@ -13,9 +14,14 @@ export default class InventoryContainer extends Component {
         inventory: response.data
       });
     });
+    axios.get("http://localhost:8080/warehouses").then(response => {
+      this.setState({
+        warehouseNames: response.data
+      })
+    })
   }
 
   render() {
-    return <Inventory inventory={this.state.inventory} />;
+    return <Inventory inventory={this.state.inventory} warehouseNames={this.state.warehouseNames} />;
   }
 }
