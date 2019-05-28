@@ -1,39 +1,131 @@
-// .caps {
-//     text-transform: uppercase;
-// }
 .addWarehouse {
-    margin-right: 16px;
-    margin-left: 16px;
+  margin-right: 16px;
+  margin-left: 16px;
+  font-family: AvenirNext;
+  font-weight: 550;
+
+  h1 {
+    margin-top: 32px;
+  }
+
+  &__header {
+    display: flex;
+    font-size: 0.8rem;
+    color: $SILVER;
+    margin-top: 32px;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    background-color: $ALABASTER;
+    border: $MERCURY solid 1px;
+    border-radius: 5px;
+    height: 48px;
+    width: 100%;
     font-family: AvenirNext;
-    //form {
+    color: $BLACK;
+    padding-left: 16px;
+    box-sizing: border-box;
 
-    header {
-        font-size: 0.8rem;
-        color: $SILVER;
-        padding-bottom: 8px;
-        padding-top: 24px;
+    &--select {
+      padding-right: 16px;
     }
 
-    &__input {
-        background-color: $ALABASTER;
-        border: $MERCURY solid 1px;
-        border-radius: 5px;
+    &--description {
+      height: 80px;
+      padding-top: 16px;
+    }
+  }
+
+  .addWarehouse__address-location,
+  .addWarehouse__contact-position,
+  .addWarehouse__contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      background-color: $BLUE;
+      color: $ALABASTER;
+      font-weight: bold;
+      border-radius: 4px;
+      width: 100%;
+      border: none;
+      height: 40px;
+      font-size: 13px;
+      margin-top: 27px;
+    }
+
+    .cancel-button {
+      background-color: white;
+      color: $BLUE;
+      text-align: center;
+      font-weight: 550;
+      font-size: 13px;
+      margin-top: 27px;
+      margin-bottom: 27px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .addWarehouse {
+    margin-left: 48px;
+    margin-right: 48px;
+
+    h1 {
+      margin-top: 56px;
+      margin-bottom: 48px;
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0px;
+    }
+
+    .addWarehouse__address-location,
+    .addWarehouse__contact-position,
+    .addWarehouse__contact-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 24px;
+
+      .addWarehouse__stack {
+        display: flex;
+        flex-direction: column;
+
+        .addWarehouse__input {
+          margin-right: 40px;
+        }
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+      button {
         height: 48px;
-        width: 100%;
-        font-family: AvenirNext;
-        color: $BLACK;
-        padding-left: 16px;
-        box-sizing: border-box;
+        width: 160px;
+      }
 
-        &--select {
-            padding-right: 16px;
-        }
-
-        &--description {
-            height: 80px;
-            padding-top: 16px;
-        }
+      .cancel-button {
+        height: 48px;
+        margin-right: 48px;
+      }
     }
 
-    //}
+    .addWarehouse__categories {
+      margin-top: 24px;
+    }
+  }
 }

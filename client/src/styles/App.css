@@ -1068,4 +1068,166 @@ body h5 {
     margin-right: 180px;
   }
 }
+
+.addWarehouse {
+  margin-right: 16px;
+  margin-left: 16px;
+  font-family: AvenirNext;
+  font-weight: 550;
+}
+
+.addWarehouse h1 {
+  margin-top: 32px;
+}
+
+.addWarehouse__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8rem;
+  color: #afafaf;
+  margin-top: 32px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.addWarehouse__input {
+  background-color: #fafafa;
+  border: #e1e1e1 solid 1px;
+  border-radius: 5px;
+  height: 48px;
+  width: 100%;
+  font-family: AvenirNext;
+  color: #323232;
+  padding-left: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.addWarehouse__input--select {
+  padding-right: 16px;
+}
+
+.addWarehouse__input--description {
+  height: 80px;
+  padding-top: 16px;
+}
+
+.addWarehouse .addWarehouse__address-location,
+.addWarehouse .addWarehouse__contact-position,
+.addWarehouse .addWarehouse__contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.addWarehouse__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.addWarehouse__buttons button {
+  background-color: #004892;
+  color: #fafafa;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 100%;
+  border: none;
+  height: 40px;
+  font-size: 13px;
+  margin-top: 27px;
+}
+
+.addWarehouse__buttons .cancel-button {
+  background-color: white;
+  color: #004892;
+  text-align: center;
+  font-weight: 550;
+  font-size: 13px;
+  margin-top: 27px;
+  margin-bottom: 27px;
+}
+
+@media only screen and (min-width: 768px) {
+  .addWarehouse {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  .addWarehouse h1 {
+    margin-top: 56px;
+    margin-bottom: 48px;
+  }
+  .addWarehouse__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0px;
+  }
+  .addWarehouse .addWarehouse__address-location,
+  .addWarehouse .addWarehouse__contact-position,
+  .addWarehouse .addWarehouse__contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 24px;
+  }
+  .addWarehouse .addWarehouse__address-location .addWarehouse__stack,
+  .addWarehouse .addWarehouse__contact-position .addWarehouse__stack,
+  .addWarehouse .addWarehouse__contact-info .addWarehouse__stack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .addWarehouse .addWarehouse__address-location .addWarehouse__stack .addWarehouse__input,
+  .addWarehouse .addWarehouse__contact-position .addWarehouse__stack .addWarehouse__input,
+  .addWarehouse .addWarehouse__contact-info .addWarehouse__stack .addWarehouse__input {
+    margin-right: 40px;
+  }
+  .addWarehouse__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .addWarehouse__buttons button {
+    height: 48px;
+    width: 160px;
+  }
+  .addWarehouse__buttons .cancel-button {
+    height: 48px;
+    margin-right: 48px;
+  }
+  .addWarehouse .addWarehouse__categories {
+    margin-top: 24px;
+  }
+}
 /*# sourceMappingURL=App.css.map */
