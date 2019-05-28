@@ -19,9 +19,6 @@ export default class AddProductButton extends Component {
             inventoryPageScroll: "inventory--scroll"
         })
     };
-    addProductHandler = () => {
-        console.log("showing page")
-    }
     render() {
         return (
             <>

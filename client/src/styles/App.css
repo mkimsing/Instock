@@ -970,7 +970,7 @@ body h5 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: white;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .addProduct__header {
@@ -995,6 +995,7 @@ body h5 {
 
 .addProduct__input--select {
   padding-right: 16px;
+  color: #323232;
 }
 
 .addProduct__input--description {
@@ -1059,17 +1060,6 @@ body h5 {
   display: initial;
 }
 
-.inventory--scroll {
-  overflow: initial;
-}
-
-.inventory--noScroll {
-  overflow: hidden;
-  height: 100vh;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 @media (min-width: 768px) {
   .addProduct {
     background: rgba(0, 0, 0, 0.5);
@@ -1077,7 +1067,7 @@ body h5 {
   .addProduct__tab {
     background: white;
     width: 576px;
-    height: 654px;
+    height: 764px;
     margin: auto;
     padding: 40px 48px;
     border-radius: 5px;

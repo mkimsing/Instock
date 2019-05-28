@@ -9,7 +9,7 @@
     height: 100%;
     box-sizing: border-box;
     background: white;
-    overflow: hidden;
+    overflow: scroll;
     &__header {
         font-size: 0.8rem;
         color: $SILVER;
@@ -28,6 +28,7 @@
         box-sizing: border-box;
         &--select {
             padding-right: 16px;
+            color: $BLACK;
         }
         &--description {
             height: 80px;
@@ -73,15 +74,15 @@
 .addProduct--show {
     display: initial;
 }
-.inventory--scroll {
-    overflow: initial;
-}
-.inventory--noScroll {
-    overflow: hidden;
-    height: 100vh;
-    margin-top: 0;
-    margin-bottom: 0;
-}
+// .inventory--scroll {
+//     overflow: initial;
+// }
+// .inventory--noScroll {
+//     overflow: hidden;
+//     height: 100vh;
+//     margin-top: 0;
+//     margin-bottom: 0;
+// }
 
 @media (min-width: 768px) {
     .addProduct {
@@ -89,7 +90,7 @@
         &__tab {
             background: white;
             width: 576px;
-            height: 654px;
+            height: 764px;
             margin: auto;
             padding: 40px 48px;
             border-radius: 5px;

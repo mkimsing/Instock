@@ -18,11 +18,12 @@ router
   .post((req, res) => {
     const newWarehouse = {
       name: req.body.name,
-      // randomised ID
       id: req.body.id,
       location: {
-        address: req.body.location.address,
-        city: req.body.location.city
+        address1: req.body.location.address1,
+        address2: req.body.location.address2,
+        region: req.body.location.region,
+        postalCode: req.body.location, postalCode
       },
       contact: {
         name: req.body.contact.name,
@@ -33,7 +34,8 @@ router
       categories: req.body.categories
     };
     if (!newWarehouse.name || !newWarehouse.id ||
-      !newWarehouse.location.address || !newWarehouse.location.city ||
+      !newWarehouse.location.address1 || !newWarehouse.location.address2 ||
+      !newWarehouse.location.region || !newWarehouse.location.postalCode ||
       !newWarehouse.contact.name || !newWarehouse.contact.position ||
       !newWarehouse.contact.phone || !newWarehouse.contact.email ||
       !newWarehouse.categories) {

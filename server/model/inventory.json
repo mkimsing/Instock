@@ -7,7 +7,10 @@
       "description": "Toss and Retrieve Toy"
     },
     "lastOrdered": "05/04/2018",
-    "location": "Toronto, CA",
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "120",
     "status": "In Stock",
     "warehouseId": "1"
@@ -20,7 +23,10 @@
       "description": "Interactive Treat Dispensing Ball"
     },
     "lastOrdered": "12/05/2015",
-    "location": "Toronto, CA",
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "121",
     "status": "In Stock",
     "warehouseId": "3"
@@ -33,7 +39,10 @@
       "description": "Interactive Treat Dispensing Ball"
     },
     "lastOrdered": "01/02/2050",
-    "location": "Toronto, CA",
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "314159265",
     "status": "In Stock",
     "warehouseId": "7"
@@ -46,7 +55,10 @@
       "description": "Interactive Treat Dispensing Ball"
     },
     "lastOrdered": "01/03/2018",
-    "location": "Toronto, CA",
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "1",
     "status": "In Stock",
     "warehouseId": "9"
@@ -59,7 +71,10 @@
       "description": "Comes in super soft fabric, perfect for snuggling and comfort. Delivering comfort with a twist."
     },
     "lastOrdered": "08/01/2017",
-    "location": "Vancouver, CA",
+    "location": {
+      "city": "Vancouver",
+      "country": "CA"
+    },
     "quantity": "500",
     "status": "In Stock",
     "warehouseId": "5"
@@ -72,7 +87,10 @@
       "description": "Chew 'n Clean Tuff Bone Dog Toy Bacon Scented"
     },
     "lastOrdered": "07/03/2017",
-    "location": "Toronto, CA",
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "120",
     "status": "Out of Stock",
     "warehouseId": "4"
@@ -85,7 +103,10 @@
       "description": "Meeting your pet's emotional, physical and instinctual needs"
     },
     "lastOrdered": "06/03/2017",
-    "location": "Toronto, CA",
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "120",
     "status": "In Stock",
     "warehouseId": "2"
@@ -98,7 +119,10 @@
       "description": "Meeting your pet's emotional, physical and instinctual needs"
     },
     "lastOrdered": "06/24/2017",
-    "location": "Toronto, CA",
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "0",
     "status": "Out of Stock",
     "warehouseId": "8"
@@ -111,7 +135,10 @@
       "description": "All the real meat taste and 90% fat free! Pup-Peroni Lean Beef Flavour dog snacks are a guilt-free dog snack packed full of rich beef flavour."
     },
     "lastOrdered": "06/01/2017",
-    "location": "Vancouver, CA",
+    "location": {
+      "city": "Vancouver",
+      "country": "CA"
+    },
     "quantity": "300",
     "status": "In Stock",
     "warehouseId": "6"
@@ -124,7 +151,10 @@
       "description": "Give your dog Snausages In-a-Blanket Beef & Cheese Flavour dog treats, it’s a lip-smacking taste that will have your dog begging for more!"
     },
     "lastOrdered": "05/04/2017",
-    "location": "Toronto, CA",
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "120",
     "status": "Out of Stock",
     "warehouseId": "7"
@@ -137,7 +167,10 @@
       "description": "The patented SPORN® Easy Fit Harness™ is easy to get on and off and provides superior comfort and breathability for everyday walking, in any climate! Its no-choke design features a lightweight, padded mesh material for maximum comfort, and includes special safety features such as reflective stitching throughout and dual D-rings for extra secure leash attachment. Girth straps are adjustable for proper fitting."
     },
     "lastOrdered": "04/20/2017",
-    "location": "Toronto, CA",
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "555",
     "status": "In Stock",
     "warehouseId": "8"
@@ -150,7 +183,10 @@
       "description": "The patented SPORN® Easy Fit Harness™ is easy to get on and off and provides superior comfort and breathability for everyday walking, in any climate! Its no-choke design features a lightweight, padded mesh material for maximum comfort, and includes special safety features such as reflective stitching throughout and dual D-rings for extra secure leash attachment. Girth straps are adjustable for proper fitting."
     },
     "lastOrdered": "04/03/2019",
-    "location": "Toronto, CA",
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "555",
     "status": "In Stock",
     "warehouseId": "1"
