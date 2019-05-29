@@ -24,7 +24,6 @@ export default function Inventory(props) {
           </div>
           <InventoryTable inventory={inventory} />
         </div>
-        {/* need to pass props of warehouse list to addproductbutton */}
         <AddProductButton warehouseNames={warehouseNames} />
       </>
     );

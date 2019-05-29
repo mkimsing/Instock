@@ -46,9 +46,10 @@ export default class AddProduct extends Component {
         event.target.city.value = ''
         event.target.country.value = 'CA'
         event.target.quantity.value = ''
-        event.target.warehouse.value = 'Warehouse 1'
+        // event.target.warehouse.value = warehouseDropdownList[0]
     }
     render() {
+        console.log(this.props)
         return (
             <div className={`addProduct ${this.props.addProductDisplay.addProductDisplay}`}>
                 <div className='addProduct__tab'>
@@ -79,12 +80,9 @@ export default class AddProduct extends Component {
                         <div className='addProduct__tab--row'>
                             <div>
                                 <div className='addProduct__header'>WAREHOUSE</div>
-                                {/* select here */}
-                                <WarehousesDropdownList warehouseNames={this.props.warehouseNames} />
-                                {/* <Select warehouseNames={this.props.warehouseNames} /> */}
-                                {/* <select className='addProduct__input addProduct__input--select' name='warehouse'>
-                                    <option value='Warehouse 1'>Warehouse 1</option>
-                                </select> */}
+                                <div className='addProduct__warehousesSelect'>
+                                    <WarehousesDropdownList warehouseNames={this.props.warehouseNames} />
+                                </div>
                             </div>
                             <div>
                                 <div className='addProduct__header'>PRODUCT ID</div>
@@ -102,6 +100,16 @@ export default class AddProduct extends Component {
                                     <div className='addProduct__statusToggle--title'>In Stock</div>
                                     <Switch className='addProduct__statusToggle--switch' checkedIcon={false} uncheckedIcon={false} onChange={this.handleChange} checked={this.state.checked} />
                                 </div>
+                            </div>
+                        </div>
+                        <div className='addProduct__tab--row'>
+                            <div>
+                                <div className='addProduct__header'>CATEGORIES</div>
+                                <input className='addProduct__input' type='text' name='categories' placeholder='Comma Separated'></input>
+                            </div>
+                            <div>
+                                <div className='addProduct__header'>ORDERED BY</div>
+                                <input className='addProduct__input' type='text' name='ordered_by' placeholder='Ordered By:'></input>
                             </div>
                         </div>
                         <div>
@@ -126,7 +134,9 @@ function WarehousesDropdownList(props) {
         return { label: warehouse.name, value: warehouse.name }
     })
     return (
+        // <div className='addProduct__warehousesSelect'>
         <Select options={warehouseDropdownList} />
+        // {/* </div> */ }
     )
 }
 

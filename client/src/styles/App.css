@@ -1052,12 +1052,38 @@ body h5 {
   font-size: 1rem;
 }
 
+.addProduct__warehousesSelect {
+  width: 100%;
+  height: 48px;
+}
+
+.addProduct__warehousesSelect * {
+  background-color: #fafafa;
+  height: 100%;
+}
+
+.addProduct__warehousesSelect:first-child {
+  padding-top: 12px;
+}
+
 .addProduct--hide {
   display: none;
 }
 
 .addProduct--show {
   display: initial;
+}
+
+.css-1wa3eu0-placeholder {
+  padding-top: 14px;
+}
+
+.css-yk16xz-control {
+  height: 48px;
+}
+
+.css-1okebmr-indicatorSeparator {
+  height: 32px;
 }
 
 @media (min-width: 768px) {
@@ -1131,6 +1157,9 @@ body h5 {
   }
   .addProduct--show {
     padding-top: 10vh;
+  }
+  .addProduct__warehousesSelect {
+    width: 220px;
   }
 }
 

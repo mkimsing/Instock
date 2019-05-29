@@ -67,6 +67,18 @@
             font-size: 1rem;
         }
     }
+    &__warehousesSelect {
+        width: 100%;
+        height: 48px;
+        // padding-top: 15px;
+        & * {
+            background-color: $ALABASTER;
+            height: 100%;
+        }
+        &:first-child {
+            padding-top: 12px;
+        }
+    }
 }
 .addProduct--hide {
     display: none;
@@ -74,6 +86,20 @@
 .addProduct--show {
     display: initial;
 }
+
+// select imported css
+.css-1wa3eu0-placeholder {
+    padding-top: 14px;
+}
+.css-yk16xz-control {
+    height: 48px;
+}
+.css-1okebmr-indicatorSeparator {
+    height: 32px;
+}
+// .css-tlfecz-indicatorContainer {
+//     height: 48px;
+// }
 
 @media (min-width: 768px) {
     .addProduct {
@@ -128,6 +154,9 @@
         &--show {
             // will need to be adjusted with navbar added
             padding-top: 10vh;
+        }
+        &__warehousesSelect {
+            width: 220px;
         }
     }
 }
