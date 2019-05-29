@@ -20,6 +20,9 @@ export default class KebabButton extends Component {
 
   removeHandler = () => {
     axios.delete("http://localhost:8080/inventory");
+    .then(response=>{
+      
+    })
   };
 
   render() {

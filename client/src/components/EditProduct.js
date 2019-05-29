@@ -65,6 +65,7 @@ export default class EditProduct extends Component {
                     options={options}
                     className="form__city"
                     classNamePrefix="form__city"
+                    ç
                   />
                   {/* <select className="form__city">
                     <option value="Toronto">{`${this.props.location.city}, ${
