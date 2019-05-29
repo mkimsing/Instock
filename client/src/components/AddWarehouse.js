@@ -1,16 +1,64 @@
 import React, { Component } from "react";
-import axios from "axios";
-
+import Switch from "react-switch";
+import helper from "../helpers/helper";
 export default class AddWarehouse extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  addWarehouse = event => {
+  submitHandler = event => {
     event.preventDefault();
+    let {
+      warehouse,
+      address,
+      // address2,
+      // postalCode,
+      city,
+      contact, //Name
+      position,
+      phone,
+      email,
+      categories
+    } = event.target;
+    let fields = [
+      warehouse,
+      address,
+      // address2,
+      // postalCode,
+      city,
+      contact, //Name
+      position,
+      phone,
+      email,
+      categories
+    ];
+    let allFilled = fields
+      .map(field => {
+        return helper.isEmpty(field);
+      })
+      .every(val => {
+        return val === false;
+      });
+    if (allFilled) {
+      console.log("all filled!");
+      const locationObj = {
+        address1: address.value,
+        // address2: address2.value,
+        region: city.value
+        // postalCode: `${postalCode.value}, CA`
+      };
+
+      const contactObj = {
+        name: contact.value,
+        position: position.value,
+        phone: phone.value,
+        email: email.value
+      };
+
+      const categoriesArr = categories.value.split(",");
+      console.log(locationObj, contactObj, categoriesArr);
+      // this.props.postNewWarehouse(warehouse.value, locationObj, contactObj, categoriesArr);
+    } else {
+      console.log("At least one is empty");
+    }
   };
   render() {
-    console.log(this.props);
     return (
       <div
         className={`addWarehouse ${
@@ -18,9 +66,8 @@ export default class AddWarehouse extends Component {
         }`}
       >
         <div className="addWarehouse__tablet">
-        
           <h1>Add New</h1>
-          <form onSubmit={this.addWarehouse}>
+          <form onSubmit={this.submitHandler}>
             <>
               <div className="addWarehouse__header">Warehouse</div>
               <input
@@ -121,7 +168,12 @@ export default class AddWarehouse extends Component {
             </div>
             <div className="addWarehouse__buttons">
               <button>SAVE</button>
-              <button onClick={this.props.hideAddWarehousePage} className="cancel-button">CANCEL</button>
+              <button
+                onClick={this.props.hideAddWarehousePage}
+                className="cancel-button"
+              >
+                CANCEL
+              </button>
             </div>
           </form>
         </div>

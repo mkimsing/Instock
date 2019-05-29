@@ -1237,7 +1237,7 @@ body h5 {
   .addWarehouse .addWarehouse__address-location2 .addWarehouse__stack .addWarehouse__input,
   .addWarehouse .addWarehouse__contact-position .addWarehouse__stack .addWarehouse__input,
   .addWarehouse .addWarehouse__contact-info .addWarehouse__stack .addWarehouse__input {
-    width: 220px;
+    width: 90%;
   }
   .addWarehouse__buttons {
     display: -webkit-box;
