@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 export default class KebabButton extends Component {
   state = {
@@ -18,7 +19,7 @@ export default class KebabButton extends Component {
   };
 
   removeHandler = () => {
-    console.log(`Removing!`);
+    axios.delete("http://localhost:8080/inventory");
   };
 
   render() {
