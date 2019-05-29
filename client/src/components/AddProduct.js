@@ -21,71 +21,66 @@ export default class AddProduct extends Component {
             var toggleStatus = "In Stock"
         }
         let {
-            item,
-            productId,
+            // item,
+            product_id,
             name,
             description,
             last_ordered,
-            location,
+            ordered_by,
+            // location,
             city,
             country,
             quantity,
-            warehouseId
+            warehouse_id,
+            categories
         } = event.target;
         let fields = [
-            item,
-            productId,
+            // item,
+            product_id,
             name,
             last_ordered,
-            location,
+            ordered_by,
+            // location,
             city,
             country,
             quantity,
-            warehouseId
+            // having warehouse_id as a required field breaks the helper
+            // warehouse_id,
+            categories
         ]
-        // let allFilled = fields
-        //     .map(field => {
-        //         return helper.isEmpty(field)
-        //     })
-        //     .every(val => {
-        //         return val === false;
-        //     });
-        // if (allFilled) {
-        console.log('all are filled')
-        // const itemObj = {
-        //     productId: productId.
-        // }
-        // } else {
-        //     console.log('one or more fields missing')
-        // }
-        // axios.post("http://localhost:8080/inventory", {
-        //     // random id
-        //     id: Math.random().toString(36).substr(2, 9),
-        //     item: {
-        //         // input productId
-        //         productId: event.target.product_id,
-        //         name: event.target.name,
-        //         description: event.target.description
-        //     },
-        //     lastOrdered: event.target.last_ordered,
-        //     location: {
-        //         city: event.target.city,
-        //         country: event.target.country
-        //     },
-        //     quantity: event.target.quantity,
-        //     // need toggle.switch functionality
-        //     status: toggleStatus,
-        //     // warehouseID dependent upon warehouse name
-        //     warehouseId: event.target.warehouse
-        // })
-        event.target.product_id.value = ''
-        event.target.name.value = ''
-        event.target.description.value = ''
-        event.target.last_ordered.value = ''
-        event.target.city.value = ''
-        event.target.country.value = 'CA'
-        event.target.quantity.value = ''
-        // event.target.warehouse.value = warehouseDropdownList[0]
+        let allFilled = fields
+            .map(field => {
+                return helper.isEmpty(field)
+            })
+            .every(val => {
+                return val === false;
+            });
+        if (allFilled) {
+            console.log('all are filled')
+            const itemObj = {
+                product_id: product_id.value,
+                name: name.value,
+                description: description.value
+            }
+            const locationObj = {
+                city: city.value,
+                country: country.value,
+            }
+            // sample console log below
+            console.log(itemObj, locationObj, last_ordered.value, warehouse_id.value)
+        } else {
+            console.log('one or more fields missing')
+        }
+        product_id.value = ''
+        name.value = ''
+        description.value = ''
+        last_ordered.value = ''
+        city.value = ''
+        country.value = 'CA'
+        quantity.value = ''
+        warehouse_id.value = ''
+        ordered_by.value = ''
+        categories.value = ''
     }
     render() {
         if (this.state.checked === false) {
@@ -177,7 +172,6 @@ function WarehousesDropdownList(props) {
         return { label: warehouse.name, value: warehouse.id }
     })
     return (
-        <Select options={warehouseDropdownList} />
+        <Select name='warehouse_id' placeholder='Select...' options={warehouseDropdownList} />
     )
 }
-

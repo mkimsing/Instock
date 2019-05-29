@@ -70,16 +70,17 @@
     &__warehousesSelect {
         width: 100%;
         height: 48px;
-        // padding-top: 15px;
         & * {
             background-color: $ALABASTER;
             height: 100%;
+            font-size: 0.9rem;
         }
         &:first-child {
             padding-top: 12px;
         }
     }
 }
+// addProduct page status toggle
 .addProduct--hide {
     display: none;
 }

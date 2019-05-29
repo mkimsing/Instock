@@ -1060,6 +1060,7 @@ body h5 {
 .addProduct__warehousesSelect * {
   background-color: #fafafa;
   height: 100%;
+  font-size: 0.9rem;
 }
 
 .addProduct__warehousesSelect:first-child {
