@@ -28,7 +28,7 @@
     "location": {
       "address1": "112 Main Street",
       "address2": "Office 12",
-      "region": "Vancouver, BC",
+      "region": "Toronto, ON",
       "postalCode": "A1B2C3 CA"
     },
     "contact": {
@@ -51,7 +51,7 @@
     "location": {
       "address1": "113 Main Street",
       "address2": "Office 13",
-      "region": "Vancouver, BC",
+      "region": "Calgary, AB",
       "postalCode": "LQ13PZ CA"
     },
     "contact": {
@@ -74,7 +74,7 @@
     "location": {
       "address1": "114 Main Street",
       "address2": "Office 14",
-      "region": "Vancouver, BC",
+      "region": "Saskatoon, SK",
       "postalCode": "Q9A1KM CA"
     },
     "contact": {
@@ -97,7 +97,7 @@
     "location": {
       "address1": "115 Main Street",
       "address2": "Office 15",
-      "region": "Vancouver, BC",
+      "region": "Winnipeg, MB",
       "postalCode": "P3MJ8B CA"
     },
     "contact": {
