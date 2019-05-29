@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Switch from "react-switch";
 import BackArrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
+import Select from "react-select";
 
 export default class EditProduct extends Component {
   constructor(props) {
@@ -17,6 +18,10 @@ export default class EditProduct extends Component {
     if (Object.keys(this.props.product).length === 0)
       return <div>Loading...</div>;
 
+    const options = this.props.locations.map(location => {
+      return { label: location, value: location };
+    });
+
     return (
       <div className="product-detail-page--margin">
         <div className="header">
@@ -27,42 +32,56 @@ export default class EditProduct extends Component {
           <form className="form">
             <div className="form--flex form__description">
               ITEM DESCRIPTION
-              <textarea
-                rows="5"
-                placeholder="Here is a more detailed summary of the product name, it’s uses,
-          industries and possible attributes that could be used to describe the
-          product."
-              />
+              <textarea rows="5">
+                {this.props.product.item.description}
+              </textarea>
             </div>
             <aside>
               <div className="form__row--flex">
                 <div className="form--flex form__margin--right">
                   ORDERED BY
-                  <input type="text" placeholder="Mark Saunders" />
+                  <input
+                    type="text"
+                    defaultValue={this.props.product.orderedBy}
+                  />
                 </div>
                 <div className="form--flex">
                   REFERENCE NUMBER
-                  <input type="text" placeholder="JK2020FD7811201" />
+                  <input type="text" defaultValue={this.props.product.id} />
                 </div>
               </div>
               <div className="form__row--flex">
                 <div className="form--flex form__margin--right">
                   LAST ORDERED
-                  <input type="text" placeholder="2018-05-24" />
+                  <input
+                    type="text"
+                    defaultValue={this.props.product.lastOrdered}
+                  />
                 </div>
                 <div className="form--flex">
                   LOCATION
-                  <select className="form__city">
-                    <option value="Toronto">Toronto, CA</option>
+                  <Select
+                    defaultOptions
+                    options={options}
+                    className="form__city"
+                    classNamePrefix="form__city"
+                  />
+                  {/* <select className="form__city">
+                    <option value="Toronto">{`${this.props.location.city}, ${
+                      this.props.location.country
+                    }`}</option>
                     <option value="Vancouver">Vancouver, CA</option>
                     <option value="Calgary">Calgary, CA</option>
-                  </select>
+                  </select> */}
                 </div>
               </div>
               <div className="form__row--flex">
                 <div className="form--flex form__margin--right">
                   QUANTITY
-                  <input type="text" placeholder="0" />
+                  <input
+                    type="text"
+                    defaultValue={this.props.product.quantity}
+                  />
                 </div>
                 <div className="form--flex">
                   STATUS
@@ -87,13 +106,9 @@ export default class EditProduct extends Component {
 
               <div className="form--flex form__categories--margin">
                 CATEGORIES
-                <textarea
-                  id="categories"
-                  rows="6"
-                  placeholder="Industrial, Automotive, Heavy,
-            Mechanical, Engineering,
-            Transportation, Sales"
-                />
+                <textarea id="categories" rows="6">
+                  {this.props.product.categories}
+                </textarea>
               </div>
             </aside>
           </form>

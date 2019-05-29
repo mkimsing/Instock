@@ -52,13 +52,20 @@
 
     &__city {
       height: 43px;
-      border: $MERCURY 1px solid;
+      // border: $MERCURY 1px solid;
       margin-bottom: 24px;
-      padding-left: 15px;
       font-size: 12px;
       font-family: AvenirNext;
-      background-color: $ALABASTER;
+      // background-color: $ALABASTER;
       border-radius: 4px;
+      padding: 0px;
+    }
+    .form__city__control,
+    .form__city__value-container {
+      height: 100%;
+      background-color: $ALABASTER;
+      border: none;
+      // border: $MERCURY 1px solid;
     }
 
     &__stock {

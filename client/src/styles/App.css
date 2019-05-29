@@ -1042,13 +1042,18 @@ body h5 {
 
 .product-detail-page--margin .form__city {
   height: 43px;
-  border: #e1e1e1 1px solid;
   margin-bottom: 24px;
-  padding-left: 15px;
   font-size: 12px;
   font-family: AvenirNext;
-  background-color: #fafafa;
   border-radius: 4px;
+  padding: 0px;
+}
+
+.product-detail-page--margin .form .form__city__control,
+.product-detail-page--margin .form .form__city__value-container {
+  height: 100%;
+  background-color: #fafafa;
+  border: none;
 }
 
 .product-detail-page--margin .form__stock {
