@@ -3,9 +3,6 @@ import Add from "../assets/Icons/SVG/Icon-add.svg";
 import AddProduct from "./AddProduct";
 
 export default class AddProductButton extends Component {
-    constructor(props) {
-        super(props)
-    }
     state = {
         addProductDisplay: "addProduct--hide"
     };

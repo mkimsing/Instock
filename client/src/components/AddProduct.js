@@ -34,7 +34,7 @@ export default class AddProduct extends Component {
             warehouse_id,
             categories
         } = event.target;
-        let fields = [
+        let itemFields = [
             // item,
             product_id,
             name,
@@ -48,26 +48,37 @@ export default class AddProduct extends Component {
             // warehouse_id,
             categories
         ]
-        let allFilled = fields
+        let itemAllFilled = itemFields
             .map(field => {
                 return helper.isEmpty(field)
             })
             .every(val => {
                 return val === false;
             });
-        if (allFilled) {
+        if (itemAllFilled) {
             console.log('all are filled')
             const itemObj = {
                 product_id: product_id.value,
                 name: name.value,
                 description: description.value
             }
-            const locationObj = {
+            const itemLocationObj = {
                 city: city.value,
                 country: country.value,
             }
+            const itemCategoriesArr = categories.value.split(',');
             // sample console log below
-            console.log(itemObj, locationObj, last_ordered.value, warehouse_id.value)
+            // console.log(itemObj, itemLocationObj, itemCategoriesArr, last_ordered.value, warehouse_id.value, toggleStatus)
+            // this.props.postNewItem(
+            //     itemObj,
+            //     itemLocationObj,
+            //     itemCategoriesArr,
+            //     toggleStatus,
+            //     last_ordered.value,
+            //     ordered_by.value,
+            //     warehouse_id.value,
+            //     quantity.value,
+            // )
         } else {
             console.log('one or more fields missing')
         }
@@ -76,7 +87,7 @@ export default class AddProduct extends Component {
         description.value = ''
         last_ordered.value = ''
         city.value = ''
-        country.value = 'CA'
+        country.value = ''
         quantity.value = ''
         warehouse_id.value = ''
         ordered_by.value = ''
@@ -111,6 +122,7 @@ export default class AddProduct extends Component {
                             <div>
                                 <div className='addProduct__header'>COUNTRY</div>
                                 <select className='addProduct__input addProduct__input--select' name='country'>
+                                    <option value='' disabled selected hidden>Select...</option>
                                     <option value='CA'>CA</option>
                                 </select>
                             </div>

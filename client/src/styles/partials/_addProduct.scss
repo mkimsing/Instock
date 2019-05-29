@@ -44,6 +44,7 @@
         &--title {
             padding-top: 6px;
             color: $BLACK;
+            font-size: 0.9rem;
         }
     }
     &__buttons {
@@ -73,7 +74,7 @@
         & * {
             background-color: $ALABASTER;
             height: 100%;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         &:first-child {
             padding-top: 12px;
@@ -91,13 +92,16 @@
 // select imported css
 .css-1uccc91-singleValue,
 .css-1wa3eu0-placeholder {
-    padding-top: 14px;
+    padding-top: 18px;
 }
 .css-yk16xz-control {
     height: 48px;
 }
 .css-1okebmr-indicatorSeparator {
     height: 32px;
+}
+.css-1hwfws3 {
+    padding: 2px 8px 2px 12px;
 }
 
 @media (min-width: 768px) {
@@ -159,3 +163,4 @@
         }
     }
 }
+

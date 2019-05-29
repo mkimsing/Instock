@@ -67,7 +67,7 @@ function Warehouse(props) {
                     </div>
                     <Link to={`/warehouses/${props.warehouse.id}`}>
                         <div className='warehousesPage__warehouse--arrow'>
-                            <img src={RightArrow} />
+                            <img src={RightArrow} alt='Arrow' />
                         </div>
                     </Link>
                 </div>
@@ -87,7 +87,7 @@ function Warehouse(props) {
                         <div>{props.warehouse.categories}</div>
                         <Link to={`/warehouses/${props.warehouse.id}`}>
                             <div className='warehousesPage__desktop--arrow'>
-                                <img src={RightArrow} />
+                                <img src={RightArrow} alt='Arrow' />
                             </div>
                         </Link>
                     </div>
