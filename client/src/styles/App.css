@@ -363,9 +363,9 @@ body h5 {
   }
 }
 
-/*=============================================
-=              NavBar                         =
-=============================================*/
+/*====================================
+*              NavBar                *
+=====================================*/
 /* MOBILE - screen 320 px */
 .NavBar {
   display: -webkit-box;
@@ -393,6 +393,7 @@ body h5 {
 
 .NavBar header .logo {
   margin-top: 16px;
+  text-align: center;
 }
 
 .NavBar nav {
@@ -406,9 +407,16 @@ body h5 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
   margin-bottom: 16px;
   color: #fafafa;
   font-family: "AvenirNext", Arial, Helvetica, sans-serif;
+}
+
+.NavBar nav .nav__left,
+.NavBar nav .nav__right {
+  width: 50%;
+  text-align: center;
 }
 
 .NavBar a {
@@ -417,6 +425,7 @@ body h5 {
   text-decoration: none;
 }
 
+.NavBar a:hover,
 .NavBar a:active,
 .NavBar a:visited {
   font-weight: 550;
@@ -427,15 +436,10 @@ body h5 {
 /* MEDIA QUERIES */
 /* TABLET 768px */
 @media (min-width: 768px) {
-  navBar {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-left: 24px;
-    margin-right: 24px;
-  }
-  navBar nav {
+  .NavBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -443,15 +447,42 @@ body h5 {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    margin: 0px;
+  }
+  .NavBar header {
+    margin-left: 24px;
+  }
+  .NavBar header .logo {
+    margin: 0px;
+    text-align: center;
+  }
+  .NavBar nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0px;
+  }
+  .NavBar nav .nav__left,
+  .NavBar nav .nav__right {
+    text-align: left;
+    width: 20%;
   }
 }
 
 /* MEDIA QUERIES */
 /* DESKTOP 1440px */
 @media (min-width: 1440px) {
-  navBar {
+  .NavBar header {
     margin-left: 180px;
-    margin-right: 180px;
+  }
+  .NavBar nav .nav__left,
+  .NavBar nav .nav__right {
+    text-align: left;
+    width: 10%;
   }
 }
 /*# sourceMappingURL=App.css.map */

@@ -11,8 +11,12 @@ function NavBar() {
         </Link>
       </header>
       <nav>
+        <div className="nav__left">
         <Link to="/inventory">Inventory</Link>
+        </div>
+        <div className="nav__right">
         <Link to="/warehouses">Locations</Link>
+        </div>
       </nav>
     </div>
   );
