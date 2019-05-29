@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Switch from 'react-switch';
 import axios from 'axios';
 import Select from 'react-select';
+import helper from "../helpers/helper";
 
 export default class AddProduct extends Component {
     constructor(props) {
@@ -19,6 +20,44 @@ export default class AddProduct extends Component {
         } else {
             var toggleStatus = "In Stock"
         }
+        let {
+            item,
+            productId,
+            name,
+            description,
+            last_ordered,
+            location,
+            city,
+            country,
+            quantity,
+            warehouseId
+        } = event.target;
+        let fields = [
+            item,
+            productId,
+            name,
+            last_ordered,
+            location,
+            city,
+            country,
+            quantity,
+            warehouseId
+        ]
+        // let allFilled = fields
+        //     .map(field => {
+        //         return helper.isEmpty(field)
+        //     })
+        //     .every(val => {
+        //         return val === false;
+        //     });
+        // if (allFilled) {
+        console.log('all are filled')
+        // const itemObj = {
+        //     productId: productId.
+        // }
+        // } else {
+        //     console.log('one or more fields missing')
+        // }
         // axios.post("http://localhost:8080/inventory", {
         //     // random id
         //     id: Math.random().toString(36).substr(2, 9),
@@ -49,7 +88,11 @@ export default class AddProduct extends Component {
         // event.target.warehouse.value = warehouseDropdownList[0]
     }
     render() {
-        console.log(this.props)
+        if (this.state.checked === false) {
+            var toggleLabel = "Out Of Stock"
+        } else {
+            var toggleLabel = "In Stock"
+        }
         return (
             <div className={`addProduct ${this.props.addProductDisplay.addProductDisplay}`}>
                 <div className='addProduct__tab'>
@@ -62,7 +105,7 @@ export default class AddProduct extends Component {
                             </div>
                             <div>
                                 <div className='addProduct__header'>LAST ORDERED</div>
-                                <input className='addProduct__input' type='number' name='last_ordered' placeholder='mm/dd/yyyy'></input>
+                                <input className='addProduct__input' type='text' name='last_ordered' placeholder='mm/dd/yyyy'></input>
                             </div>
                         </div>
                         <div className='addProduct__tab--row'>
@@ -97,7 +140,7 @@ export default class AddProduct extends Component {
                             <div className='addProduct__status'>
                                 <div className='addProduct__header'>STATUS</div>
                                 <div className='addProduct__statusToggle'>
-                                    <div className='addProduct__statusToggle--title'>In Stock</div>
+                                    <div className='addProduct__statusToggle--title'>{toggleLabel}</div>
                                     <Switch className='addProduct__statusToggle--switch' checkedIcon={false} uncheckedIcon={false} onChange={this.handleChange} checked={this.state.checked} />
                                 </div>
                             </div>
@@ -117,7 +160,7 @@ export default class AddProduct extends Component {
                             <textarea className='addProduct__input addProduct__input--description' name='description' placeholder='(Optional)'></textarea>
                         </div>
                         <div className='addProduct__buttons'>
-                            <button onClick={this.props.hideAddProductPage} className='addProduct__buttons--cancel'>CANCEL</button>
+                            <button onClick={this.props.hideAddProductPage} className='addProduct__buttons--cancel' type='button'>CANCEL</button>
                             <button onClick={this.props.hideAddProductPage} className='addProduct__buttons--save' type='submit'>SAVE</button>
                         </div>
                     </form>
@@ -131,12 +174,10 @@ function WarehousesDropdownList(props) {
     const warehouseDropdownArray = props.warehouseNames
     if (Object.keys(warehouseDropdownArray).length === 0) return <div>Loading...</div>
     const warehouseDropdownList = warehouseDropdownArray.map((warehouse) => {
-        return { label: warehouse.name, value: warehouse.name }
+        return { label: warehouse.name, value: warehouse.id }
     })
     return (
-        // <div className='addProduct__warehousesSelect'>
         <Select options={warehouseDropdownList} />
-        // {/* </div> */ }
     )
 }
 

@@ -1074,6 +1074,7 @@ body h5 {
   display: initial;
 }
 
+.css-1uccc91-singleValue,
 .css-1wa3eu0-placeholder {
   padding-top: 14px;
 }
@@ -1093,7 +1094,7 @@ body h5 {
   .addProduct__tab {
     background: white;
     width: 576px;
-    height: 764px;
+    height: 864px;
     margin: auto;
     padding: 40px 48px;
     border-radius: 5px;

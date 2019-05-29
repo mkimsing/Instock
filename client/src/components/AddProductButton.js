@@ -20,7 +20,6 @@ export default class AddProductButton extends Component {
         })
     };
     render() {
-        console.log(this.state)
         return (
             <>
                 <button className="add" onClick={this.displayAddProductPage}>

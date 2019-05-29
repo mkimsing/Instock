@@ -13,6 +13,8 @@ class WarehousesContainer extends Component {
             });
         });
     }
+
+
     render() {
         return (
             <div>

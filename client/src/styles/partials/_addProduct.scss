@@ -88,6 +88,7 @@
 }
 
 // select imported css
+.css-1uccc91-singleValue,
 .css-1wa3eu0-placeholder {
     padding-top: 14px;
 }
@@ -97,9 +98,6 @@
 .css-1okebmr-indicatorSeparator {
     height: 32px;
 }
-// .css-tlfecz-indicatorContainer {
-//     height: 48px;
-// }
 
 @media (min-width: 768px) {
     .addProduct {
@@ -107,7 +105,7 @@
         &__tab {
             background: white;
             width: 576px;
-            height: 764px;
+            height: 864px;
             margin: auto;
             padding: 40px 48px;
             border-radius: 5px;
