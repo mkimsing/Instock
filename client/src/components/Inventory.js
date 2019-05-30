@@ -4,6 +4,7 @@ import Add from "../assets/Icons/SVG/Icon-add.svg";
 
 export default function Inventory(props) {
   let { inventory } = props;
+  //Inventory is initialized as empty object before any data is loaded
   if (!inventory || Object.keys(inventory).length === 0) {
     return (
       <div className="inventoryPage">

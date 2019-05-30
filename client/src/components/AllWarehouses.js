@@ -1,6 +1,5 @@
 import React from "react";
 import RightArrow from "../assets/Icons/SVG/Icon-arrow-right.svg";
-import Add from "../assets/Icons/SVG/Icon-add.svg";
 import { Link } from "react-router-dom";
 import AddWarehouseButton from "./AddWarehouseButton";
 
@@ -72,7 +71,7 @@ function Warehouse(props) {
           </div>
           <Link to={`/warehouses/${props.warehouse.id}`}>
             <div className="warehousesPage__warehouse--arrow">
-              <img src={RightArrow} />
+              <img src={RightArrow} alt='arrow' />
             </div>
           </Link>
         </div>
@@ -103,7 +102,7 @@ function Warehouse(props) {
             <div>{props.warehouse.categories}</div>
             <Link to={`/warehouses/${props.warehouse.id}`}>
               <div className="warehousesPage__desktop--arrow">
-                <img src={RightArrow} />
+                <img src={RightArrow} alt='arrow' />
               </div>
             </Link>
           </div>

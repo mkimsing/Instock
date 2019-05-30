@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import Switch from "react-switch";
+import React from "react";
 import BackArrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 import { Link } from "react-router-dom";
 
@@ -10,7 +9,7 @@ export default function ProductDetail(props) {
       <div className="header">
         <div className="header__back">
           <Link to="/inventory">
-            <img src={BackArrow} />
+            <img src={BackArrow} alt='back arrow' />
           </Link>
           <h1>{props.product.item.name}</h1>
         </div>
