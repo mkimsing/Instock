@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Switch from 'react-switch';
-import axios from 'axios';
 import Select from 'react-select';
 import helper from "../helpers/helper";
 
@@ -21,26 +20,22 @@ export default class AddProduct extends Component {
             var toggleStatus = "In Stock"
         }
         let {
-            // item,
-            product_id,
+            productId,
             name,
             description,
-            last_ordered,
-            ordered_by,
-            // location,
+            lastOrdered,
+            orderedBy,
             city,
             country,
             quantity,
-            warehouse_id,
+            warehouseId,
             categories
         } = event.target;
         let itemFields = [
-            // item,
-            product_id,
+            productId,
             name,
-            last_ordered,
-            ordered_by,
-            // location,
+            lastOrdered,
+            orderedBy,
             city,
             country,
             quantity,
@@ -58,39 +53,39 @@ export default class AddProduct extends Component {
         if (itemAllFilled) {
             console.log('all are filled')
             const itemObj = {
-                product_id: product_id.value,
-                name: name.value,
-                description: description.value
+                productId: productId.value.trim(),
+                name: name.value.trim(),
+                description: description.value.trim()
             }
             const itemLocationObj = {
-                city: city.value,
-                country: country.value,
+                city: city.value.trim(),
+                country: country.value.trim(),
             }
-            const itemCategoriesArr = categories.value.split(',');
-            // sample console log below
-            // console.log(itemObj, itemLocationObj, itemCategoriesArr, last_ordered.value, warehouse_id.value, toggleStatus)
-            // this.props.postNewItem(
-            //     itemObj,
-            //     itemLocationObj,
-            //     itemCategoriesArr,
-            //     toggleStatus,
-            //     last_ordered.value,
-            //     ordered_by.value,
-            //     warehouse_id.value,
-            //     quantity.value,
-            // )
+            const itemCategoriesArr = categories.value.split(',').map(category => {
+                return category.trim();
+            });
+            this.props.postNewItem(
+                itemObj,
+                itemLocationObj,
+                itemCategoriesArr,
+                lastOrdered.value.trim(),
+                orderedBy.value.trim(),
+                quantity.value.trim(),
+                toggleStatus,
+                warehouseId.value
+            )
         } else {
             console.log('one or more fields missing')
         }
-        product_id.value = ''
+        productId.value = ''
         name.value = ''
         description.value = ''
-        last_ordered.value = ''
+        lastOrdered.value = ''
         city.value = ''
         country.value = ''
         quantity.value = ''
-        warehouse_id.value = ''
-        ordered_by.value = ''
+        warehouseId.value = ''
+        orderedBy.value = ''
         categories.value = ''
     }
     render() {
@@ -111,7 +106,7 @@ export default class AddProduct extends Component {
                             </div>
                             <div>
                                 <div className='addProduct__header'>LAST ORDERED</div>
-                                <input className='addProduct__input' type='text' name='last_ordered' placeholder='mm/dd/yyyy'></input>
+                                <input className='addProduct__input' type='text' name='lastOrdered' placeholder='mm/dd/yyyy'></input>
                             </div>
                         </div>
                         <div className='addProduct__tab--row'>
@@ -121,8 +116,8 @@ export default class AddProduct extends Component {
                             </div>
                             <div>
                                 <div className='addProduct__header'>COUNTRY</div>
-                                <select className='addProduct__input addProduct__input--select' name='country'>
-                                    <option value='' disabled selected hidden>Select...</option>
+                                <select className='addProduct__input addProduct__input--select' name='country' defaultValue=''>
+                                    <option value='' disabled hidden>Select...</option>
                                     <option value='CA'>CA</option>
                                 </select>
                             </div>
@@ -136,7 +131,7 @@ export default class AddProduct extends Component {
                             </div>
                             <div>
                                 <div className='addProduct__header'>PRODUCT ID</div>
-                                <input className='addProduct__input' type='text' name='product_id' placeholder='Product ID'></input>
+                                <input className='addProduct__input' type='text' name='productId' placeholder='Product ID'></input>
                             </div>
                         </div>
                         <div className='addProduct__tab--row'>
@@ -159,7 +154,7 @@ export default class AddProduct extends Component {
                             </div>
                             <div>
                                 <div className='addProduct__header'>ORDERED BY</div>
-                                <input className='addProduct__input' type='text' name='ordered_by' placeholder='Ordered By:'></input>
+                                <input className='addProduct__input' type='text' name='orderedBy' placeholder='Ordered By:'></input>
                             </div>
                         </div>
                         <div>
@@ -184,6 +179,6 @@ function WarehousesDropdownList(props) {
         return { label: warehouse.name, value: warehouse.id }
     })
     return (
-        <Select name='warehouse_id' placeholder='Select...' options={warehouseDropdownList} />
+        <Select name='warehouseId' placeholder='Select...' options={warehouseDropdownList} />
     )
 }

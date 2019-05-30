@@ -4,12 +4,40 @@ const inventoryController = require("../controllers/inventoryController");
 const helper = require("../helpers/helper");
 const fileName = `${__dirname}/../model/inventory.json`;
 
+let inventories = require(fileName);
+
 router
   .route("/")
   //Get all inventory
   .get((_req, res) => {
     res.json(inventoryController.getAllInventory());
+  })
+  // post new inventory item
+  .post((req, res) => {
+    let { id, item, location, categories, lastOrdered, orderedBy, quantity, status, warehouseId } = req.body;
+    if (
+      !id ||
+      !item.name ||
+      !item.description ||
+      !item.productId ||
+      !location.city ||
+      !location.country ||
+      !categories ||
+      !lastOrdered ||
+      !orderedBy ||
+      !quantity ||
+      !status ||
+      !warehouseId
+    ) {
+      return res.status(400).json({
+        errorMessage: "Please ensure all fields are included before submitting."
+      });
+    }
+    inventories.push(req.body);
+    helper.writeJSONFile(fileName, inventories);
+    res.json(inventories);
   });
+
 
 //Endpoint that will return an item based on its id.
 //If the id does not match, return a 404 status and an error message.

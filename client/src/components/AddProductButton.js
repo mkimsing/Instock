@@ -22,7 +22,12 @@ export default class AddProductButton extends Component {
                 <button className="add" onClick={this.displayAddProductPage}>
                     <img className="add--img" src={Add} alt="Plus Sign" />
                 </button>
-                <AddProduct hideAddProductPage={this.hideAddProductPage} addProductDisplay={this.state} warehouseNames={this.props.warehouseNames} />
+                <AddProduct
+                    hideAddProductPage={this.hideAddProductPage}
+                    addProductDisplay={this.state}
+                    warehouseNames={this.props.warehouseNames}
+                    postNewItem={this.props.postNewItem}
+                />
             </>
         )
     }

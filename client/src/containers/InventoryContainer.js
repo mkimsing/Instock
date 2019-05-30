@@ -24,28 +24,35 @@ export default class InventoryContainer extends Component {
     })
   }
 
-  // postNewItem(name, location, categories, status, last_ordered, ordered_by, warehouse_id, quantity) {
-  //   console.log(this.props)
-  //   const newItem = {
-  //     id: Math.random().toString(36).substr(2, 9),
-  //     // 
-  //     name: name,
-  //     location: location,
-  //     contact: contact,
-  //     categories: categories
-  //   };
-  //   axios
-  //     .post("http://localhost:8080/inventory", {
-  //       newItem
-  //     })
-  //     .then(response => {
-  //       this.setState({
-  //         inventory: response.data
-  //       });
-  //     });
-  // }
+  postNewItem = (item, location, categories, lastOrdered, orderedBy, quantity, status, warehouseId) => {
+    const newItem = {
+      id: Math.random().toString(36).substr(2, 9),
+      item: item,
+      location: location,
+      categories: categories,
+      lastOrdered: lastOrdered,
+      orderedBy: orderedBy,
+      quantity: quantity,
+      status: status,
+      warehouseId: warehouseId
+    };
+    console.log(newItem)
+    axios
+      .post("http://localhost:8080/inventory", {
+        ...newItem
+      })
+      .then(response => {
+        this.setState({
+          inventory: response.data
+        });
+      });
+  }
 
   render() {
-    return <Inventory inventory={this.state.inventory} warehouseNames={this.state.warehouseNames} />;
+    return <Inventory
+      inventory={this.state.inventory}
+      warehouseNames={this.state.warehouseNames}
+      postNewItem={this.postNewItem}
+    />;
   }
 }

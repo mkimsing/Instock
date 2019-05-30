@@ -24,7 +24,7 @@ export default function Inventory(props) {
           </div>
           <InventoryTable inventory={inventory} />
         </div>
-        <AddProductButton warehouseNames={warehouseNames} />
+        <AddProductButton warehouseNames={warehouseNames} postNewItem={props.postNewItem} />
       </>
     );
   }

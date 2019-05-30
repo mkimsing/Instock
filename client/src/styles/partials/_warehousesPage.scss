@@ -235,6 +235,7 @@
         }
         &__categories {
             display: flex;
+            justify-content: space-between;
         }
         &__add {
             bottom: 100px;
