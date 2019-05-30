@@ -22,6 +22,74 @@ const inventoryController = {
     } else {
       return { error: 404, errorMsg: `Warehouse with ID: ${id} not found` };
     }
+  },
+  //Function to edit an inventory item
+  editInventoryItem: (itemId, newData) => {
+    if (
+      !newData ||
+      !newData.item ||
+      !newData.item.description ||
+      !newData.orderedBy ||
+      !newData.id ||
+      !newData.location ||
+      !newData.location.city ||
+      !newData.location.country ||
+      !newData.quantity ||
+      !newData.status ||
+      !newData.categories
+    ) {
+      return {
+        error: 400,
+        errorMsg: `Please provide JSON data in the following format: 
+{
+  description: 'description',
+  orderedBy: 'Name',
+  id: "IdNumber",
+  lastOrdered: 'mm/dd/yyyy',
+  location: {
+    city: 'MyCity',
+    country: 'MyCountry'
+  },
+  quantity: 'Amount',
+  status: 'In Stock',
+  categories: ['A', 'B', 'C']
+}`
+      };
+    } else {
+      let allInventory = helper.readJSONFile(Inventory_File);
+      let foundItem = allInventory.find(item => {
+        return item.id === itemId;
+      });
+
+      if (foundItem) {
+        let {
+          item,
+          orderedBy,
+          id,
+          lastOrdered,
+          location,
+          quantity,
+          status,
+          categories
+        } = newData;
+
+        foundItem.item.description = item.description;
+        foundItem.orderedBy = orderedBy;
+        foundItem.id = id;
+        foundItem.lastOrdered = lastOrdered;
+        foundItem.location = location;
+        foundItem.quantity = quantity;
+        foundItem.status = status;
+        foundItem.categories = categories;
+
+        // allInventory.push(foundItem);
+        helper.writeJSONFile(Inventory_File, allInventory);
+
+        return { foundItem };
+      } else {
+        return { error: 404, errorMsg: `No id found with id: ${itemId}` };
+      }
+    }
   }
 };
 

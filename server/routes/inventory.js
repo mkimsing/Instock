@@ -69,4 +69,16 @@ router.delete("/:id", (req, res) => {
   }
 });
 
+router.put("/:id/edit", (req, res) => {
+  const response = inventoryController.editInventoryItem(
+    req.params.id,
+    req.body
+  );
+  if (response.error) {
+    res.status(response.error).send(response.errorMsg);
+  } else {
+    res.json(response);
+  }
+});
+
 module.exports = router;
