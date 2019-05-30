@@ -87,7 +87,9 @@ export default class EditProduct extends Component {
                 <div className="form--flex">
                   STATUS
                   <div className="form__stock">
-                    <span className="form__stock-text">In Stock</span>
+                    <span className="form__stock-text">
+                      {this.props.product.status}
+                    </span>
                     <label className="form__toggle-button">
                       <Switch
                         onChange={this.handleChange}

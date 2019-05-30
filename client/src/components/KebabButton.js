@@ -18,11 +18,8 @@ export default class KebabButton extends Component {
     }
   };
 
-  removeHandler = () => {
-    axios.delete("http://localhost:8080/inventory");
-    .then(response=>{
-      
-    })
+  removeItem = () => {
+    this.props.removeHandler(this.props.id);
   };
 
   render() {
@@ -31,7 +28,7 @@ export default class KebabButton extends Component {
         <button className="kebabButton" onClick={this.toggleRemoveButton} />
         <button
           className={`removeButton ${this.state.removeButtonModifier}`}
-          onClick={this.removeHandler}
+          onClick={this.removeItem}
         >
           Remove
         </button>

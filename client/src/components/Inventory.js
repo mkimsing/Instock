@@ -21,7 +21,10 @@ export default function Inventory(props) {
           <h1>Inventory</h1>
           <input placeholder="Search" />
         </div>
-        <InventoryTable inventory={inventory} />
+        <InventoryTable
+          inventory={inventory}
+          removeHandler={props.removeHandler}
+        />
         <div className="add">
           <img className="add--img" src={Add} alt="Plus Sign" />
         </div>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Switch from "react-switch";
 import BackArrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
+import { Link } from "react-router-dom";
 
 export default function ProductDetail(props) {
   if (Object.keys(props.product).length === 0) return <div>Loading...</div>;
@@ -8,7 +9,9 @@ export default function ProductDetail(props) {
     <div className="product-detail-page--margin">
       <div className="header">
         <div className="header__back">
-          <img src={BackArrow} />
+          <Link to="/inventory">
+            <img src={BackArrow} />
+          </Link>
           <h1>{props.product.item.name}</h1>
         </div>
         <div className="header__stock">{props.product.status}</div>
@@ -60,6 +63,7 @@ export default function ProductDetail(props) {
         </form>
       </div>
       <div className="buttons">
+        {/* <Link to={`/${}`/edit`}> */}
         <button>EDIT</button>
       </div>
     </div>
