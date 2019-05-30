@@ -7,8 +7,8 @@ export default class AddWarehouse extends Component {
     let {
       warehouse,
       address,
-      // address2,
-      // postalCode,
+      address2,
+      postalCode,
       city,
       contact, //Name
       position,
@@ -19,8 +19,8 @@ export default class AddWarehouse extends Component {
     let fields = [
       warehouse,
       address,
-      // address2,
-      // postalCode,
+      address2,
+      postalCode,
       city,
       contact, //Name
       position,
@@ -35,27 +35,42 @@ export default class AddWarehouse extends Component {
       .every(val => {
         return val === false;
       });
+
     if (allFilled) {
-      console.log("all filled!");
+      // Parse postal code to remove spaces between parts
+      const parsedPostalCode = postalCode.value.replace(/\s+/g, "").trim();
+
       const locationObj = {
-        address1: address.value,
-        // address2: address2.value,
-        region: city.value
-        // postalCode: `${postalCode.value}, CA`
+        address1: address.value.trim(),
+        address2: address2.value.trim(),
+        region: city.value.trim(),
+        postalCode: `${parsedPostalCode} CA`
       };
 
       const contactObj = {
-        name: contact.value,
-        position: position.value,
-        phone: phone.value,
-        email: email.value
+        name: contact.value.trim(),
+        position: position.value.trim(),
+        phone: phone.value.trim(),
+        email: email.value.trim()
       };
 
-      const categoriesArr = categories.value.split(",");
-      console.log(locationObj, contactObj, categoriesArr);
-      // this.props.postNewWarehouse(warehouse.value, locationObj, contactObj, categoriesArr);
+      const categoriesArr = categories.value.split(",").map(category => {
+        return category.trim();
+      });
+      this.props.postNewWarehouse(
+        warehouse.value,
+        locationObj,
+        contactObj,
+        categoriesArr
+      );
+
+      //Reset fields
+      fields.forEach(field => (field.value = ""));
+
+      //Hide modal
+      this.props.hideAddWarehousePage();
     } else {
-      console.log("At least one is empty");
+      console.log("Please fill out all fields");
     }
   };
   render() {
@@ -93,9 +108,9 @@ export default class AddWarehouse extends Component {
                   className="addWarehouse__input addWarehouse__input--select"
                   name="city"
                 >
-                  <option value="Vancouver">Vancouver, BC</option>
-                  <option value="Toronto">Toronto, ON</option>
-                  <option value="Calgary">Calgary, AB</option>
+                  <option value="Vancouver, BC">Vancouver, BC</option>
+                  <option value="Toronto, ON">Toronto, ON</option>
+                  <option value="Calgary, AB">Calgary, AB</option>
                 </select>
               </div>
             </div>
@@ -106,7 +121,7 @@ export default class AddWarehouse extends Component {
                   className="addWarehouse__input"
                   type="text"
                   name="address2"
-                  placeholder="Enter additional Address information"
+                  placeholder="Additional address information"
                 />
               </div>
               <div className="addWarehouse__stack">
@@ -146,7 +161,7 @@ export default class AddWarehouse extends Component {
                   className="addWarehouse__input"
                   type="text"
                   name="phone"
-                  placeholder="000 - 000 - 0000"
+                  placeholder="000-000-0000"
                 />
               </div>
               <div className="addWarehouse__stack">
@@ -164,11 +179,13 @@ export default class AddWarehouse extends Component {
               <textarea
                 className="addWarehouse__input addWarehouse__input--description"
                 placeholder="Use commas to separate each category"
+                name="categories"
               />
             </div>
             <div className="addWarehouse__buttons">
               <button>SAVE</button>
               <button
+                type="button"
                 onClick={this.props.hideAddWarehousePage}
                 className="cancel-button"
               >

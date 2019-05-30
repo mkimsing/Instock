@@ -20,7 +20,7 @@ class WarehousesContainer extends Component {
       });
   }
 
-  postNewWarehouse(name, location, contact, categories) {
+  postNewWarehouse = (name, location, contact, categories) => {
     const newWarehouse = {
       id: Math.random()
         .toString(36)
@@ -32,14 +32,14 @@ class WarehousesContainer extends Component {
     };
     axios
       .post("http://localhost:8080/warehouses", {
-        newWarehouse
+        ...newWarehouse
       })
       .then(response => {
         this.setState({
           warehouses: response.data
         });
       });
-  }
+  };
 
   componentDidMount() {
     this.fetchAllWarehouses();
@@ -48,7 +48,10 @@ class WarehousesContainer extends Component {
   render() {
     return (
       <div>
-        <AllWarehouses warehouses={this.state.warehouses} />
+        <AllWarehouses
+          warehouses={this.state.warehouses}
+          postNewWarehouse={this.postNewWarehouse}
+        />
       </div>
     );
   }

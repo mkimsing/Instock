@@ -20,12 +20,16 @@ export default class AddWarehouseButton extends Component {
   render() {
     return (
       <>
-            <button className="warehousesPage__add" onClick={this.displayAddWarehouse}>
+        <button
+          className="warehousesPage__add"
+          onClick={this.displayAddWarehouse}
+        >
           <img className="warehousesPage__add--img" src={Add} />
         </button>
         <AddWarehouse
           hideAddWarehousePage={this.hideAddWarehousePage}
           addWarehouseDisplay={this.state}
+          postNewWarehouse={this.props.postNewWarehouse}
         />
       </>
     );
