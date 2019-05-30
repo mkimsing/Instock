@@ -1,6 +1,9 @@
 import React from "react";
 import InventoryItem from "./InventoryItem";
 export default function InventoryTable(props) {
+  if (props.inventory.length === 0) {
+    return <h3> No Items Found</h3>;
+  }
   return (
     <section className="inventoryTable">
       <div className="inventoryTable__Headers">
@@ -12,7 +15,13 @@ export default function InventoryTable(props) {
       </div>
       <div>
         {props.inventory.map(item => {
-          return <InventoryItem item={item} key={item.id} />;
+          return (
+            <InventoryItem
+              item={item}
+              key={item.id}
+              removeHandler={props.removeHandler}
+            />
+          );
         })}
       </div>
     </section>

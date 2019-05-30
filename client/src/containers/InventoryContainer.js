@@ -15,8 +15,21 @@ export default class InventoryContainer extends Component {
       });
     });
   }
+  removeHandler = id => {
+    axios.delete(`http://localhost:8080/inventory/${id}`).then(response => {
+      console.log(response.data.msg);
+      this.setState({
+        inventory: response.data.inventory
+      });
+    });
+  };
 
   render() {
-    return <Inventory inventory={this.state.inventory} />;
+    return (
+      <Inventory
+        inventory={this.state.inventory}
+        removeHandler={this.removeHandler}
+      />
+    );
   }
 }

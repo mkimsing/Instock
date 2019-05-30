@@ -6,7 +6,8 @@ import ProductDetails from "../components/ProductDetailComponent";
 import { Route } from "react-router-dom";
 export default class ProductContainer extends Component {
   state = {
-    product: {}
+    product: {},
+    warehouseLocations: []
   };
 
   componentDidMount() {
@@ -17,6 +18,17 @@ export default class ProductContainer extends Component {
           product: response.data
         });
       });
+
+    axios.get(`${apiInfo.API_URL}/warehouses`).then(response => {
+      const locations = response.data.map(warehouse => {
+        return warehouse.location.region;
+      });
+
+      const uniqueLocations = [...new Set(locations)];
+      this.setState({
+        warehouseLocations: uniqueLocations
+      });
+    });
   }
 
   componentDidUpdate(prevProps) {
@@ -46,7 +58,12 @@ export default class ProductContainer extends Component {
           path={`${this.props.match.path}/edit`}
           exact
           render={() => {
-            return <EditProduct product={this.state.product} />;
+            return (
+              <EditProduct
+                product={this.state.product}
+                locations={this.state.warehouseLocations}
+              />
+            );
           }}
         />
       </>
