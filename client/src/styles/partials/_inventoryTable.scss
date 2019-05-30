@@ -55,7 +55,8 @@
     font-size: 14px;
     font-family: AvenirNext;
     z-index: 1; // Force on top
-
+    border-radius: 2px;
+    box-shadow: 0px 40px 30px 0px rgba(225, 225, 225, 0.4); //Color is $MERCURY
     &--show {
       display: block;
     }
@@ -72,18 +73,28 @@
 .item {
   border-bottom: solid $SILVER 1px;
   padding-bottom: 24px;
+  padding-top: 24px;
+  &:hover {
+    background-color: $MERCURY;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
   .fullSizeOnly {
     display: none;
   }
 
   .mobileOnly {
-    display: block; //May be overridden by display:flex, etc
+    display: block; //Show by default, may be overridden by display:flex, etc
   }
 
   &__flexContainer {
     display: flex;
     flex-direction: column;
+    padding: 5px;
 
     .kebabButton {
       mask-image: url("../assets/Icons/SVG//Icon-kebab-default.svg");
@@ -100,6 +111,9 @@
       justify-content: space-between;
       align-items: center;
       position: relative; //Allow absolute positioning of remove button
+      h5 {
+        margin-top: 10px;
+      }
 
       //Kebab button
       .kebabButton {
@@ -137,7 +151,7 @@
 
 @media (min-width: 768px) {
   .item {
-    margin: 24px 5px;
+    margin: 0px 5px;
 
     .fullSizeOnly {
       display: block; //May be overridden by display:flex, etc
@@ -148,7 +162,7 @@
     }
     &__flexContainer {
       flex-direction: row;
-      align-items: flex-end;
+      align-items: center;
       justify-content: space-between;
 
       h5 {
@@ -201,8 +215,6 @@
 @media (min-width: 1440px) {
   .item {
     &__flexContainer {
-      align-items: center;
-
       #kebabCell {
         .kebabContainer {
           .removeButton {

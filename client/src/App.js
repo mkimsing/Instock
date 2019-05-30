@@ -1,24 +1,30 @@
 import React from "react";
 import "./styles/App.css";
+
 import { Switch, Route } from "react-router-dom";
 import WarehousesContainer from "./containers/WarehousesContainer";
 import InventoryContainer from "./containers/InventoryContainer";
-import navBar from "./components/NavBar";
-import addWarehouse from "./components/addWarehouse";
+import NavBar from "./components/NavBar";
+import WarehouseInventoryContainer from "./containers/WarehouseInventoryContainer";
+import ProductContainer from "./containers/ProductContainer";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <NavBar/>
         <Switch>
-          <Route path="/navBar" component={navBar} />
-          <Route path="/addWarehouse" component={addWarehouse}/>
           {/* When a user hits the homepage, redirect them to the list of warehouses */}
           <Route path="/" exact component={WarehousesContainer} />
-          <Route path="/warehouses" component={WarehousesContainer} />
-          <Route path="/inventory" component={InventoryContainer} />
-          {/* <Route path="/warehouse/:id" component={Warehouse} /> */}
-          {/* <Route path="/inventory/:id" component={Inventory} /> */}
+          <Route path="/warehouses" exact component={WarehousesContainer} />
+          <Route
+            path="/warehouses/:warehouseID"
+            exact
+            component={WarehouseInventoryContainer}
+          />
+
+          <Route path="/inventory" exact component={InventoryContainer} />
+          <Route path="/inventory/:id" component={ProductContainer} />
         </Switch>
       </div>
     );

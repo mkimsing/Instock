@@ -1,20 +1,62 @@
+/*=============================================
+=            Floating add modal                 =
+=============================================*/
+.add {
+  background: $BLUE;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  box-shadow: 0 25px 50px rgba(225, 225, 225, 0.5);
+  &--img {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .add {
+    height: 80px;
+    width: 80px;
+    bottom: 80px;
+    right: 80px;
+    &--img {
+      right: 25px;
+      bottom: 25px;
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .add {
+    bottom: 100px;
+    right: 240px;
+  }
+}
+
 .inventoryPage {
   margin: 32px 16px 10px 16px;
-  
-  h1{
-    margin:0px;
+
+  h1 {
+    margin: 0px;
   }
   //Search bar
-  input{
+  input {
     margin-top: 16px;
     margin-bottom: 8px;
     height: 48px;
     width: 80%;
-    background: url("../assets/Icons/SVG/Icon-search.svg") no-repeat
-      $ALABASTER;
+    background: url("../assets/Icons/SVG/Icon-search.svg") no-repeat $ALABASTER;
     background-size: 16px;
     background-position: 16px 50%;
-    
+
     border: 1px $MERCURY solid;
     border-radius: 4px;
     box-sizing: border-box;
@@ -22,41 +64,42 @@
     font-size: 14px;
     line-height: 18px;
     text-indent: calc(16px + 12px + 3%);
-    &:active, &:focus {
+    &:active,
+    &:focus {
       border-color: $BLUE;
     }
   }
 }
 
-@media(min-width: 768px){
-  .inventoryPage{
+@media (min-width: 768px) {
+  .inventoryPage {
     margin-left: 24px;
     margin-right: 24px;
 
-    &__header{
-      display:flex;
+    &__header {
+      display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom:24px;
+      margin-bottom: 24px;
     }
-    input{
+    input {
       width: 40%;
     }
   }
 }
 
-@media(min-width: 1440px){
-  .inventoryPage{
+@media (min-width: 1440px) {
+  .inventoryPage {
     margin-left: 180px;
     margin-right: 180px;
 
-    &__header{
-      display:flex;
+    &__header {
+      display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom:48px;
+      margin-bottom: 48px;
     }
-    input{
+    input {
       width: 24%;
     }
   }

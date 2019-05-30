@@ -1,0 +1,206 @@
+.product-detail-page--margin {
+  margin-right: 16px;
+  margin-left: 16px;
+  font-family: AvenirNext;
+
+  .header {
+    display: flex;
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    h1 {
+      margin-left: 16px;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    font-weight: 550;
+    color: $SILVER;
+    font-size: 13px;
+    line-height: 20px;
+
+    &--flex {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input,
+    textarea {
+      border: $MERCURY 1px solid;
+      border-radius: 4px;
+      margin-bottom: 24px;
+      background-color: $ALABASTER;
+      resize: none;
+    }
+
+    textarea {
+      line-height: 18px;
+      font-size: 12.5px;
+      font-family: AvenirNext;
+      padding: 16px 37px 10px 16px;
+    }
+
+    input {
+      font-size: 13px;
+      font-family: AvenirNext;
+      height: 40px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    &__city {
+      height: 43px;
+      // border: $MERCURY 1px solid;
+      margin-bottom: 24px;
+      font-size: 12px;
+      font-family: AvenirNext;
+      // background-color: $ALABASTER;
+      border-radius: 4px;
+      padding: 0px;
+    }
+    .form__city__control,
+    .form__city__value-container {
+      height: 100%;
+      background-color: $ALABASTER;
+      border: none;
+      // border: $MERCURY 1px solid;
+    }
+
+    &__stock {
+      color: black;
+      font-weight: initial;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    &__stock-text {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      font-family: AvenirNext;
+    }
+
+    &__toggle-button {
+      display: flex;
+    }
+  }
+  button {
+    background-color: $BLUE;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    width: 100%;
+    border: none;
+    height: 40px;
+    font-size: 13px;
+  }
+  .cancel-button {
+    color: $BLUE;
+    text-align: center;
+    font-weight: 550;
+    font-size: 13px;
+    margin-top: 27px;
+    margin-bottom: 27px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .product-detail-page--margin {
+    margin-right: 24px;
+    margin-left: 24px;
+
+    .header {
+      border-bottom: 1px solid $MERCURY;
+    }
+
+    .form {
+      width: 67vw;
+      display: flex;
+
+      textarea {
+        padding-right: 114px;
+      }
+
+      #categories {
+        margin-bottom: 0px;
+      }
+
+      &__row--flex {
+        display: flex;
+        width: 100%;
+      }
+
+      &--flex {
+        width: 100%;
+      }
+
+      &__margin--right {
+        margin-right: 40px;
+      }
+
+      &__stock {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 40px;
+        align-items: center;
+      }
+
+      .toggle__button--flex {
+        display: flex;
+      }
+
+      .form__categories--margin {
+        margin-bottom: 48px;
+      }
+    }
+    .buttons {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      border-top: 1px $MERCURY solid;
+      margin-bottom: 40px;
+      padding-top: 40px;
+
+      button {
+        height: 48px;
+        width: 160px;
+        margin-left: 40px;
+        margin-bottom: 0px;
+      }
+
+      .cancel-button {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .product-detail-page--margin {
+    margin-right: 180px;
+    margin-left: 180px;
+
+    .form {
+      flex-direction: row;
+      width: initial;
+      margin-right: 20px;
+
+      &__description {
+        margin-right: 40px;
+        width: 75vw;
+      }
+
+      #categories {
+        margin-bottom: 0px;
+      }
+      aside {
+        width: 100%;
+      }
+    }
+  }
+}
