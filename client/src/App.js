@@ -9,14 +9,15 @@ import WarehouseInventoryContainer from "./containers/WarehouseInventoryContaine
 import AddWarehouse from "./components/AddWarehouse"
 import AddProduct from "./components/AddProduct";
 import EditProduct from "./components/EditProduct";
+import ProductContainer from "./containers/ProductContainer";
 
-import ProductDetailComponent from "./components/ProductDetailComponent";
+//Is this needed?
+//import ProductDetailComponent from "./components/ProductDetailComponent";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <ProductDetailComponent />
         <Switch>
 
           <Route path="/addWarehouse" exact component={AddWarehouse}/>
@@ -26,13 +27,15 @@ class App extends React.Component {
 
           <Route path="/" exact component={WarehousesContainer} />
           <Route path="/warehouses" exact component={WarehousesContainer} />
-          <Route path="/warehouses/:warehouseID" exact component={WarehouseInventoryContainer} />
+          <Route
+            path="/warehouses/:warehouseID"
+            exact
+            component={WarehouseInventoryContainer}
+          />
 
-          <Route path="/inventory" component={InventoryContainer} />
-          {/* <Route path="/warehouse/:id" component={Warehouse} /> */}
-          {/* <Route path="/inventory/:id" component={Inventory} /> */}
+          <Route path="/inventory" exact component={InventoryContainer} />
+          <Route path="/inventory/:id" component={ProductContainer} />
         </Switch>
-
       </div>
     );
   }
