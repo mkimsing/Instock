@@ -19,11 +19,19 @@ export default class ProductContainer extends Component {
       });
   }
 
-  //ComponentDidMount
-  // update state
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params.id !== prevProps.match.params.id) {
+      axios
+        .get(`${apiInfo.API_URL}/inventory/${this.props.match.params.id}`)
+        .then(response => {
+          this.setState({
+            product: response.data
+          });
+        });
+    }
+  }
 
   render() {
-    console.log(this.props.match.path);
     return (
       <>
         <Route

@@ -14,11 +14,14 @@ export default class EditProduct extends Component {
   }
 
   render() {
+    if (Object.keys(this.props.product).length === 0)
+      return <div>Loading...</div>;
+
     return (
       <div className="product-detail-page--margin">
         <div className="header">
           <img src={BackArrow} />
-          <h1>Product Name</h1>
+          <h1>{this.props.product.item.name}</h1>
         </div>
         <div>
           <form className="form">
