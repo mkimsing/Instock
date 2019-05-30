@@ -6,7 +6,6 @@ export default function WarehouseInventory(props) {
   if (
     !inventory ||
     !warehouseData ||
-    // Object.keys(inventory).length === 0 ||
     Object.keys(warehouseData).length === 0
   ) {
     return (
