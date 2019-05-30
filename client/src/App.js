@@ -10,10 +10,13 @@ import AddWarehouse from "./components/AddWarehouse"
 import AddProduct from "./components/AddProduct";
 import EditProduct from "./components/EditProduct";
 
+import ProductDetailComponent from "./components/ProductDetailComponent";
+
 class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <ProductDetailComponent />
         <Switch>
 
           <Route path="/addWarehouse" exact component={AddWarehouse}/>
@@ -29,6 +32,7 @@ class App extends React.Component {
           {/* <Route path="/warehouse/:id" component={Warehouse} /> */}
           {/* <Route path="/inventory/:id" component={Inventory} /> */}
         </Switch>
+
       </div>
     );
   }
