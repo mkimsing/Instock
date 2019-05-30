@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Switch from "react-switch";
 import BackArrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 import Select from "react-select";
+import { Link } from "react-router-dom";
 
 export default class EditProduct extends Component {
   constructor(props) {
@@ -25,7 +26,9 @@ export default class EditProduct extends Component {
     return (
       <div className="product-detail-page--margin">
         <div className="header">
-          <img src={BackArrow} />
+          <Link to={`/inventory/${this.props.product.id}`}>
+            <img src={BackArrow} />
+          </Link>
           <h1>{this.props.product.item.name}</h1>
         </div>
         <div>

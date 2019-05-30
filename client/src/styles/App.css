@@ -151,6 +151,11 @@ body h5 {
   background-color: #e1e1e1;
 }
 
+.item a {
+  text-decoration: none;
+  color: black;
+}
+
 .item .fullSizeOnly {
   display: none;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import KebabButton from "./KebabButton";
+import { Link } from "react-router-dom";
 export default class InventoryItem extends React.Component {
   render() {
     let { item, lastOrdered, location, quantity, status } = this.props.item;
@@ -14,7 +15,9 @@ export default class InventoryItem extends React.Component {
             />
           </div>
           <div className="item__text">
-            <h2>{item.name}</h2>
+            <Link to={`/inventory/${this.props.item.id}`}>
+              <h2>{item.name}</h2>
+            </Link>
             <h4>{item.description}</h4>
           </div>
           <h5 className="tableHeader">LAST ORDERED</h5>

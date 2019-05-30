@@ -63,8 +63,9 @@ export default function ProductDetail(props) {
         </form>
       </div>
       <div className="buttons">
-        {/* <Link to={`/${}`/edit`}> */}
-        <button>EDIT</button>
+        <Link to={`/inventory/${props.product.id}/edit`}>
+          <button>EDIT</button>
+        </Link>
       </div>
     </div>
   );
