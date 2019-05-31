@@ -26,7 +26,7 @@ class App extends React.Component {
           <Route path="/inventory" exact component={InventoryContainer} />
           <Route path="/inventory/:id" component={ProductContainer} />
         </Switch>
-      </div>
+      </div >
     );
   }
 }

@@ -46,15 +46,6 @@ function WarehousesList(props) {
 }
 
 function Warehouse(props) {
-  // function categorySort(catArr) {
-  //   for (let i = 0; i < catArr.length; i++) {
-  //     if (i < catArr.length - 1) {
-  //       catArr[i] = catArr[i] + ", ";
-  //     }
-  //   }
-  //   return catArr;
-  // }
-  // categorySort(categories);
   return (
     <div className="warehousesPage__table">
       <div className="warehousesPage__left">
@@ -75,7 +66,6 @@ function Warehouse(props) {
           </Link>
         </div>
         <div className="warehousesPage__bottom">
-          {/* <div className='warehousesPage__contact'> */}
           <div className="warehousesPage__contact--namePos">
             <div className="warehousesPage__contact--name">
               {props.warehouse.contact.name}
