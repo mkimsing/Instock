@@ -5,8 +5,6 @@ const helper = require("../helpers/helper");
 const fileName = `${__dirname}/../model/inventory.json`;
 let inventories = require(fileName);
 
-let inventories = require(fileName);
-
 router
   .route("/")
   //Get all inventory

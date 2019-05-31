@@ -23,7 +23,7 @@ router
         address1: req.body.location.address1,
         address2: req.body.location.address2,
         region: req.body.location.region,
-        postalCode: req.body.location, postalCode
+        postalCode: req.body.location.postalCode
       },
       contact: {
         name: req.body.contact.name,
