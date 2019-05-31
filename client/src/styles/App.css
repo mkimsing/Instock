@@ -1119,6 +1119,13 @@ body h5 {
   display: flex;
   margin-top: 32px;
   margin-bottom: 32px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product-detail-page--margin .header h1 {
@@ -1184,9 +1191,18 @@ body h5 {
 
 .product-detail-page--margin .form .form__city__control,
 .product-detail-page--margin .form .form__city__value-container {
-  height: 100%;
+  height: 89%;
   background-color: #fafafa;
   border: none;
+}
+
+.product-detail-page--margin .form .form__city__value-container {
+  margin-top: -8px;
+}
+
+.product-detail-page--margin .form .form__city__single-value {
+  font-family: AvenirNext;
+  font-weight: initial;
 }
 
 .product-detail-page--margin .form__stock {
