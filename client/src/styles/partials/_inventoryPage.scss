@@ -49,7 +49,7 @@
     margin: 0px;
   }
   //Search bar
-  input {
+  .searchBar input {
     margin-top: 16px;
     margin-bottom: 8px;
     height: 48px;
@@ -83,7 +83,7 @@
       justify-content: space-between;
       margin-bottom: 24px;
     }
-    input {
+    .searchBar input {
       width: 40%;
     }
   }
@@ -100,7 +100,7 @@
       justify-content: space-between;
       margin-bottom: 48px;
     }
-    input {
+    .searchBar input {
       width: 24%;
     }
   }

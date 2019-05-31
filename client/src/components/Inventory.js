@@ -22,7 +22,7 @@ export default function Inventory(props) {
       <div className="inventoryPage">
         <div className="inventoryPage__header">
           <h1>Inventory</h1>
-          <input placeholder="Search" />
+          <input className="searchBar" placeholder="Search" />
         </div>
         <InventoryTable
           inventory={inventory}

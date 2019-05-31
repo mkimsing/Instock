@@ -13,7 +13,17 @@ router
   })
   // post new inventory item
   .post((req, res) => {
-    let { id, item, location, categories, lastOrdered, orderedBy, quantity, status, warehouseId } = req.body;
+    let {
+      id,
+      item,
+      location,
+      categories,
+      lastOrdered,
+      orderedBy,
+      quantity,
+      status,
+      warehouseId
+    } = req.body;
     if (
       !id ||
       !item.name ||
