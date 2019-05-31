@@ -1119,6 +1119,13 @@ body h5 {
   display: flex;
   margin-top: 32px;
   margin-bottom: 32px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product-detail-page--margin .header h1 {

@@ -46,16 +46,15 @@ function WarehousesList(props) {
 }
 
 function Warehouse(props) {
-  const categories = props.warehouse.categories;
-  function categorySort(catArr) {
-    for (let i = 0; i < catArr.length; i++) {
-      if (i < catArr.length - 1) {
-        catArr[i] = catArr[i] + ", ";
-      }
-    }
-    return catArr;
-  }
-  categorySort(categories);
+  // function categorySort(catArr) {
+  //   for (let i = 0; i < catArr.length; i++) {
+  //     if (i < catArr.length - 1) {
+  //       catArr[i] = catArr[i] + ", ";
+  //     }
+  //   }
+  //   return catArr;
+  // }
+  // categorySort(categories);
   return (
     <div className="warehousesPage__table">
       <div className="warehousesPage__left">
@@ -97,7 +96,7 @@ function Warehouse(props) {
             </a>
           </div>
           <div className="warehousesPage__categories">
-            <div>{props.warehouse.categories}</div>
+            <div>{props.warehouse.categories.join(', ')}</div>
             <Link to={`/warehouses/${props.warehouse.id}`}>
               <div className="warehousesPage__desktop--arrow">
                 <img src={RightArrow} alt='arrow' />
