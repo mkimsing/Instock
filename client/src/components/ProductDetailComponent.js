@@ -3,14 +3,6 @@ import BackArrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 import { Link } from "react-router-dom";
 
 export default function ProductDetail(props) {
-  // let status;
-
-  // if (this.state.product.status === "In Stock") {
-  //   return <div className="status__inStock" />;
-  // } else {
-  //   return <div className="status__noStock" />;
-  // }
-
   if (Object.keys(props.product).length === 0) return <div>Loading...</div>;
   return (
     <div className="product-detail-page--margin">
@@ -40,13 +32,13 @@ export default function ProductDetail(props) {
               </div>
               <div className="form--flex">
                 REFERENCE NUMBER
-                <h4>{props.product.id}</h4>
+                <h4>{props.product.item.productId}</h4>
               </div>
             </div>
             <div className="form__row--flex">
               <div className="form--flex form__margin--right">
                 LAST ORDERED
-                <h4>2018-05-24</h4>
+                <h4>{props.product.lastOrdered}</h4>
               </div>
               <div className="form--flex">
                 LOCATION
@@ -65,7 +57,7 @@ export default function ProductDetail(props) {
             <div className="form--flex form__categories--margin">
               CATEGORIES
               <h4 className="form__textarea" id="textarea2">
-                {props.product.categories.toString()}
+                {props.product.categories.join(", ")}
               </h4>
             </div>
           </aside>

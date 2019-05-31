@@ -44,17 +44,18 @@ export default class WarehouseInventoryContainer extends Component {
   }
 
   removeHandler = id => {
+    let warehouseID = this.props.match.params.warehouseID;
     axios.delete(`http://localhost:8080/inventory/${id}`).then(response => {
-      let { warehouseID } = this.props.match.params;
       axios
         .get(`${apiInfo.API_URL}/warehouses/${warehouseID}/inventory`)
         .then(response => {
           this.setState({
             inventory: response.data
           });
-        });
+        })
     });
   };
+
 
   render() {
     return (

@@ -12,7 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <NavBar/>
+        <NavBar />
         <Switch>
           {/* When a user hits the homepage, redirect them to the list of warehouses */}
           <Route path="/" exact component={WarehousesContainer} />

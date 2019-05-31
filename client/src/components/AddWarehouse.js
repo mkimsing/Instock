@@ -69,7 +69,7 @@ export default class AddWarehouse extends Component {
       //Hide modal
       this.props.hideAddWarehousePage();
     } else {
-      console.log("Please fill out all fields");
+      alert('Please fill out all the fields!')
     }
   };
   render() {

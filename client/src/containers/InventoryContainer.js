@@ -37,7 +37,6 @@ export default class InventoryContainer extends Component {
       status: status,
       warehouseId: warehouseId
     };
-    console.log(newItem)
     axios
       .post("http://localhost:8080/inventory", {
         ...newItem
@@ -50,7 +49,6 @@ export default class InventoryContainer extends Component {
   }
   removeHandler = id => {
     axios.delete(`http://localhost:8080/inventory/${id}`).then(response => {
-      console.log(response.data.msg);
       this.setState({
         inventory: response.data.inventory
       });
@@ -62,6 +60,7 @@ export default class InventoryContainer extends Component {
       inventory={this.state.inventory}
       warehouseNames={this.state.warehouseNames}
       postNewItem={this.postNewItem}
+      removeHandler={this.removeHandler}
     />;
   }
 }
