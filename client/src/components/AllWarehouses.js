@@ -89,7 +89,6 @@ function Warehouse(props) {
             <div className="warehousesPage__contact--phone">
               {props.warehouse.contact.phone}
             </div>
-            {/* <div className='warehousesPage__contact--email'>{props.warehouse.contact.email}</div> */}
             <a
               className="warehousesPage__contact--email"
               href={"mailto:" + props.warehouse.contact.email}
@@ -97,7 +96,6 @@ function Warehouse(props) {
               {props.warehouse.contact.email}
             </a>
           </div>
-          {/* </div> */}
           <div className="warehousesPage__categories">
             <div>{props.warehouse.categories}</div>
             <Link to={`/warehouses/${props.warehouse.id}`}>

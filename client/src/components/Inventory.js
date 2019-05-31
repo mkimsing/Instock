@@ -1,9 +1,10 @@
 import React from "react";
 import InventoryTable from "./InventoryTable";
-import Add from "../assets/Icons/SVG/Icon-add.svg";
+import AddProductButton from "./AddProductButton";
 
 export default function Inventory(props) {
-  let { inventory } = props;
+  let { inventory, warehouseNames } = props;
+//   if ((!inventory || Object.keys(inventory).length === 0) || (!warehouseNames || Object.keys(warehouseNames).length === 0)) {
   //Inventory is initialized as empty object before any data is loaded
   if (!inventory || Object.keys(inventory).length === 0) {
     return (
@@ -29,7 +30,8 @@ export default function Inventory(props) {
         <div className="add">
           <img className="add--img" src={Add} alt="Plus Sign" />
         </div>
-      </div>
+        <AddProductButton warehouseNames={warehouseNames} postNewItem={props.postNewItem} />
+      </>
     );
   }
 }
