@@ -9,14 +9,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80px;
-    width: 100vw;
+    min-height: 80px;
+    width: 100%;
     background-color: $BLACK;
+    box-sizing: content-box;
 
     header {
         margin-left: 69px;
         margin-right: 69px;
-
         .logo {
             margin-top: 16px;
             text-align: center;
@@ -28,12 +28,15 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        box-sizing: border-box;
+
         margin-bottom: 16px;
         color: $ALABASTER;
         font-family: "AvenirNext", Arial, Helvetica, sans-serif;
 
         .nav__left,
         .nav__right {
+            padding-top: 16px;
             width: 50%;
             text-align: center;
         }
@@ -48,9 +51,11 @@
     a:hover,
     a:active,
     a:visited {
+        flex-basis: 100%;
+        width: 100%;
         font-weight: 550;
         margin-bottom: 20px;
-        border-bottom: 2px solid $ALABASTER;
+        border-bottom: 3px solid $ALABASTER;
     }
 }
 
@@ -82,6 +87,7 @@
 
             .nav__left,
             .nav__right {
+                padding-top: 0;
                 text-align: left;
                 width: 20%;
             }

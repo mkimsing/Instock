@@ -356,7 +356,7 @@ body h5 {
   margin: 0px;
 }
 
-.inventoryPage .searchBar input {
+.inventoryPage .inventoryPage__searchBar {
   margin-top: 16px;
   margin-bottom: 8px;
   height: 48px;
@@ -374,7 +374,7 @@ body h5 {
   text-indent: calc(16px + 12px + 3%);
 }
 
-.inventoryPage .searchBar input:active, .inventoryPage .searchBar input:focus {
+.inventoryPage .inventoryPage__searchBar:active, .inventoryPage .inventoryPage__searchBar:focus {
   border-color: #004892;
 }
 
@@ -395,7 +395,7 @@ body h5 {
             justify-content: space-between;
     margin-bottom: 24px;
   }
-  .inventoryPage .searchBar input {
+  .inventoryPage .inventoryPage__searchBar {
     width: 40%;
   }
 }
@@ -417,7 +417,7 @@ body h5 {
             justify-content: space-between;
     margin-bottom: 48px;
   }
-  .inventoryPage .searchBar input {
+  .inventoryPage .inventoryPage__searchBar {
     width: 24%;
   }
 }
@@ -440,9 +440,11 @@ body h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80px;
-  width: 100vw;
+  min-height: 80px;
+  width: 100%;
   background-color: #323232;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .NavBar header {
@@ -467,6 +469,8 @@ body h5 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 16px;
   color: #fafafa;
   font-family: "AvenirNext", Arial, Helvetica, sans-serif;
@@ -474,6 +478,7 @@ body h5 {
 
 .NavBar nav .nav__left,
 .NavBar nav .nav__right {
+  padding-top: 16px;
   width: 50%;
   text-align: center;
 }
@@ -487,9 +492,12 @@ body h5 {
 .NavBar a:hover,
 .NavBar a:active,
 .NavBar a:visited {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 100%;
   font-weight: 550;
   margin-bottom: 20px;
-  border-bottom: 2px solid #fafafa;
+  border-bottom: 3px solid #fafafa;
 }
 
 /* MEDIA QUERIES */
@@ -527,6 +535,7 @@ body h5 {
   }
   .NavBar nav .nav__left,
   .NavBar nav .nav__right {
+    padding-top: 0;
     text-align: left;
     width: 20%;
   }
@@ -1237,6 +1246,11 @@ body h5 {
   font-size: 13px;
   margin-top: 27px;
   margin-bottom: 27px;
+}
+
+.product-detail-page--margin a {
+  text-decoration: none;
+  color: black;
 }
 
 @media only screen and (min-width: 768px) {

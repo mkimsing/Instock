@@ -47,27 +47,6 @@ router
     res.json(inventories);
   });
 
-// Post new inventory item //
-router.post("/", (req, res) => {
-  let { item, lastOrdered, location, quantity, status } = req.body;
-  if (
-    !item.name ||
-    !lastOrdered ||
-    !location.city ||
-    !quantity ||
-    !status ||
-    !item.description ||
-    !location.country
-  ) {
-    return res.status(400).json({
-      errorMessage: "Please ensure all fields are included before submitting."
-    });
-  }
-  inventories.push(req.body);
-  helper.writeJSONFile(fileName, inventories);
-  res.json(inventories);
-});
-
 //Endpoint that will return an item based on its id.
 //If the id does not match, return a 404 status and an error message.
 router.route("/:id").get((req, res) => {

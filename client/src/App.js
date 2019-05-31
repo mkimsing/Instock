@@ -12,7 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <NavBar/>
+        <NavBar />
         <Switch>
           {/* When a user hits the homepage, redirect them to the list of warehouses */}
           <Route path="/" exact component={WarehousesContainer} />
@@ -26,7 +26,7 @@ class App extends React.Component {
           <Route path="/inventory" exact component={InventoryContainer} />
           <Route path="/inventory/:id" component={ProductContainer} />
         </Switch>
-      </div>
+      </div >
     );
   }
 }
