@@ -40,7 +40,7 @@ function WarehousesList(props) {
   const warehouseArray = props.warehouses;
   if (Object.keys(warehouseArray).length === 0) return <div>Loading...</div>;
   const warehouseList = warehouseArray.map(warehouse => {
-    return <Warehouse warehouse={warehouse} />;
+    return <Warehouse warehouse={warehouse} key={warehouse.id} />;
   });
   return <div>{warehouseList}</div>;
 }

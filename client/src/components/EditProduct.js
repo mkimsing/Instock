@@ -24,13 +24,14 @@ export default class EditProduct extends Component {
     let temp = this.state.editedProduct;
     if (name === "description" || name === "name" || name === "productId") {
       temp.item[name] = value;
+    } else if (name === 'categories') {
+      temp[name] = value.split(',').map(category => category.trim())
     } else {
       temp[name] = value;
     }
     this.setState({
       editedProduct: temp
     });
-    console.log(temp);
   };
 
   handleSelectChange = option => {
@@ -43,7 +44,6 @@ export default class EditProduct extends Component {
     this.setState({
       editedProduct: temp
     });
-    console.log(temp);
   };
 
   handleSwitchChange = checked => {
@@ -60,7 +60,6 @@ export default class EditProduct extends Component {
     this.setState({
       editedProduct: temp
     });
-    console.log(temp);
   };
 
   render() {
@@ -89,7 +88,7 @@ export default class EditProduct extends Component {
           <form className="form" onChange={this.handleChange}>
             <div className="form--flex form__description">
               ITEM DESCRIPTION
-              <textarea rows="5" name="description" defaultValue={this.props.product.item.description}>         
+              <textarea rows="5" name="description" defaultValue={this.props.product.item.description}>
               </textarea>
             </div>
             <aside>
@@ -106,7 +105,7 @@ export default class EditProduct extends Component {
                   REFERENCE NUMBER
                   <input
                     type="text"
-                    defaultValue={this.props.product.id}
+                    defaultValue={this.props.product.item.productId}
                     name="productId"
                   />
                 </div>
@@ -163,7 +162,8 @@ export default class EditProduct extends Component {
               </div>
               <div className="form--flex form__categories--margin">
                 CATEGORIES
-                <textarea id="categories" rows="6" name="categories" defaultValue={this.props.product.categories.toString()}>
+                <textarea id="categories" rows="6" name="categories"
+                  defaultValue={this.props.product.categories.join(', ')}>
                 </textarea>
               </div>
             </aside>
