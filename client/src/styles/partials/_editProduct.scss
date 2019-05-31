@@ -7,6 +7,8 @@
     display: flex;
     margin-top: 32px;
     margin-bottom: 32px;
+    flex-direction: row;
+    align-items: center;
 
     h1 {
       margin-left: 16px;
