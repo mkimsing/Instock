@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Switch from "react-switch";
 import helper from "../helpers/helper";
 export default class AddWarehouse extends Component {
   submitHandler = event => {
@@ -78,7 +77,7 @@ export default class AddWarehouse extends Component {
       <div
         className={`addWarehouse ${
           this.props.addWarehouseDisplay.addWarehouseDisplay
-        }`}
+          }`}
       >
         <div className="addWarehouse__tablet">
           <h1>Add New</h1>

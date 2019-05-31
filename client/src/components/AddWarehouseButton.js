@@ -24,7 +24,7 @@ export default class AddWarehouseButton extends Component {
           className="warehousesPage__add"
           onClick={this.displayAddWarehouse}
         >
-          <img className="warehousesPage__add--img" src={Add} />
+          <img className="warehousesPage__add--img" src={Add} alt='add symbol' />
         </button>
         <AddWarehouse
           hideAddWarehousePage={this.hideAddWarehousePage}

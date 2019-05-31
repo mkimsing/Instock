@@ -8,7 +8,10 @@
     },
     "orderedBy": "Fifi Smith",
     "lastOrdered": "05/04/2018",
-    "location": { "city": "Toronto", "country": "CA" },
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "120",
     "status": "In Stock",
     "warehouseId": "1",
@@ -23,7 +26,10 @@
     },
     "orderedBy": "Fifi Jones",
     "lastOrdered": "12/05/2015",
-    "location": { "city": "Toronto", "country": "CA" },
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "121",
     "status": "In Stock",
     "warehouseId": "3",
@@ -38,7 +44,10 @@
     },
     "orderedBy": "Fifi Peanut",
     "lastOrdered": "01/02/2050",
-    "location": { "city": "Toronto", "country": "CA" },
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "314159265",
     "status": "In Stock",
     "warehouseId": "7",
@@ -53,7 +62,10 @@
     },
     "orderedBy": "Fifi Miniso",
     "lastOrdered": "01/03/2018",
-    "location": { "city": "Toronto", "country": "CA" },
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "1",
     "status": "In Stock",
     "warehouseId": "9",
@@ -68,7 +80,10 @@
     },
     "orderedBy": "Fifi Blue",
     "lastOrdered": "08/01/2017",
-    "location": { "city": "Vancouver", "country": "CA" },
+    "location": {
+      "city": "Vancouver",
+      "country": "CA"
+    },
     "quantity": "500",
     "status": "In Stock",
     "warehouseId": "5",
@@ -83,7 +98,10 @@
     },
     "orderedBy": "Fifi Harrods",
     "lastOrdered": "07/03/2017",
-    "location": { "city": "Vancouver", "country": "CA" },
+    "location": {
+      "city": "Vancouver",
+      "country": "CA"
+    },
     "quantity": "120",
     "status": "Out of Stock",
     "warehouseId": "4",
@@ -98,7 +116,10 @@
     },
     "orderedBy": "Fifi Pink",
     "lastOrdered": "06/03/2017",
-    "location": { "city": "Toronto", "country": "CA" },
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "120",
     "status": "In Stock",
     "warehouseId": "2",
@@ -113,7 +134,10 @@
     },
     "orderedBy": "Fifi Acer",
     "lastOrdered": "06/24/2017",
-    "location": { "city": "Toronto", "country": "CA" },
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "0",
     "status": "Out of Stock",
     "warehouseId": "8",
@@ -128,7 +152,10 @@
     },
     "orderedBy": "Fifi Mac",
     "lastOrdered": "06/01/2017",
-    "location": { "city": "Vancouver", "country": "CA" },
+    "location": {
+      "city": "Vancouver",
+      "country": "CA"
+    },
     "quantity": "300",
     "status": "In Stock",
     "warehouseId": "6",
@@ -143,7 +170,10 @@
     },
     "orderedBy": "Fifi Stock",
     "lastOrdered": "05/04/2017",
-    "location": { "city": "Toronto", "country": "CA" },
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "120",
     "status": "Out of Stock",
     "warehouseId": "7",
@@ -158,7 +188,10 @@
     },
     "orderedBy": "Fifi Tomtoc",
     "lastOrdered": "04/20/2017",
-    "location": { "city": "Toronto", "country": "CA" },
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "555",
     "status": "In Stock",
     "warehouseId": "8",
@@ -173,7 +206,10 @@
     },
     "orderedBy": "Fifi Camelback",
     "lastOrdered": "04/03/2019",
-    "location": { "city": "Toronto", "country": "CA" },
+    "location": {
+      "city": "Toronto",
+      "country": "CA"
+    },
     "quantity": "555",
     "status": "In Stock",
     "warehouseId": "1",

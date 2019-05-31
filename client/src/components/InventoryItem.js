@@ -23,7 +23,7 @@ export default class InventoryItem extends React.Component {
           <h5 className="tableHeader">LAST ORDERED</h5>
           <h4 className="tableCell"> {lastOrdered}</h4>
           <h5 className="tableHeader">LOCATION</h5>
-          <h4 className="tableCell"> {location}</h4>
+          <h4 className="tableCell"> {location.city}, {location.country}</h4>
           <h5 className="tableHeader"> QUANTITY</h5>
           <h4 className="tableCell"> {quantity}</h4>
           <h5 className="tableHeader">STATUS</h5>

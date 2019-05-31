@@ -10,6 +10,41 @@ router
   //Get all inventory
   .get((_req, res) => {
     res.json(inventoryController.getAllInventory());
+  })
+  // post new inventory item
+  .post((req, res) => {
+    let {
+      id,
+      item,
+      location,
+      categories,
+      lastOrdered,
+      orderedBy,
+      quantity,
+      status,
+      warehouseId
+    } = req.body;
+    if (
+      !id ||
+      !item.name ||
+      !item.description ||
+      !item.productId ||
+      !location.city ||
+      !location.country ||
+      !categories ||
+      !lastOrdered ||
+      !orderedBy ||
+      !quantity ||
+      !status ||
+      !warehouseId
+    ) {
+      return res.status(400).json({
+        errorMessage: "Please ensure all fields are included before submitting."
+      });
+    }
+    inventories.push(req.body);
+    helper.writeJSONFile(fileName, inventories);
+    res.json(inventories);
   });
 
 // Post new inventory item //
@@ -66,6 +101,18 @@ router.delete("/:id", (req, res) => {
     res.status(404).json({
       errorMessage: `Inventory item with ID: ${req.params.id} not found`
     });
+  }
+});
+
+router.put("/:id/edit", (req, res) => {
+  const response = inventoryController.editInventoryItem(
+    req.params.id,
+    req.body
+  );
+  if (response.error) {
+    res.status(response.error).send(response.errorMsg);
+  } else {
+    res.json(response);
   }
 });
 

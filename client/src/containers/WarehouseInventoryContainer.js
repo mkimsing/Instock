@@ -16,11 +16,14 @@ export default class WarehouseInventoryContainer extends Component {
         this.setState({
           inventory: response.data
         });
+      })
+      .catch(err => {
+        console.log(err.errorMsg)
       });
 
     axios.get(`${apiInfo.API_URL}/warehouses`).then(response => {
       let foundWarehouse = response.data.find(warehouse => {
-        return warehouse.id === parseInt(warehouseID);
+        return warehouse.id === warehouseID;
       });
       this.setState({
         warehouseData: foundWarehouse
