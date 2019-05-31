@@ -28,12 +28,9 @@ const inventoryController = {
     if (
       !newData ||
       !newData.item ||
-      !newData.item.description ||
       !newData.orderedBy ||
       !newData.id ||
       !newData.location ||
-      !newData.location.city ||
-      !newData.location.country ||
       !newData.quantity ||
       !newData.status ||
       !newData.categories
@@ -41,19 +38,21 @@ const inventoryController = {
       return {
         error: 400,
         errorMsg: `Please provide JSON data in the following format: 
-{
-  description: 'description',
-  orderedBy: 'Name',
-  id: "IdNumber",
-  lastOrdered: 'mm/dd/yyyy',
-  location: {
-    city: 'MyCity',
-    country: 'MyCountry'
-  },
-  quantity: 'Amount',
-  status: 'In Stock',
-  categories: ['A', 'B', 'C']
-}`
+  {
+    "id": "1",
+    "item": {
+      "productId": "12341",
+      "name": "Hartz Zoo Balloons Dog Toy",
+      "description": "Toss and Retrieve Toy"
+    },
+    "orderedBy": "Fifi Smith",
+    "lastOrdered": "05/04/2018",
+    "location": { "city": "Toronto", "country": "CA" },
+    "quantity": "120",
+    "status": "In Stock",
+    "warehouseId": "1",
+    "categories": ["Dog", "Toy", "Pet"]
+  }`
       };
     } else {
       let allInventory = helper.readJSONFile(Inventory_File);
@@ -65,7 +64,6 @@ const inventoryController = {
         let {
           item,
           orderedBy,
-          id,
           lastOrdered,
           location,
           quantity,
@@ -73,9 +71,8 @@ const inventoryController = {
           categories
         } = newData;
 
-        foundItem.item.description = item.description;
+        foundItem.item = item;
         foundItem.orderedBy = orderedBy;
-        foundItem.id = id;
         foundItem.lastOrdered = lastOrdered;
         foundItem.location = location;
         foundItem.quantity = quantity;
