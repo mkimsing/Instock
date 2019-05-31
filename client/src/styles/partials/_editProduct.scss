@@ -62,9 +62,18 @@
     }
     .form__city__control,
     .form__city__value-container {
-      height: 100%;
+      height: 89%;
       background-color: $ALABASTER;
       border: none;
+    }
+
+    .form__city__value-container {
+      margin-top: -8px;
+    }
+
+    .form__city__single-value {
+      font-family: AvenirNext;
+      font-weight: initial;
     }
 
     &__stock {
