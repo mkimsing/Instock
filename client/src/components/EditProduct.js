@@ -39,7 +39,7 @@ export default class EditProduct extends Component {
     let temp = this.state.editedProduct;
     temp.location = {};
     temp.location.city = strings[0];
-    temp.location.country = strings[1];
+    temp.location.country = "CA";
     this.setState({
       editedProduct: temp
     });
