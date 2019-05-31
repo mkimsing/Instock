@@ -4,7 +4,9 @@ import AddProductButton from "./AddProductButton";
 
 export default function Inventory(props) {
   let { inventory, warehouseNames } = props;
-  if ((!inventory || Object.keys(inventory).length === 0) || (!warehouseNames || Object.keys(warehouseNames).length === 0)) {
+//   if ((!inventory || Object.keys(inventory).length === 0) || (!warehouseNames || Object.keys(warehouseNames).length === 0)) {
+  //Inventory is initialized as empty object before any data is loaded
+  if (!inventory || Object.keys(inventory).length === 0) {
     return (
       <div className="inventoryPage">
         <div className="inventoryPage__header">
@@ -16,13 +18,17 @@ export default function Inventory(props) {
     );
   } else {
     return (
-      <>
-        <div className="inventoryPage">
-          <div className="inventoryPage__header">
-            <h1>Inventory</h1>
-            <input placeholder="Search" />
-          </div>
-          <InventoryTable inventory={inventory} />
+      <div className="inventoryPage">
+        <div className="inventoryPage__header">
+          <h1>Inventory</h1>
+          <input placeholder="Search" />
+        </div>
+        <InventoryTable
+          inventory={inventory}
+          removeHandler={props.removeHandler}
+        />
+        <div className="add">
+          <img className="add--img" src={Add} alt="Plus Sign" />
         </div>
         <AddProductButton warehouseNames={warehouseNames} postNewItem={props.postNewItem} />
       </>

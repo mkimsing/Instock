@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import apiInfo from "../helpers/api_info";
 import Inventory from "../components/Inventory";
+
 export default class InventoryContainer extends Component {
   // constructor(props) {
   //   super(props);
@@ -47,6 +48,14 @@ export default class InventoryContainer extends Component {
         });
       });
   }
+  removeHandler = id => {
+    axios.delete(`http://localhost:8080/inventory/${id}`).then(response => {
+      console.log(response.data.msg);
+      this.setState({
+        inventory: response.data.inventory
+      });
+    });
+  };
 
   render() {
     return <Inventory

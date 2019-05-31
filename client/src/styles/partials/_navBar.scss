@@ -1,0 +1,113 @@
+/*====================================
+*              NavBar                *
+=====================================*/
+
+/* MOBILE - screen 320 px */
+
+.NavBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100vw;
+    background-color: $BLACK;
+
+    header {
+        margin-left: 69px;
+        margin-right: 69px;
+
+        .logo {
+            margin-top: 16px;
+            text-align: center;
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 16px;
+        color: $ALABASTER;
+        font-family: "AvenirNext", Arial, Helvetica, sans-serif;
+
+        .nav__left,
+        .nav__right {
+            width: 50%;
+            text-align: center;
+        }
+    }
+
+    a {
+        color: $ALABASTER;
+        font-family: "AvenirNext", Arial, Helvetica, san-serif;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:active,
+    a:visited {
+        font-weight: 550;
+        margin-bottom: 20px;
+        border-bottom: 2px solid $ALABASTER;
+    }
+}
+
+/* MEDIA QUERIES */
+
+/* TABLET 768px */
+
+@media (min-width: 768px) {
+    .NavBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0px;
+
+        header {
+            margin-left: 24px;
+
+            .logo {
+                margin: 0px;
+                text-align: center;
+            }
+
+        }
+
+        nav {
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 0px;
+
+            .nav__left,
+            .nav__right {
+                text-align: left;
+                width: 20%;
+            }
+        }
+    }
+}
+
+/* MEDIA QUERIES */
+
+/* DESKTOP 1440px */
+
+@media (min-width: 1440px) {
+    .NavBar {
+
+        header {
+            margin-left: 180px;
+
+        }
+
+        nav {
+
+            .nav__left,
+            .nav__right {
+                text-align: left;
+                width: 10%;
+            }
+        }
+    }
+}
