@@ -39,8 +39,6 @@ export default class AddProduct extends Component {
             city,
             country,
             quantity,
-            // having warehouse_id as a required field breaks the helper
-            // warehouse_id,
             categories
         ]
         let itemAllFilled = itemFields
