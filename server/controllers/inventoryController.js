@@ -71,8 +71,10 @@ const inventoryController = {
           categories
         } = newData;
 
-        foundItem.item = item;
+
+        foundItem.item.description = item.description;
         foundItem.orderedBy = orderedBy;
+        foundItem.item.productId = item.productId;
         foundItem.lastOrdered = lastOrdered;
         foundItem.location = location;
         foundItem.quantity = quantity;

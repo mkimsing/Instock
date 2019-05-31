@@ -15,8 +15,10 @@ export default class ProductContainer extends Component {
       .put(`http://localhost:8080/inventory/${product.id}`, product)
       .then(response => {
         this.setState({
-          inventory: response.data.inventory
+          inventory: response.data
         });
+        this.props.history.push(`/inventory/${product.id}`)
+
       });
   };
 

@@ -27,7 +27,6 @@ router
     if (
       !id ||
       !item.name ||
-      !item.description ||
       !item.productId ||
       !location.city ||
       !location.country ||
@@ -83,7 +82,7 @@ router.delete("/:id", (req, res) => {
   }
 });
 
-router.put("/:id/edit", (req, res) => {
+router.put("/:id/", (req, res) => {
   const response = inventoryController.editInventoryItem(
     req.params.id,
     req.body

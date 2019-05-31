@@ -29,9 +29,6 @@ export default function Inventory(props) {
           removeHandler={props.removeHandler}
           saveHandler={props.saveHandler}
         />
-        <div className="add">
-          <img className="add--img" src={Add} alt="Plus Sign" />
-        </div>
         <AddProductButton
           warehouseNames={warehouseNames}
           postNewItem={props.postNewItem}
