@@ -7,21 +7,9 @@ export default class WarehouseInventoryContainer extends Component {
     inventory: [],
     warehouseData: {}
   };
-  componentDidUpdate(prevProps) {
-    if (this.props.match.params === prevProps.match.params) {
-      let { warehouseID } = this.props.match.params;
-      axios
-        .get(`${apiInfo.API_URL}/warehouses/${warehouseID}/inventory`)
-        .then(response => {
-          this.setState({
-            inventory: response.data
-          });
-        });
-    }
-  }
 
-  componentDidMount() {
-    let { warehouseID } = this.props.match.params;
+  fetchData = () => {
+    let warehouseID = this.props.match.params.warehouseID;
     axios
       .get(`${apiInfo.API_URL}/warehouses/${warehouseID}/inventory`)
       .then(response => {
@@ -38,6 +26,18 @@ export default class WarehouseInventoryContainer extends Component {
         warehouseData: foundWarehouse
       });
     });
+  };
+
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (
+      prevProps.match.params.warehouseID !== this.props.match.params.warehouseID
+    ) {
+      this.fetchData();
+    }
   }
 
   removeHandler = id => {
