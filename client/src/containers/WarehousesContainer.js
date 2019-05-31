@@ -44,7 +44,6 @@ class WarehousesContainer extends Component {
   componentDidMount() {
     this.fetchAllWarehouses();
   }
-
   render() {
     return (
       <div>

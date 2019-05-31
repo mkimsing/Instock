@@ -16,20 +16,29 @@ router
   })
   // post new warehouse
   .post((req, res) => {
-    if (
-      !req.body ||
-      !req.body.name ||
-      !req.body.id ||
-      !req.body.location.address1 ||
-      !req.body.location.address2 ||
-      !req.body.location.region ||
-      !req.body.location.postalCode ||
-      !req.body.contact.name ||
-      !req.body.contact.position ||
-      !req.body.contact.phone ||
-      !req.body.contact.email ||
-      !req.body.categories
-    ) {
+    const newWarehouse = {
+      name: req.body.name,
+      id: req.body.id,
+      location: {
+        address1: req.body.location.address1,
+        address2: req.body.location.address2,
+        region: req.body.location.region,
+        postalCode: req.body.location, postalCode
+      },
+      contact: {
+        name: req.body.contact.name,
+        position: req.body.contact.position,
+        phone: req.body.contact.phone,
+        email: req.body.contact.email
+      },
+      categories: req.body.categories
+    };
+    if (!newWarehouse.name || !newWarehouse.id ||
+      !newWarehouse.location.address1 || !newWarehouse.location.address2 ||
+      !newWarehouse.location.region || !newWarehouse.location.postalCode ||
+      !newWarehouse.contact.name || !newWarehouse.contact.position ||
+      !newWarehouse.contact.phone || !newWarehouse.contact.email ||
+      !newWarehouse.categories) {
       return res.status(400).json({
         errorMessage: "Please ensure all fields are included before submitting."
       });
