@@ -1,7 +1,7 @@
 import React from "react";
 import InventoryTable from "./InventoryTable";
 import AddProductButton from "./AddProductButton";
-import Add from "../assets/Icons/SVG/Icon-add.svg";
+import Add from '../assets/Icons/SVG/Icon-add.svg'
 
 export default function Inventory(props) {
   let { inventory, warehouseNames } = props;
@@ -31,10 +31,7 @@ export default function Inventory(props) {
         <div className="add">
           <img className="add--img" src={Add} alt="Plus Sign" />
         </div>
-        <AddProductButton
-          warehouseNames={warehouseNames}
-          postNewItem={props.postNewItem}
-        />
+        <AddProductButton warehouseNames={warehouseNames} postNewItem={props.postNewItem} />
       </div>
     );
   }
