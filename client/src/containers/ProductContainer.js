@@ -10,6 +10,16 @@ export default class ProductContainer extends Component {
     warehouseLocations: []
   };
 
+  saveHandler = product => {
+    axios
+      .put(`http://localhost:8080/inventory/${product.id}`, product)
+      .then(response => {
+        this.setState({
+          inventory: response.data.inventory
+        });
+      });
+  };
+
   componentDidMount() {
     axios
       .get(`${apiInfo.API_URL}/inventory/${this.props.match.params.id}`)
@@ -47,7 +57,7 @@ export default class ProductContainer extends Component {
     return (
       <>
         <Route
-          path={`${this.props.match.path}/`}
+          path={`${this.props.match.path}`}
           exact
           render={() => {
             return <ProductDetails product={this.state.product} />;
@@ -62,6 +72,7 @@ export default class ProductContainer extends Component {
               <EditProduct
                 product={this.state.product}
                 locations={this.state.warehouseLocations}
+                saveHandler={this.saveHandler}
               />
             );
           }}

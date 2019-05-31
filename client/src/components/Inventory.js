@@ -24,6 +24,7 @@ export default function Inventory(props) {
         <InventoryTable
           inventory={inventory}
           removeHandler={props.removeHandler}
+          saveHandler={props.saveHandler}
         />
         <div className="add">
           <img className="add--img" src={Add} alt="Plus Sign" />

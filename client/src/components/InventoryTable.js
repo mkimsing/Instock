@@ -20,6 +20,7 @@ export default function InventoryTable(props) {
               item={item}
               key={item.id}
               removeHandler={props.removeHandler}
+              saveHandler={props.saveHandler}
             />
           );
         })}

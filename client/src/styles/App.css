@@ -1111,6 +1111,11 @@ body h5 {
   margin-bottom: 27px;
 }
 
+.product-detail-page--margin a {
+  text-decoration: none;
+  color: black;
+}
+
 @media only screen and (min-width: 768px) {
   .product-detail-page--margin {
     margin-right: 24px;

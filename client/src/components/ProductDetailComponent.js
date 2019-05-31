@@ -4,6 +4,14 @@ import BackArrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 import { Link } from "react-router-dom";
 
 export default function ProductDetail(props) {
+  // let status;
+
+  // if (this.state.product.status === "In Stock") {
+  //   return <div className="status__inStock" />;
+  // } else {
+  //   return <div className="status__noStock" />;
+  // }
+
   if (Object.keys(props.product).length === 0) return <div>Loading...</div>;
   return (
     <div className="product-detail-page--margin">
