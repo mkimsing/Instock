@@ -89,8 +89,11 @@ export default class EditProduct extends Component {
           <form className="form" onChange={this.handleChange}>
             <div className="form--flex form__description">
               ITEM DESCRIPTION
-              <textarea rows="5" name="description" defaultValue={this.props.product.item.description}>         
-              </textarea>
+              <textarea
+                rows="5"
+                name="description"
+                defaultValue={this.props.product.item.description}
+              />
             </div>
             <aside>
               <div className="form__row--flex">
@@ -129,6 +132,7 @@ export default class EditProduct extends Component {
                     classNamePrefix="form__city"
                     name="location"
                     onChange={this.handleSelectChange}
+                    placeholder=""
                   />
                 </div>
               </div>
@@ -163,8 +167,12 @@ export default class EditProduct extends Component {
               </div>
               <div className="form--flex form__categories--margin">
                 CATEGORIES
-                <textarea id="categories" rows="6" name="categories" defaultValue={this.props.product.categories.toString()}>
-                </textarea>
+                <textarea
+                  id="categories"
+                  rows="6"
+                  name="categories"
+                  defaultValue={this.props.product.categories.toString()}
+                />
               </div>
             </aside>
           </form>
