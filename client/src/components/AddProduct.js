@@ -49,7 +49,6 @@ export default class AddProduct extends Component {
                 return val === false;
             });
         if (itemAllFilled) {
-            console.log('all are filled')
             const itemObj = {
                 productId: productId.value.trim(),
                 name: name.value.trim(),
@@ -72,19 +71,20 @@ export default class AddProduct extends Component {
                 toggleStatus,
                 warehouseId.value
             )
+            productId.value = ''
+            name.value = ''
+            description.value = ''
+            lastOrdered.value = ''
+            city.value = ''
+            country.value = ''
+            quantity.value = ''
+            warehouseId.value = ''
+            orderedBy.value = ''
+            categories.value = ''
+            this.props.hideAddProductPage()
         } else {
-            console.log('one or more fields missing')
+            alert('Please fill out all the fields!')
         }
-        productId.value = ''
-        name.value = ''
-        description.value = ''
-        lastOrdered.value = ''
-        city.value = ''
-        country.value = ''
-        quantity.value = ''
-        warehouseId.value = ''
-        orderedBy.value = ''
-        categories.value = ''
     }
     render() {
         if (this.state.checked === false) {
@@ -152,7 +152,7 @@ export default class AddProduct extends Component {
                             </div>
                             <div>
                                 <div className='addProduct__header'>ORDERED BY</div>
-                                <input className='addProduct__input' type='text' name='orderedBy' placeholder='Ordered By:'></input>
+                                <input className='addProduct__input' type='text' name='orderedBy' placeholder='Name Here'></input>
                             </div>
                         </div>
                         <div>
@@ -161,7 +161,7 @@ export default class AddProduct extends Component {
                         </div>
                         <div className='addProduct__buttons'>
                             <button onClick={this.props.hideAddProductPage} className='addProduct__buttons--cancel' type='button'>CANCEL</button>
-                            <button onClick={this.props.hideAddProductPage} className='addProduct__buttons--save' type='submit'>SAVE</button>
+                            <button className='addProduct__buttons--save' type='submit'>SAVE</button>
                         </div>
                     </form>
                 </div>
