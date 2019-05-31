@@ -49,7 +49,7 @@
     margin: 0px;
   }
   //Search bar
-  .searchBar input {
+  .inventoryPage__searchBar {
     margin-top: 16px;
     margin-bottom: 8px;
     height: 48px;
@@ -83,7 +83,7 @@
       justify-content: space-between;
       margin-bottom: 24px;
     }
-    .searchBar input {
+    .inventoryPage__searchBar {
       width: 40%;
     }
   }
@@ -100,7 +100,7 @@
       justify-content: space-between;
       margin-bottom: 48px;
     }
-    .searchBar input {
+    .inventoryPage__searchBar {
       width: 24%;
     }
   }

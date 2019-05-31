@@ -1,7 +1,7 @@
 import React from "react";
 import InventoryTable from "./InventoryTable";
 import AddProductButton from "./AddProductButton";
-import Add from '../assets/Icons/SVG/Icon-add.svg'
+import Add from "../assets/Icons/SVG/Icon-add.svg";
 
 export default function Inventory(props) {
   let { inventory, warehouseNames } = props;
@@ -22,16 +22,20 @@ export default function Inventory(props) {
       <div className="inventoryPage">
         <div className="inventoryPage__header">
           <h1>Inventory</h1>
-          <input className="searchBar" placeholder="Search" />
+          <input className="inventoryPage__searchBar" placeholder="Search" />
         </div>
         <InventoryTable
           inventory={inventory}
           removeHandler={props.removeHandler}
+          saveHandler={props.saveHandler}
         />
         <div className="add">
           <img className="add--img" src={Add} alt="Plus Sign" />
         </div>
-        <AddProductButton warehouseNames={warehouseNames} postNewItem={props.postNewItem} />
+        <AddProductButton
+          warehouseNames={warehouseNames}
+          postNewItem={props.postNewItem}
+        />
       </div>
     );
   }

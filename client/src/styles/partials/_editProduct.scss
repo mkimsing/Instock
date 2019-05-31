@@ -52,11 +52,9 @@
 
     &__city {
       height: 43px;
-      // border: $MERCURY 1px solid;
       margin-bottom: 24px;
       font-size: 12px;
       font-family: AvenirNext;
-      // background-color: $ALABASTER;
       border-radius: 4px;
       padding: 0px;
     }
@@ -65,7 +63,6 @@
       height: 100%;
       background-color: $ALABASTER;
       border: none;
-      // border: $MERCURY 1px solid;
     }
 
     &__stock {
@@ -105,6 +102,10 @@
     font-size: 13px;
     margin-top: 27px;
     margin-bottom: 27px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
   }
 }
 
