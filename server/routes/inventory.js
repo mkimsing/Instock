@@ -5,8 +5,6 @@ const helper = require("../helpers/helper");
 const fileName = `${__dirname}/../model/inventory.json`;
 let inventories = require(fileName);
 
-let inventories = require(fileName);
-
 router
   .route("/")
   //Get all inventory
@@ -15,7 +13,17 @@ router
   })
   // post new inventory item
   .post((req, res) => {
-    let { id, item, location, categories, lastOrdered, orderedBy, quantity, status, warehouseId } = req.body;
+    let {
+      id,
+      item,
+      location,
+      categories,
+      lastOrdered,
+      orderedBy,
+      quantity,
+      status,
+      warehouseId
+    } = req.body;
     if (
       !id ||
       !item.name ||
