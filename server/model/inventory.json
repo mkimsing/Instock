@@ -8,18 +8,11 @@
     },
     "orderedBy": "Fifi Smith",
     "lastOrdered": "05/04/2018",
-    "location": {
-      "city": "Toronto",
-      "country": "CA"
-    },
+    "location": { "city": "Toronto", "country": "CA" },
     "quantity": "120",
     "status": "In Stock",
     "warehouseId": "1",
-    "categories": [
-      "Dog",
-      "Toy",
-      "Pet"
-    ]
+    "categories": ["Dog", "Toy", "Pet"]
   },
   {
     "id": "2",
@@ -30,18 +23,11 @@
     },
     "orderedBy": "Fifi Jones",
     "lastOrdered": "12/05/2015",
-    "location": {
-      "city": "Toronto",
-      "country": "CA"
-    },
+    "location": { "city": "Toronto", "country": "CA" },
     "quantity": "121",
     "status": "In Stock",
     "warehouseId": "3",
-    "categories": [
-      "Dog",
-      "Toy",
-      "Pet"
-    ]
+    "categories": ["Dog", "Toy", "Pet"]
   },
   {
     "id": "3",
@@ -52,18 +38,11 @@
     },
     "orderedBy": "Fifi Peanut",
     "lastOrdered": "01/02/2050",
-    "location": {
-      "city": "Toronto",
-      "country": "CA"
-    },
+    "location": { "city": "Toronto", "country": "CA" },
     "quantity": "314159265",
     "status": "In Stock",
     "warehouseId": "7",
-    "categories": [
-      "Dog",
-      "Toy",
-      "Pet"
-    ]
+    "categories": ["Dog", "Toy", "Pet"]
   },
   {
     "id": "4",
@@ -74,18 +53,11 @@
     },
     "orderedBy": "Fifi Miniso",
     "lastOrdered": "01/03/2018",
-    "location": {
-      "city": "Toronto",
-      "country": "CA"
-    },
+    "location": { "city": "Toronto", "country": "CA" },
     "quantity": "1",
     "status": "In Stock",
     "warehouseId": "9",
-    "categories": [
-      "Dog",
-      "Toy",
-      "Pet"
-    ]
+    "categories": ["Dog", "Toy", "Pet"]
   },
   {
     "id": "5",
@@ -96,18 +68,11 @@
     },
     "orderedBy": "Fifi Blue",
     "lastOrdered": "08/01/2017",
-    "location": {
-      "city": "Vancouver",
-      "country": "CA"
-    },
+    "location": { "city": "Vancouver", "country": "CA" },
     "quantity": "500",
     "status": "In Stock",
     "warehouseId": "5",
-    "categories": [
-      "Dog",
-      "Toy",
-      "Pet"
-    ]
+    "categories": ["Dog", "Toy", "Pet"]
   },
   {
     "id": "6",
@@ -118,19 +83,11 @@
     },
     "orderedBy": "Fifi Harrods",
     "lastOrdered": "07/03/2017",
-    "location": {
-      "city": "Vancouver",
-      "country": "CA"
-    },
+    "location": { "city": "Vancouver", "country": "CA" },
     "quantity": "120",
     "status": "Out of Stock",
     "warehouseId": "4",
-    "categories": [
-      "Dog",
-      "Toy",
-      "Pet",
-      "Food"
-    ]
+    "categories": ["Dog", "Toy", "Pet", "Food"]
   },
   {
     "id": "7",
@@ -141,18 +98,11 @@
     },
     "orderedBy": "Fifi Pink",
     "lastOrdered": "06/03/2017",
-    "location": {
-      "city": "Toronto",
-      "country": "CA"
-    },
+    "location": { "city": "Toronto", "country": "CA" },
     "quantity": "120",
     "status": "In Stock",
     "warehouseId": "2",
-    "categories": [
-      "Dog",
-      "Bed",
-      "Pet"
-    ]
+    "categories": ["Dog", "Bed", "Pet"]
   },
   {
     "id": "8",
@@ -163,18 +113,11 @@
     },
     "orderedBy": "Fifi Acer",
     "lastOrdered": "06/24/2017",
-    "location": {
-      "city": "Toronto",
-      "country": "CA"
-    },
+    "location": { "city": "Toronto", "country": "CA" },
     "quantity": "0",
     "status": "Out of Stock",
     "warehouseId": "8",
-    "categories": [
-      "Dog",
-      "Bed",
-      "Pet"
-    ]
+    "categories": ["Dog", "Bed", "Pet"]
   },
   {
     "id": "9",
@@ -185,18 +128,11 @@
     },
     "orderedBy": "Fifi Mac",
     "lastOrdered": "06/01/2017",
-    "location": {
-      "city": "Vancouver",
-      "country": "CA"
-    },
+    "location": { "city": "Vancouver", "country": "CA" },
     "quantity": "300",
     "status": "In Stock",
     "warehouseId": "6",
-    "categories": [
-      "Dog",
-      "Bed",
-      "Pet"
-    ]
+    "categories": ["Dog", "Bed", "Pet"]
   },
   {
     "id": "10",
@@ -207,18 +143,11 @@
     },
     "orderedBy": "Fifi Stock",
     "lastOrdered": "05/04/2017",
-    "location": {
-      "city": "Toronto",
-      "country": "CA"
-    },
+    "location": { "city": "Toronto", "country": "CA" },
     "quantity": "120",
     "status": "Out of Stock",
     "warehouseId": "7",
-    "categories": [
-      "Dog",
-      "Food",
-      "Pet"
-    ]
+    "categories": ["Dog", "Food", "Pet"]
   },
   {
     "id": "11",
@@ -229,18 +158,11 @@
     },
     "orderedBy": "Fifi Tomtoc",
     "lastOrdered": "04/20/2017",
-    "location": {
-      "city": "Toronto",
-      "country": "CA"
-    },
+    "location": { "city": "Toronto", "country": "CA" },
     "quantity": "555",
     "status": "In Stock",
     "warehouseId": "8",
-    "categories": [
-      "Dog",
-      "Harness",
-      "Pet"
-    ]
+    "categories": ["Dog", "Harness", "Pet"]
   },
   {
     "id": "12",
@@ -251,17 +173,10 @@
     },
     "orderedBy": "Fifi Camelback",
     "lastOrdered": "04/03/2019",
-    "location": {
-      "city": "Toronto",
-      "country": "CA"
-    },
+    "location": { "city": "Toronto", "country": "CA" },
     "quantity": "555",
     "status": "In Stock",
     "warehouseId": "1",
-    "categories": [
-      "Dog",
-      "Harness",
-      "Pet"
-    ]
+    "categories": ["Dog", "Harness", "Pet"]
   }
 ]

@@ -27,7 +27,7 @@ export default class EditProduct extends Component {
       <div className="product-detail-page--margin">
         <div className="header">
           <Link to={`/inventory/${this.props.product.id}`}>
-            <img src={BackArrow} alt='back arrow' />
+            <img src={BackArrow} alt="back arrow" />
           </Link>
           <h1>{this.props.product.item.name}</h1>
         </div>
@@ -35,8 +35,10 @@ export default class EditProduct extends Component {
           <form className="form">
             <div className="form--flex form__description">
               ITEM DESCRIPTION
-              <textarea rows="5" defaultValue={this.props.product.item.description}>
-              </textarea>
+              <textarea
+                rows="5"
+                defaultValue={this.props.product.item.description}
+              />
             </div>
             <aside>
               <div className="form__row--flex">
@@ -103,9 +105,11 @@ export default class EditProduct extends Component {
               </div>
               <div className="form--flex form__categories--margin">
                 CATEGORIES
-                <textarea id="categories" rows="6">
-                  {this.props.product.categories}
-                </textarea>
+                <textarea
+                  id="categories"
+                  rows="6"
+                  defaultValue={this.props.product.categories.toString()}
+                />
               </div>
             </aside>
           </form>

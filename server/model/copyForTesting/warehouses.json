@@ -221,10 +221,32 @@
       "phone": "123-456-789",
       "email": "michael@instock.com"
     },
+    "categories": ["Cats", "Dogs", "Cows"]
+  },
+  {
+    "id": "0vzxe1gof",
+    "name": "Testing Warehouse 2 ",
+    "location": {
+      "address1": "1234 Testing Ave",
+      "address2": "Test Suite 1",
+      "region": "Calgary, AB",
+      "postalCode": "1P94B5 CA"
+    },
+    "contact": {
+      "name": "Michael",
+      "position": "King",
+      "phone": "321-456-987",
+      "email": "thisisanemail@gmail.com"
+    },
     "categories": [
-      "Cats",
-      "Dogs",
-      "Cows"
+      "Dolphins",
+      "Orca",
+      "Shark",
+      "Whale",
+      "Tuna",
+      "Salmon",
+      "Manta Ray",
+      "Jellyfish"
     ]
   }
 ]

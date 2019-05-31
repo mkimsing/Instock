@@ -9,7 +9,7 @@ export default function ProductDetail(props) {
       <div className="header">
         <div className="header__back">
           <Link to="/inventory">
-            <img src={BackArrow} alt='back arrow' />
+            <img src={BackArrow} alt="back arrow" />
           </Link>
           <h1>{props.product.item.name}</h1>
         </div>
@@ -42,7 +42,9 @@ export default function ProductDetail(props) {
               </div>
               <div className="form--flex">
                 LOCATION
-                <h4>{props.product.location}</h4>
+                <h4>
+                  {props.product.location.city} {props.product.location.country}
+                </h4>
               </div>
             </div>
             <div className="form__row--flex">
@@ -55,7 +57,7 @@ export default function ProductDetail(props) {
             <div className="form--flex form__categories--margin">
               CATEGORIES
               <h4 className="form__textarea" id="textarea2">
-                {props.product.categories}
+                {props.product.categories.toString()}
               </h4>
             </div>
           </aside>
